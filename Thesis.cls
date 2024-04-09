@@ -150,16 +150,16 @@
 \degree      {}
 \authors     {}
 \university  {\texorpdfstring{\href{University Web Site URL Here (include http://)}
-                {University Name}}
+                {Jawaharlal Nehru University}}
                 {University Name}}
 \UNIVERSITY  {\texorpdfstring{\href{University Web Site URL Here (include http://)}
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
+                {JAWAHARLAL NEHRU UNIVERSITY}}
                 {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
 \department  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {Department or School Name}}
+                {Inter-Universtity Centre of Astronomy and Astrophysics}}
                 {Department or School Name}}
 \DEPARTMENT  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
+                {INTER-UNIVERSTITY CENTRE OF ASTRONOMY AND ASTROPHYSICS}}
                 {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
 \group       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
                 {Research Group Name}}
@@ -168,7 +168,7 @@
                 {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
                 {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
 \faculty     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
-                {Faculty Name}}
+                {Prof. Aseem Paranjape}}
                 {Faculty Name}}
 \FACULTY     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
                 {FACULTY NAME (IN BLOCK CAPITALS)}}
@@ -192,22 +192,25 @@
     \vskip 60\p@
     \begin{center}
       \setlength{\parskip}{0pt}
-      {\large\textbf{\UNIVNAME}\par}
+      {\Large\textbf{\DEPTNAME}\par}
+      \vfill
+      {\includegraphics[]{Figures/IUCAA-logo.png}}
       \vfill
       {\huge \bf \@title \par}
       \vfill
+      {\large A thesis submitted in partial fulfillment for the \par}
+      {\large degree of Doctor of Philosophy \par}
       {\LARGE by \par}
       \smallskip
       {\LARGE \authornames \par}
-      \vfill
-      {\large A thesis submitted in partial fulfillment for the \par}
-      {\large degree of Doctor of Philosophy \par}
       \bigskip
+      {\large supervised by \par}
+      {\Large \facname \par}
       \bigskip
       {\large in the \par}
-      {\large \facname \par}
       {\large \deptname \par}
-      \bigskip
+      {\large to \par}
+      {\large \univname \par}
       \bigskip
       \bigskip
       {\Large \@date \par}
@@ -237,11 +240,11 @@
   \null\vfil
   \begin{center}
     \setlength{\parskip}{0pt}
-    {\normalsize \UNIVNAME \par}
-    \bigskip
+    % {\normalsize \UNIVNAME \par}
+    % \bigskip
     {\huge{\textit{Abstract}} \par}
     \bigskip
-    {\normalsize \facname \par}
+    % {\normalsize \facname \par}
     {\normalsize \deptname \par}
     \bigskip
     {\normalsize Doctor of Philosophy\par}
