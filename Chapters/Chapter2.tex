@@ -540,7 +540,7 @@ At the other extreme, in the inner halo of low-mass systems, it is very interest
 
 Finally, building a more in-depth understanding of our results will need a physical, preferably analytical, model. One possibility is to use the self-similar approximation \citep[][]{fg84,bertschinger85,launagai+15,shi16}
 to model the combined dynamical evolution of dark matter, gas and stars in a halo.
-We will report the results of such studies in future work.
+We report the results of such a study in chapter \ref{chap:self-sim-relxn}
 
  
 \section*{Acknowledgments}
@@ -548,14 +548,14 @@ We thank Nishant Singh, Nishikanta Khandai and Kandaswamy Subramanian for useful
 We thank the anonymous referee for useful comments that improved the clarity of the presentation.
 We gratefully acknowledge the use of high performance computing facilities at IUCAA (\url{http://hpc.iucaa.in}). This work made extensive use of the open source computing packages NumPy \citep{vanderwalt-numpy},\footnote{\url{http://www.numpy.org}} SciPy \citep{scipy},\footnote{\url{http://www.scipy.org}} Matplotlib \citep{hunter07_matplotlib},\footnote{\url{https://matplotlib.org/}} Pandas \citep[][]{reback2020pandas},\footnote{\url{https://pandas.pydata.org/about/}} Schwimmbad \citep{schwimmbad},\footnote{\url{https://joss.theoj.org/papers/10.21105/joss.00357}} H5py,\footnote{\url{https://www.h5py.org/}} Colossus \citep{colossus},\footnote{\url{http://www.benediktdiemer.com/code/colossus/}}  Jupyter Notebook\footnote{\url{https://jupyter.org}} and Code-OSS.\footnote{\url{https://github.com/microsoft/vscode}}
 
-\section*{Data availability}
-The IllustrisTNG simulations are publicly available at \url{https://www.tng-project.org/}. The EAGLE simulations are publicly available at \url{https://icc.dur.ac.uk/Eagle/}. 
+% \section*{Data availability}
+% The IllustrisTNG simulations are publicly available at \url{https://www.tng-project.org/}. The EAGLE simulations are publicly available at \url{https://icc.dur.ac.uk/Eagle/}. 
 
 
 % \bibliography{references}
 
 % \appendix
-\section{Choice of matching algorithm}
+\section{Appendix: Choice of matching algorithm}
 \label{sec:apndx-matching}
 In this work, we studied the response of dark matter halo to galaxy by comparing the haloes in hydrodynamical simulations to their counterparts in gravity-only runs. We described the matching procedure in \secref{sec:methods-match}, here we discuss some of the specific choices in that procedure.
 For this purpose, let us consider the FOF group haloes in TNG300 simulation with $\log M(\Mh)>10.5$.  There are 543588 FOF groups satisfying this criterion in the hydrodynamical run of TNG300, with each of them having more than 500 particles within their $R_{\rm vir}$ in the highest resolution run.
@@ -586,7 +586,7 @@ While obtaining matches for as many haloes as possible, we also have to ensure t
 In the \figref{fig:efficiency-mass-rev}, matching loss as a function of halo mass is shown after removing all those pairs in which the particle matching fraction of the gravity-only halo with respect to hydrodynamical halo is less than 50\%. Since this symmetrical matching condition produces consistent matched catalogue of haloes, we apply this additional matching condition  but stick to matching whole FOF groups. With this procedure, our final matched catalogue for TNG300 contains 524841 pairs, leaving 18747 out of 543588 hydrodynamical haloes unmatched. The additional unmatched haloes primarily reside in dense environments, and we can't find match for those haloes because of the inherent issues with 3d FOF algorithm in dealing with mergers. 
 
 
-\section{Mock particles in a Galaxy-Halo system}
+\section{Appendix: Mock particles in a Galaxy-Halo system}
 \label{appen:Mock}
 Here we validate our method used in extracting the relaxation relation (see \secref{sec:methods-relx-reln}) using mock galaxy-halo systems.
 In this, we use Hernquist profile for the initial unrelaxed dark matter halo and similar analytical mass profiles for the baryon components \citep[see appendix of][]{2021MNRAS.507..632P}. We then get the relaxed dark matter profile using quasi-adiabatic relaxation model with different values of $q$. Mock particle data is then generated with these mass profiles for different components of hydrodynamical halo and the corresponding gravity-only halo.
@@ -612,7 +612,7 @@ For those mock halo pairs, we compute the mass profiles and obtain the relaxatio
 
 
 
-\section{Using the three parameter model}
+\section{Appendix: Using the three parameter model}
 \label{sec:apndx-demo}
 Here we show the relaxed mass profile predicted by our 3-parameter model \eqn{eq:q3-model} for the haloes with mass, $M\leq10^{13}\Mh$. We follow a similar procedure as described in \secref{sec:mass-prof-demo}; once again we consider the response as a function of only the halo mass and ignore the dependence on other halo properties. For a given halo we obtain the values of the three parameters namely $q_0$, $q_{10}$ and $q_{11}$ by simply interpolating the fitted parameters shown in \figref{fig:3-param-mass-only} as a function of mass. We find that accounting for radial dependence through a simple \eqn{eq:q3-model}, gives a mass profile that is within $10\%$ of the simulation even upto $2 \%$ of virial radii (see upper left panel of \figref{fig:relxn_models_compare}) and within $3 \%$ for the low mass haloes. The upper right panel of \figref{fig:relxn_models_compare}, shows the corresponding profiles assuming a mass independent fixed values for the parameters $q_0\simeq-0.05$, $q_{10}\simeq1.1$ and $q_{11}\simeq0.5$. In addition to these, we also compare with mass profiles predicted by the standard adiabatic relaxation \citealp{1986ApJ...301...27B} and few other relaxation models from \citet{2004ApJ...616...16G}, \citet{2021MNRAS.507..632P} and \citet{2020MNRAS.494.4291C} for the IllustrisTNG haloes.
 
@@ -624,7 +624,7 @@ Here we show the relaxed mass profile predicted by our 3-parameter model \eqn{eq
 \end{figure*}
 
 
-\section{Dependence on galaxy properties in the cluster scale}
+\section{Appendix: Dependence on galaxy properties in the cluster scale}
 The effect of different halo and galaxy properties on the response of the dark matter is presented here; the relaxation parameters $q_0(r)$ and $q_1(r)$ is shown in \figref{fig:fit-func-rf-13514} as our three parameter description fails for these cluster scale haloes (see section \ref{sec:dep-on-hal-gal-props} for details).
 
 \begin{figure*}
