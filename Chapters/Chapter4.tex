@@ -1,6 +1,5 @@
 \chapter{Dynamical relaxation}
 
-\abstract{
 We present the dynamical evolution of the dark matter's relaxation response to galaxies and their connection to the astrophysical properties as simulated in the IllustrisTNG suite of cosmological hydrodynamical simulations.
 % This study investigates the dynamical evolution of dark matter's response to galaxies within populations of haloes simulated using the IllustrisTNG cosmological volumes. By comparing haloes from hydrodynamical and gravity-only simulations, we examined the correlation between relaxation quantities and various halo/galaxy properties. 
 Our results show that the radially-dependent linear relaxation relation model from our previous work is applicable at least from redshift \(z=5\). We focus on the offset parameter \(q_0\), which characterizes the relaxation of dark matter shells without changing the enclosed mass.
@@ -12,7 +11,7 @@ We show that star formation activity significantly influences the halo relaxatio
 These findings enhance our understanding of halo relaxation mechanisms. 
 %and improve models of halo profiles in baryonification procedures and semi-analytic galaxy formation models. 
 Our estimates of the time-scales relevant for dark matter relaxation can potentially improve the description of halo profiles in existing baryonification schemes and semi-analytical galaxy formation models. Our results also show how
-the relaxation response of dark haloes can probe the evolutionary history of the galaxies they host.}
+the relaxation response of dark haloes can probe the evolutionary history of the galaxies they host.
 
 \section{Introduction}
 \label{sec:intro}
@@ -247,7 +246,7 @@ This leads to the inverse relationship between star formation rate and metallici
 
 \subsubsection{Correlation at fixed time intervals}
 \label{sec:halhal-corr-sfrZ}
-\PV{Entire section rewritten} \\
+% \PV{Entire section rewritten} \\
 We now focus on using the correlations to explore the repetitive nature of galactic processes. As a preliminary approach, we quantify this using the average of the Spearman rank correlation matrix $\rho^s_{ij}$ along the diagonals parallel to the black line shown in each panel of the \figref{fig:dynam-correl-sfr-ZOsfr-img}. This essentially represents the time-averaged correlation across haloes between SFR and $Z^{\star}_{\rm{O}}$ at a fixed earlier or later time, defined as:
 %\AP{what exactly should the reader look at in the figure?} 
 \begin{align}
@@ -284,7 +283,7 @@ While there is a relatively stronger positive correlation at intermediate masses
 
 \subsubsection{Time Correlations}
 \label{sec:time-correl-sfrZ}
-\PV{Entire section rewritten} \\
+% \PV{Entire section rewritten} \\
 In order to further understand the connection between the sequences of galactic processes, we study time correlations that capture the temporal variations along the evolutionary tracks of each halo.
 % The halo-halo correlation might not capture the relevant information if the sample variance is either much smaller or larger than the temporal variations. 
 Consider an individual halo along with its evolutionary track, say $n^{\rm{th}}$ halo in a population of N haloes. We characterize the time correlation through the Spearman correlation as a function of time lag, $\rho^s_t |_{n}(\tau)[\rm{SFR}, Z^{\star}_{\rm{O}}]$ defined as follows.
@@ -354,7 +353,7 @@ When computed at distinct time steps ($\tau = m \Delta t$) for integer $m=0, \pm
 \end{cases}.
 \end{align}
 % \AP{show the explicit summation that is used in the code, similar to previous explicit expressions}
-This considers $(T-m) \times N$ values of both SFR and $Z^{\star}_{\rm{O}}$ at each time lag $\tau = m \Delta t$; \red{Suppose the ranks are denoted as $R^m_{\rm{SFR}}(n,t_i)$ and $R^m_{Z^{\star}_{\rm{O}}}(n,t_i)$, then for a positive value of $m$,
+This considers $(T-m) \times N$ values of both SFR and $Z^{\star}_{\rm{O}}$ at each time lag $\tau = m \Delta t$; Suppose the ranks are denoted as $R^m_{\rm{SFR}}(n,t_i)$ and $R^m_{Z^{\star}_{\rm{O}}}(n,t_i)$, then for a positive value of $m$,
 \begin{align}
 \rho^s_f (\tau = m \Delta t) &= \frac{ \sum_{i=1}^{T-m} \sum_{n=1}^{N} R^m_{\rm{SFR}}(n,t_i) \times  R^m_{Z^{\star}_{\rm{O}}}(n,t_j) - \mu_{n,t} [ R_{\rm{SFR}}(n,t_i) ]  \times \mu_{n,t} [R_{Z^{\star}_{\rm{O}}}(n,t_j)] }
 { N(T-m) \times \sigma_{n,t} [ R_{\rm{SFR}}(n,t_i) ]  \times \sigma_{n,t} [R_{Z^{\star}_{\rm{O}}}(n,t_j)] }
@@ -363,7 +362,7 @@ where the mean ($\mu_{n,t}$), standard deviation ($\sigma_{n,t}$) and the ranks 
 \begin{align}
 R^m_{\rm{SFR}}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T-m}\}) &= R[ ~\rm{SFR}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T-m}\}) ~]\\
 R^m_{Z^{\star}_{\rm{O}}}(\{1 \ldots N\}, ~\{t_{1+m} \ldots t_T\}) &= R[ ~Z^{\star}_{\rm{O}}(\{1 \ldots N\}, ~\{t_{1+m} \ldots t_T\}) ~]
-\end{align}}
+\end{align}
 This full 2D Spearman correlation coefficient $\rho^s_f[\rm{SFR},Z^{\star}_{\rm{O}}]$ is presented in the right panel of the \figref{fig:dynam-correl-sfr-ZOsfr-timeshift-func-all}.
 Once again, we only consider the range of time-lags marked in the figure at each of the halo masses. These are obtained by comparing $\rho^s_f(\tau)$ with the cross-correlation of normalized ranks computed on the entire duration and across all haloes in the population. We find that the full correlation $\rho^s_f$ tends to be stronger than the time correlation $\rho^s_t$, while also including the correlations in temporal variations unlike $\rho^s_h$ defined in \eqref{eq:def-hal-correl}.
 % This will be useful later when studying the correlation between other quantities, especially when the underlying correlations are weaker. 
@@ -396,7 +395,7 @@ over which the correlation is significant.
 A_{+} = \int w(\tau) \rho_{+}(\tau) d\tau / \Delta\tau_{+}, \qquad A_{-} = \int w(\tau) \rho_{-}(\tau) d\tau / \Delta\tau_{-} \\
 \tau_{+} = \frac{1}{A_{+} \Delta\tau_{+}} \int \tau w(\tau) \rho_{+}(\tau) d\tau , \qquad \tau_{-} = \frac{1}{A_{-}\Delta\tau_{-}} \int \tau w(\tau) \rho_{-}(\tau) d\tau     
 \end{gather}
-Here, the weight function $w$ is taken to be the fraction of the entire data between $z \sim 5$ and $z \sim 0$ involved in computing the correlation coefficient at a given time lag. In general, the values of $\tau_{\pm}$ are physical only when the corresponding correlation strengths $A_{\pm}$ and the durations $\Delta \tau_{\pm}$ are both significant. \red{Also note that when correlating between two quantities say $X$ and $Y$ a positive time lag $\tau_{+}[X,Y]$ (or $\tau_{-}[X,Y]$) indicate that the positive (or negative) correlation is seen with $Y$ lagging behind $X$. Hence the mean time lags are anti-symmetric with respect to the quantities, $\tau_{\pm}[X,Y]= - \tau_{\pm}[Y,X]$; However, the strengths and durations of correlations are symmetric, $A_{\pm}[X,Y]= A_{\pm}[Y,X]$ and $\Delta \tau_{\pm}[X,Y]= \Delta \tau_{\pm}[Y,X]$}.
+Here, the weight function $w$ is taken to be the fraction of the entire data between $z \sim 5$ and $z \sim 0$ involved in computing the correlation coefficient at a given time lag. In general, the values of $\tau_{\pm}$ are physical only when the corresponding correlation strengths $A_{\pm}$ and the durations $\Delta \tau_{\pm}$ are both significant. Also note that when correlating between two quantities say $X$ and $Y$ a positive time lag $\tau_{+}[X,Y]$ (or $\tau_{-}[X,Y]$) indicate that the positive (or negative) correlation is seen with $Y$ lagging behind $X$. Hence the mean time lags are anti-symmetric with respect to the quantities, $\tau_{\pm}[X,Y]= - \tau_{\pm}[Y,X]$; However, the strengths and durations of correlations are symmetric, $A_{\pm}[X,Y]= A_{\pm}[Y,X]$ and $\Delta \tau_{\pm}[X,Y]= \Delta \tau_{\pm}[Y,X]$.
 
 \begin{figure}[htbp]
 \centering
@@ -409,7 +408,7 @@ Here, the weight function $w$ is taken to be the fraction of the entire data bet
 
 The mean time lags ($\tau_{\pm}$), the effective strengths ($A_{\pm}$) and the durations ($\Delta\tau_{\pm}$) of the correlation between the SFR and metallicity $(Z^{\star}_{\rm{O}})$ are shown in the \figref{fig:dynam-correl-sfr-ZOsfr-timeshift-all} for all our halo populations. 
 % \AP{sign convention needs to be clarified, namely, the meaning of positive and negative values of $\tau$ when correlating quantity X with quantity Y. later you are using $\tau[X,Y]$, so why not just introduce that notation here and use it to clarify sign convention?}
-The positive correlation between SFR and future $Z^{\star}_{\rm{O}}$ is depicted by positive values of \red{$\tau_{+}[\rm{SFR}, Z^{\star}_{\rm{O}}]$}. At low masses $(<10^{12.5}\Mh)$ this time lag is as large as $\tau_{+}=\sim 2 ~\rm{Gyr}$. At higher masses, though, the time lags are smaller, along with relatively lower correlation strengths. This is likely due to the strong AGN feedback redistributing the metals from the star-forming regions. In addition, the negative correlation identified qualitatively in the previous section can also be seen in the \figref{fig:dynam-correl-sfr-ZOsfr-timeshift-all} with large negative time-lags ($\tau_{-} \sim -3~ \rm{Gyr}$) in some halo populations (shown by dashed curves).
+The positive correlation between SFR and future $Z^{\star}_{\rm{O}}$ is depicted by positive values of $\tau_{+}[\rm{SFR}, Z^{\star}_{\rm{O}}]$. At low masses $(<10^{12.5}\Mh)$ this time lag is as large as $\tau_{+}=\sim 2 ~\rm{Gyr}$. At higher masses, though, the time lags are smaller, along with relatively lower correlation strengths. This is likely due to the strong AGN feedback redistributing the metals from the star-forming regions. In addition, the negative correlation identified qualitatively in the previous section can also be seen in the \figref{fig:dynam-correl-sfr-ZOsfr-timeshift-all} with large negative time-lags ($\tau_{-} \sim -3~ \rm{Gyr}$) in some halo populations (shown by dashed curves).
 %\AP{weren't you going to explain that one should only seriously consider signals in regions where the correlation strength is high and the interval $\Delta\tau$ is significantly away from zero?}
 
 
@@ -604,16 +603,10 @@ may allow simple time-dependent transformation procedures to incorporate the dyn
 
 
 
-\section*{Data availability}
-No new data were generated during the course of this research.
-
-\acknowledgments
-The research of AP is supported by the Associates scheme of ICTP, Trieste.
-We gratefully acknowledge the use of high performance computing facilities at IUCAA (\url{http://hpc.iucaa.in}). This work made extensive use of the open source computing packages NumPy \citep{vanderwalt-numpy},\footnote{\url{http://www.numpy.org}} SciPy \citep{scipy},\footnote{\url{http://www.scipy.org}} Matplotlib \citep{hunter07_matplotlib},\footnote{\url{https://matplotlib.org/}} Pandas \citep[][]{reback2020pandas},\footnote{\url{https://pandas.pydata.org/about/}} Schwimmbad \citep{schwimmbad},\footnote{\url{https://joss.theoj.org/papers/10.21105/joss.00357}} H5py,\footnote{\url{https://www.h5py.org/}} Colossus \citep{colossus},\footnote{\url{http://www.benediktdiemer.com/code/colossus/}}  Jupyter Notebook\footnote{\url{https://jupyter.org}} and Code-OSS.\footnote{\url{https://github.com/microsoft/vscode}}
 
 
 
-\bibliography{references,references_new}
+% \bibliography{references,references_new}
 % \newpage
 % \appendix
 % Appendix if anything requested by referee
@@ -654,4 +647,4 @@ We gratefully acknowledge the use of high performance computing facilities at IU
 
 
 
-\end{document}
+% \end{document}
