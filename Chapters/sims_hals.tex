@@ -57,6 +57,121 @@ In our study, we specifically utilize the TNG suite's 1P set of simulations, a s
 All these parameters have a value of one in the fiducial simulation, and there are five simulations with higher values and another five simulations with lower values for each of these parameters. In total, we utilize these 41 hydrodynamical simulations and compare them against the gravity-only simulation over the same cosmological volume.
 
 
+
+\subsection{Halo matching}
+\label{sec:methods-match-ch:z0main}
+To study how a dark halo responded to the galaxy forming in it, we need to first reliably match the catalogue of haloes found in the hydrodynamic simulation (which includes galaxy formation physics) to those found in its gravity-only run. For various numerical reasons a given halo in the hydro run may not have a true match in the halo catalogue of gravity-only run. So we first try to obtain an exhaustive catalogue of matched haloes that will be used to build a statistical description of this halo response.
+
+
+\subsubsection{Matching procedure}
+We match the haloes using the particle data associated with the haloes;
+while the mass of each dark matter particle differs between the hydrodynamical and gravity-only runs, the \emph{number} of dark matter particles within the same initial periodic box is the same for each of the five pairs of simulations that we consider in IllustrisTNG and EAGLE. So a given particle in a hydro simulation has originated from the same region as the particle of the same ID in its corresponding gravity-only run.
+For any given pair of haloes, with one in the hydrodynamical simulation and the other in the corresponding gravity-only run, we define the matching fraction of each of those two haloes (with respect to the other) 
+as the fraction of its dark matter particles that are also present in the other halo. Below, we describe how we use 
+these matching fractions to decide if the given pair can be considered a valid matched pair. 
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass_all.pdf}
+    \caption{Fraction of haloes in the TNG hydrodynamical simulations that have not found a match is shown as a function of mass $M_{200c}$. coloured vertical bands represent the mass range relevant for this work in each of the three TNG simulation boxes.}
+    \label{fig:matching-loss-all-ch:z0main}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[clip,trim={0.5cm 0cm 2cm 0.5cm}, width=\linewidth]{plots/visual_single_halo.pdf}
+\includegraphics[clip,trim={0.5cm 0cm 2cm 0.5cm}, width=\linewidth]{plots/visual_single_halo_E.pdf}
+\caption{Visually inspecting two matched FOF halo pairs, one each from IllustrisTNG \emph{(top row)} and EAGLE \emph{(bottom row)} using 2D-projected dark matter density field around the center of the hydrodynamical halo in a thick slice. The \emph{left panel} shows the halo in the hydrodynamical simulation and the \emph{right panel} shows the corresponding matched pair in the gravity-only simulation. The black circle shows the virial boundary of the gravity-only halo and blue circle shows that of the hydrodynamical halo. In both cases, the hydrodynamical halo is noticeably more spherical and compact than its gravity-only counterpart, with a spatially offset center. See text for a discussion.} 
+\label{fig:single-halo-pair-ch:z0main}
+\end{figure}
+
+Computing the matching fractions 
+for every pair of haloes is computationally expensive with $O(n^2)$ for millions of haloes in the catalogue. We decrease the complexity to $O(n)$ by supplying, for each halo in the hydro-simulation, an ordered list of most probable match candidates in the gravity-only run. These candidate lists of gravity-only haloes are generated and ranked based on the spatial positions of the haloes and their masses using a KD-tree based neighbour finding algorithm, implemented using \texttt{scipy.spatial.KDTree}.
+For each halo in the hydro run, we test if the matching fraction of this halo with respect to any of the haloes in its match candidate list exceeds the value of 0.5. This ensures that at most one halo is selected as a match for each of the hydrodynamical haloes, so that our matched catalogue of halo pairs will be a subset of the source catalogue without repetitions.
+While we match as many haloes as possible, it is also important to ensure that false matches don't plague our study. Based on the results in Appendix \ref{sec:apndx-matching-ch:z0main}, we therefore additionally require that in a valid matched pair, the gravity-only FOF halo must also have a matching fraction of more than 0.5 with respect to the hydrodynamical halo.
+Our FOF based matching can be compared with
+\citet[][]{2018MNRAS.481.1950L} where a similar matching algorithm has been followed for central subhaloes.
+
+\subsubsection{Halo pair catalogue}
+We generate a matched catalogue of haloes for each of the five simulations studied in this work, including FOF haloes resolved with more than 1000 particles\footnote{Mass resolution in the gravity-only runs are $7 \times 10^7 \Mh$, $8.9 \times 10^6 \Mh$ and $5.4 \times 10^5$ for TNG300, TNG100 and TNG50 respectively; whereas $9.7 \times 10^6 \Mh$ for the L100 and $1.21 \times 10^6 \Mh$ for the L25 simulation of EAGLE.}. The fraction of hydrodynamical haloes that fails to be part of the matched catalogue is shown in \figref{fig:matching-loss-all-ch:z0main} in bins of halo mass for the IllustrisTNG simulations. %
+In the mass range in which the halo samples are selected for this work (see \secref{sec:results-mass-ch:z0main}), more than 96\% of the haloes in hydrodynamical simulation have been assigned a match in the gravity-only run. The small fraction of unmatched haloes primarily reside in dense environments 
+where our algorithm presumably fails due to
+the inherent issues with 3D FOF algorithm in dealing with mergers. Similar results hold for the EAGLE simulations as well. 
+For illustrative purpose, a visual representation of two randomly chosen halo pairs, one each from IllustrisTNG and EAGLE, is shown in \figref{fig:single-halo-pair-ch:z0main}. 
+
+
+
+
+
+
+
+
+
+
+\subsection{Methods to study the halo response}
+\label{sec:method-ch:z0main}
+The response of dark matter halo to galaxy formation has primarily two aspects, contraction or expansion of the halo towards the centre and a change in its triaxial shape. In this work, we study the former aspect of the halo response, by focusing on spherically averaged mass profiles. 
+The illustrative haloes shown in \figref{fig:single-halo-pair-ch:z0main} become more compact and spherical in the hydrodynamical simulation that includes galaxy formation.
+Also notice that there is an offset between the center-of-potential locations of matched pairs of haloes. These offsets are likely correlated with the halo tidal environment and will be interesting to follow-up in future work.
+
+\subsubsection{Mass profiles}
+\label{subsec:massprofiles-ch:z0main}
+
+The overall expansion and/or contraction of dark matter in response to galaxy formation can be studied through the differences in spherically averaged mass profiles between matched haloes. For the dark matter, these radial profiles are obtained by adding up the mass of all dark matter particles contained within concentric spherical shells. In addition to these, we also need baryon mass profiles in modelling the dark matter response. While stellar mass profiles are computed in a similar fashion as dark matter,
+for the gas mass profiles we use a Gaussian kernel to assign mass enclosed to each of the spherical shells\footnote{Throughout this work, we consider concentric shells defined by their radii and the mass enclosed by such a shell is the mass in the sphere bounded by that shell.
+}. 
+The width of this Gaussian kernel was taken to match the SPH smoothing length for the EAGLE simulation, whereas for IllustrisTNG we use the cube root of the Voronoi cell volume to define the kernel smoothing scale. We have tested that our results are robust to differences in the choice of this kernel.
+
+
+\subsubsection{Quasi-adiabatic relaxation model}
+\label{sec:methods-adiab-ch:z0main}
+The impact of galaxy formation on the dark halo is expected to be primarily an adiabatic relaxation of dark matter particle orbits in response to baryon condensation \citep[][]{1986ApJ...301...27B}. We start by discussing this simplified model and study more complex effects such as the impact of baryonic feedback processes below.
+Assuming that the dark matter halo is spherical and doesn't undergo shell crossing while baryons condense towards the centre, the adiabatic relaxation of any given dark matter shell is determined by the change in baryonic mass within that shell. 
+Consider a shell enclosing a \emph{dark matter} mass $M_i^d(r_i)$ in radius $r_i$ in the unrelaxed halo. After relaxation, the radius of the shell changes to $r_f$. By definition, the dark matter mass $M_f^d(r_f)$ enclosed in $r_f$ in the relaxed halo is simply
+\be 
+M_f^d(r_f) = M_i^d(r_i)\,.
+\label{eq:DMmass1-ch:z0main}
+\ee
+The \emph{total} mass $M_i(r_i)$ enclosed in $r_i$ in the unrelaxed halo, on the other hand, does not necessarily equal the total mass $M_f(r_f)$ enclosed in $r_f$ in the relaxed halo.
+If angular momentum were to be conserved and the dark matter particle orbits stay circular, then the amount of relaxation of the shell is completely determined by the change in this total mass within the shell
+\citep[][]{1986ApJ...301...27B},
+\begin{align}
+    r_i \,M_i(r_i) = r_f \,M_f(r_f) %
+    \implies 
+\frac{r_f}{r_i} = \frac{M_i(r_i)}{M_f(r_f)}\,. 
+\label{eq:AR1-ch:z0main}
+\end{align}
+Extending this idealised scenario, quasi-adiabatic relaxation models consider the relaxation ratio $r_f/r_i$ as a function of the mass ratio $M_i/M_f$.
+\begin{align}
+\frac{r_f}{r_i} &= 1 + \chi \left( \frac{M_i(r_i)}{M_f(r_f)} \right) 
+\label{eq:qAR1-ch:z0main}
+\end{align}
+For example, the baryonification procedures in \cite{2015JCAP...12..049S,2021MNRAS.503.4147P} include dark matter response as a quasi-adiabatic relaxation with
+\be
+\chi(y) = q\,(y-1)\,.
+\label{eq:chi-linear-ch:z0main}
+\ee
+
+\subsubsection{The relaxation relation} %
+\label{sec:methods-relx-reln-ch:z0main}
+Our focus in this work is to characterise the relaxation relation \eqn{eq:qAR1-ch:z0main} as a function of halo and galaxy properties over a wide dynamic range; e.g, we would like to ask whether \eqn{eq:chi-linear-ch:z0main} is a good description of this relation.
+To study this, we must extract this relation for individual haloes in hydrodynamical simulations.
+For a given hydrodynamical halo in the matched catalog, we can obtain this relaxation relation by considering its matched halo in the gravity-only run to represent its unrelaxed state. 
+We find it convenient to work with $r_f$ as a control variable. In this case, the values of $r_i$, $M_i(r_i)$ and $M_f(r_f)$ must be obtained from the matched halo pair, which can be done as follows.
+
+For a dark matter shell at radius $r_f$ in the relaxed halo enclosing a dark matter mass of $M_f^d(r_f)$, its unrelaxed radius $r_i$ can be obtained by applying \eqn{eq:DMmass1-ch:z0main} and inverting the mass profile $M_i^d(r)=(1-f_b) M_i(r)$ of the gravity-only halo, where $f_b$ is the cosmic baryon fraction, to obtain 
+\begin{align}
+\label{eq:inv-mass-ch:z0main}
+r_i = {M_i}^{-1} \left( \frac{M_f^d(r_f)}{(1-f_b)} \right)\,.
+\end{align}
+This is because each `particle' in the gravity-only halo consists of collisionless baryons and dark matter in precisely the proportion $f_{b}$. 
+The value of $M_i(r_i)$ then follows from direct mass counting in the unrelaxed (i.e., gravity-only) halo in radius $r_i$, and the value of $M_f(r_f)$ follows from direct mass counting in the relaxed (i.e. hydrodynamical) halo in radius $r_f$, as described in \secref{subsec:massprofiles-ch:z0main}. In practice, we first obtain the unrelaxed mass profile $M_i(r_i)$ for a wide range of radii in finely spaced bins, in order to then compute the inverse in \eqn{eq:inv-mass-ch:z0main} by interpolation.
+
+Thus, for any shell defined by its relaxed radius $r_f$, we can obtain both the relaxation ratio $r_f/r_i$ and the mass ratio $M_i/M_f$ from its unrelaxed radius computed from mass profiles. Hence we can obtain the relaxation relation by placing multiple concentric shells around the halo all the way to its virial radius $R_{\rm{vir}}$.
+In Appendix \ref{appen:Mock-ch:z0main}, we have tested this algorithm on mock halo + galaxy systems generated with fixed known relaxation relations.
+
+
 % \section{Techniques}
 % \label{sec:methods}
 \section{Haloes with relaxation}
