@@ -3,7 +3,7 @@
 %% ---------------------------------------------------------------- 
 
 % Set up the document
-\documentclass[a4paper, 11pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
+\documentclass[a4paper, 12pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
 \graphicspath{Figures/}  % Location of the graphics files (set up for graphics to be in PDF format)
 
 % Include any extra LaTeX packages required
@@ -26,6 +26,8 @@
 
 \maketitle
 %% ----------------------------------------------------------------
+
+\setstretch{1.5}
 
 \section*{Synopsis}
 A detailed understanding of the formation and evolution of galaxies and their interaction with their environment is a pressing open problem. 
@@ -62,7 +64,29 @@ Understanding the nature of this response (or `baryonic backreaction') is critic
 The goal of the present work is to perform a systematic, statistical study of this dark matter response in high-resolution hydrodynamical simulations incorporating realistic feedback and quantify it using simple analytical forms, including the sensitivity of this response to halo-centric distance and halo and galaxy properties. To this end, we use the publicly available suites of simulations from the IllustrisTNG and EAGLE projects. 
 
 
-\section{Publications}
+\section*{Outline}
+
+In the first chapter of this thesis, we introduce dark matter haloes and the usual methods employed in studying them. This primarily involves simulations of cosmological volumes such as N-body simulations for gravity computation and hydrodynamical simulations for gas. We then define the primary objective of this thesis, along with its relevance to the broader context.
+
+In the second chapter, the techniques we employed in studying the halo relaxation 
+
+
+
+In the third chapter, we present our findings from state-of-the-art galaxy formation simulations, IllustrisTNG and EAGLE simulations, characterizing the dark matter response in a wide variety of haloes. We present novel fitting functions that accurately describe this relaxation response, revealing an additional dependence on halo-centric distance and highlighting the significant role of star formation-related feedback processes. 
+
+In the fourth chapter, we explore the role of astrophysical modeling in producing the halo response at different epochs in simulations. We find the gas equation of state to have significant influence in EAGLE haloes, and we also quantify the strong influence of AGN and stellar feedback in CAMELS simulations. Our results also show a more universal relaxation response at an earlier epoch $(z=1)$ compared to $z=0$. These findings are applicable to semi-analytical tools for modeling galactic and large-scale structures. 
+
+In the fifth chapter, we uncover the causal connections between star formation activities, feedback processes, and halo relaxation. Through time-series analyses we provide new insights into the immediate and delayed effects across different halo regions. Our estimates of the time-scales can potentially improve the description of halo profiles in existing baryonification schemes and semi-analytical galaxy formation models. 
+
+In the sixth chapter, we develop a spherical self-similar model for galaxy formation that simultaneously and self-consistently solves for the evolution of gas and dark matter, producing pseudo galaxy disks within the halo. This complementary approach offers a framework to rapidly explore the sensitivity of halo response to various astrophysical processes. We find quasi-adiabatic halo relaxation similar to full non-linear simulations, with similarly strong trends over the gas equation of state.
+
+\section*{Publications}
+
+
+
+
+\bibliography{Bibliography,references-AdiabRelxn1,references-SelfSimRelxn}
+
 
 \end{document}  % The End
 %% ----------------------------------------------------------------
