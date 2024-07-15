@@ -176,6 +176,23 @@
 \addresses   {}
 \subject     {}
 \keywords    {}
+% \newcommand{\descripline}[1]{\def\@mydescripline{#1}}
+
+% % Define the boolean
+% \newif\if@synopsis
+% \@synopsisfalse % Initialize to false
+
+% % mythesis.cls
+% \newcommand{\setsynopsis}[1]{%
+%     \ifthenelse{\equal{#1}{true}}{%
+%         \@synopsistrue
+%         \decripline{Synopsis of the thesis submitted for the degree of }
+%     }{%
+%         \@synopsisfalse
+%     }%
+% }
+
+
 \renewcommand\maketitle{
   \btypeout{Title Page}
   \hypersetup{pdftitle={\@title}}
@@ -194,12 +211,15 @@
       \setlength{\parskip}{0pt}
       {\Large\textbf{\DEPTNAME}\par}
       \vfill
-      {\includegraphics[]{Figures/IUCAA-logo.png}}
+      \bigskip
+      {\includegraphics[height=4cm]{Figures/IUCAA-logo.png}}
       \vfill
+      \bigskip
       {\huge \bf \@title \par}
       \vfill
-      {\large A thesis submitted in partial fulfillment for the \par}
-      {\large degree of Doctor of Philosophy \par}
+      \bigskip
+      {\large Synopsis of the thesis submitted for the degree of \par}
+      {\large \textbf{Doctor of Philosophy} (in Physics) \par}
       {\LARGE by \par}
       \smallskip
       {\LARGE \authornames \par}
@@ -207,12 +227,14 @@
       {\large supervised by \par}
       {\Large \facname \par}
       \bigskip
-      {\large in the \par}
-      {\large \deptname \par}
+      % {\large in the \par}
+      % {\large \deptname \par}
       {\large to \par}
       {\large \univname \par}
       \bigskip
+      {\includegraphics[height=3cm]{Figures/JNU_logo.jpg}}
       \bigskip
+      \vfill
       {\Large \@date \par}
       \bigskip
     \end{center}

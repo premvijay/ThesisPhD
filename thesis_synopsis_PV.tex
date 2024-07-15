@@ -10,7 +10,61 @@
 \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
 \usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
 \usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
-\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+\usepackage[utf8]{inputenc}
+\usepackage{aas_macros}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[normalem]{ulem}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{soul}
+\hypersetup{colorlinks=true,allcolors=teal}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+
+% \hypersetup{colorlinks=true,allcolors=teal}
+
+\newcommand{\Hi}{\textsc{Hi}}
+\newcommand{\mHi}{\ensuremath{m_{\Hi}}}
+
+\newcommand{\p}{\ensuremath{\partial}}
+
+
+\newcommand{\Msun}{\ensuremath{M_{\odot}}}
+\newcommand{\Mh}{\ensuremath{h^{-1}M_{\odot}}}
+\newcommand{\Mhsq}{\ensuremath{h^{-2}M_{\odot}}}
+\newcommand{\Mpch}{\ensuremath{h^{-1}{\rm Mpc}}}
+\newcommand{\kpch}{\ensuremath{h^{-1}{\rm kpc}}}
+\newcommand{\kms}{\ensuremath{{\rm km\,s}^{-1}}}
+\newcommand{\msq}{\ensuremath{{\rm \,m\,s}^{-2}}}
+
+\newcommand{\avg}[1]{\ensuremath{\left\langle \,#1\, \right\rangle}}
+\newcommand{\e}[1]{\ensuremath{{\rm e}^{#1}}}
+
+\newcommand{\der}{\ensuremath{{\rm d}}}
+\newcommand{\Der}{\ensuremath{{\rm D}}}
+\newcommand{\dir}{\ensuremath{\delta_{\rm D}}}
+
+\newcommand{\erfc}[1]{\ensuremath{{\rm erfc}\left(#1\right)}}
+\newcommand{\erf}[1]{\ensuremath{{\rm erf}\left(#1\right)}}
+
+\newcommand{\eqn}[1]{equation~\eqref{#1}}
+\newcommand{\eqns}[1]{equations~\eqref{#1}}
+\newcommand{\eqnref}[1]{equation~\eqref{#1}}
+\newcommand{\eqnsref}[1]{equations~\eqref{#1}}
+\newcommand{\ph}[1]{\phantom{#1}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\appnref}[1]{Appendix ~\ref{#1}}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\Cal}[1]{\ensuremath{\mathcal{#1}}}
+
+\newcommand{\AP}[1]{\emph{\color{blue}[AP: #1]}}
+\newcommand{\PV}[1]{\emph{\color{violet}[PV: #1]}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
 
 %% ----------------------------------------------------------------
 \begin{document}
@@ -30,8 +84,9 @@
 \setstretch{1.5}
 
 \section*{Synopsis}
+Dark matter haloes are the fundamental building blocks of the large scale structure in the Lambda-cold dark matter ($\Lambda$CDM) picture of the Universe. Made of non-luminous matter, they make the gravitational wells for the
 A detailed understanding of the formation and evolution of galaxies and their interaction with their environment is a pressing open problem. 
-In the Lambda-cold dark matter ($\Lambda$CDM) picture of the Universe, the primary environment of any galaxy is provided by a `halo' of dark matter surrounding it \citep[e.g.,][]{wr78}. 
+In the , the primary environment of any galaxy is provided by a `halo' of dark matter surrounding it \citep[e.g.,][]{wr78}. 
 Therefore, understanding the dynamical behaviour of these dark haloes during the evolution of the galaxies they host is a key ingredient needed for building a complete picture of galaxy evolution.
 
 Dark haloes form through the gravitational collapse of overdensities that developed from tiny fluctuations in the initial distribution of matter (e.g., \citealp[][]{1974ApJ...187..425P}; for a review see \citealp{2002PhR...372....1C}). 
@@ -84,7 +139,7 @@ In the sixth chapter, we develop a spherical self-similar model for galaxy forma
 
 
 
-
+\bibliographystyle{unsrtnat}
 \bibliography{Bibliography,references-AdiabRelxn1,references-SelfSimRelxn}
 
 
