@@ -80,6 +80,13 @@
 \keywords   {}
 
 \maketitle
+\setstretch{1.5}  % It is better to have smaller font and larger line spacing than the other way round
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{}  % Clears all page headers and footers
+\rhead{\thepage}  % Sets the right side header to show the page number
+\lhead{}  % Clears the left side page header
+
 %% ----------------------------------------------------------------
 
 \setstretch{1.5}
@@ -91,7 +98,7 @@
 
 Dark matter is inferred exclusively through its gravitational effects to make up over 80\% of all the matter in the Lambda-cold dark matter ($\Lambda$CDM) model of the Universe. Tiny fluctuations in the initial density field cause them to clump into gravitationally collapsed structures called haloes \citep[][]{1974ApJ...187..425P,2002PhR...372....1C}. These haloes are fundamental to understanding cosmology as they form the building blocks of the large-scale structure and also reveal insights into the particle physics of dark matter. Dark matter haloes have been extensively studied in gravity-only scenarios both in isolated systems and over cosmological volumes. For example, the haloes identified in cosmological $N$-body simulations on $\Lambda$CDM cosmology are known to be triaxial \citep[][]{1988ApJ...327..507F}, and their sphericalised mass profiles are found to have a universal form \citep{1996ApJ...462..563N,1997ApJ...490..493N,2010MNRAS.402...21N}.
 
-Dark matter haloes also provide the primary environment for the formation and evolution of galaxies \citep[e.g.,][]{wr78}, making them crucial for understanding astrophysical processes. Gas, through various non-gravitational baryonic interactions, can cool and condense towards the halo center \citep{1988MNRAS.234..459S,1998MNRAS.295..319M}, eventually producing stars and other astrophysical bodies. However, the complexity and incomplete knowledge of these baryonic processes, along with their large dynamic range, make it impossible to study galaxy formation directly from first principles using cosmological simulations.
+Dark matter haloes also provide the primary environment for the formation and evolution of galaxies \citep[][]{wr78}, making them crucial for understanding astrophysical processes. Gas, through various non-gravitational baryonic interactions, can cool and condense towards the halo center \citep{1988MNRAS.234..459S,1998MNRAS.295..319M}, eventually producing stars and other astrophysical bodies. However, the complexity and incomplete knowledge of these baryonic processes, along with their large dynamic range, make it impossible to study galaxy formation directly from first principles using cosmological simulations.
 
 One approach to studying galaxy formation is to use semi-analytic techniques, modeling its formation within the halo based on properties known from gravity-only simulations. These semi-analytic models have various free parameters that need to be constrained typically by observations \citep{2015ARA&A..53...51S}. The formation of galaxies driven by the baryonic interactions within these haloes also affect the spatial distribution of dark matter through gravitational coupling. This response of a halo's dark matter content to the baryons it hosts must be accounted for to understand the coupled evolution of haloes and galaxies.
 
@@ -219,21 +226,24 @@ Overall, this chapter underscores the potential of self-similar models in advanc
 
 We conclude this thesis with a brief summary of the key findings and their applications. We also discuss future directions for this work in this chapter.
 
+\clearpage
 \section*{Organization of the Thesis}
 
-In the first chapter of this thesis, we review the background material and define the primary objectives, along with their relevance to the broader context.
+\begin{itemize}
+    \item In the first chapter of this thesis, we review the background material and define the primary objectives, along with their relevance to the broader context.
+    
+    \item In the second chapter, we demonstrate the specific techniques we employed in studying the simulated response of dark matter haloes to galaxy formation and evolution within simulations of cosmological volumes.
+    
+    \item In the third chapter, we present our findings from state-of-the-art galaxy formation simulations, IllustrisTNG and EAGLE, characterizing the dark matter response in a wide variety of haloes at present epoch. We introduce novel fitting functions that accurately describe this relaxation response, revealing an additional dependence on halo-centric distance and highlighting the significant role of star formation-related feedback processes.
+    
+    \item In the fourth chapter, we explore the role of astrophysical modeling in producing the halo response at different epochs in simulations. We find the gas equation of state to have significant influence in EAGLE haloes, and we also quantify the strong influence of AGN and stellar feedback in CAMELS simulations. Our results show a more universal relaxation response at an earlier epoch ($z=1$) compared to $z=0$. These findings are applicable to semi-analytical tools for modeling galactic and large-scale structures.
+    
+    \item In the fifth chapter, we uncover the causal connections between star formation activities, feedback processes, and halo relaxation. Through time-series analyses, we provide new insights into the immediate and delayed effects across different halo regions. Our estimates of the timescales can potentially improve the description of halo profiles in existing baryonification schemes and semi-analytical galaxy formation models.
 
-In the second chapter, we demonstrate the specific techniques we employed in studying the simulated response of dark matter haloes to galaxy formation and evolution within simulations of cosmological volumes.
+    \item In the sixth chapter, we develop a spherical self-similar model for galaxy formation that simultaneously and self-consistently solves for the evolution of gas and dark matter, producing pseudo galaxy disks within the halo. This complementary approach offers a framework to rapidly explore the sensitivity of halo response to various astrophysical processes. We find quasi-adiabatic halo relaxation similar to full non-linear simulations, with similarly strong trends related to the gas equation of state.
 
-In the third chapter, we present our findings from state-of-the-art galaxy formation simulations, IllustrisTNG and EAGLE, characterizing the dark matter response in a wide variety of haloes at present epoch. We introduce novel fitting functions that accurately describe this relaxation response, revealing an additional dependence on halo-centric distance and highlighting the significant role of star formation-related feedback processes.
-
-In the fourth chapter, we explore the role of astrophysical modeling in producing the halo response at different epochs in simulations. We find the gas equation of state to have significant influence in EAGLE haloes, and we also quantify the strong influence of AGN and stellar feedback in CAMELS simulations. Our results show a more universal relaxation response at an earlier epoch ($z=1$) compared to $z=0$. These findings are applicable to semi-analytical tools for modeling galactic and large-scale structures.
-
-In the fifth chapter, we uncover the causal connections between star formation activities, feedback processes, and halo relaxation. Through time-series analyses, we provide new insights into the immediate and delayed effects across different halo regions. Our estimates of the timescales can potentially improve the description of halo profiles in existing baryonification schemes and semi-analytical galaxy formation models.
-
-In the sixth chapter, we develop a spherical self-similar model for galaxy formation that simultaneously and self-consistently solves for the evolution of gas and dark matter, producing pseudo galaxy disks within the halo. This complementary approach offers a framework to rapidly explore the sensitivity of halo response to various astrophysical processes. We find quasi-adiabatic halo relaxation similar to full non-linear simulations, with similarly strong trends related to the gas equation of state.
-
-In the seventh chapter, we summarize the key findings of this thesis and discuss the future outlook.
+    \item In the seventh chapter, we summarize the key findings of this thesis and discuss the future outlook.
+\end{itemize}
 
 % \section*{Publications}
 \section*{Publications included}
