@@ -212,7 +212,7 @@
       {\Large\textbf{\DEPTNAME}\par}
       \vfill
       \bigskip
-      {\includegraphics[height=4cm]{Figures/IUCAA-logo.png}}
+      {\includegraphics[height=3cm]{Figures/IUCAA-logo.png}}
       \vfill
       \bigskip
       {\huge \bf \@title \par}
@@ -232,7 +232,7 @@
       {\large to \par}
       {\large \univname \par}
       \bigskip
-      {\includegraphics[height=3cm]{Figures/JNU_logo.jpg}}
+      {\includegraphics[height=2.5cm]{Figures/JNU_logo.jpg}}
       \bigskip
       \vfill
       {\Large \@date \par}

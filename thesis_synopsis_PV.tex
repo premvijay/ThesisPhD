@@ -24,6 +24,7 @@
 
 % \hypersetup{colorlinks=true,allcolors=teal}
 
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
 \newcommand{\Hi}{\textsc{Hi}}
 \newcommand{\mHi}{\ensuremath{m_{\Hi}}}
 
@@ -86,7 +87,7 @@
 
 \chapter*{Synopsis}
 \section*{Background}
-Dark matter is inferred exclusively through its gravitational effects to make up over 80\% of all the matter in the Lambda-cold dark matter ($\Lambda$CDM) picture of the Universe. Tiny fluctuations in the initial density field causes them to clump into gravitationally collapsed structures called haloes (e.g., \citealp[][]{1974ApJ...187..425P}; for a review see \citealp{2002PhR...372....1C}). They contain crucial information about the cosmology as they form the fundamental building blocks of the large scale structure, and also the particle physics of the dark matter. The dark matter haloes have been extensively studied in gravity-only scenarios both in isolated systems and over cosmological volumes. For example, the haloes identified in cosmological $N$-body simulations on $\Lambda$CDM cosmology, are known to be triaxial \citep[][]{1988ApJ...327..507F}, and their sphericalised mass profiles are found to have a universal form (\citealp{1996ApJ...462..563N,1997ApJ...490..493N}, hereafter, NFW; see also \citealp{2010MNRAS.402...21N}).
+Dark matter is inferred exclusively through its gravitational effects to make up over 80\% of all the matter in the Lambda-cold dark matter ($\Lambda$CDM) picture of the Universe. Tiny fluctuations in the initial density field causes them to clump into gravitationally collapsed structures called haloes \citep[][]{1974ApJ...187..425P,2002PhR...372....1C}. They contain crucial information about the cosmology as they form the fundamental building blocks of the large scale structure, and also the particle physics of the dark matter. The dark matter haloes have been extensively studied in gravity-only scenarios both in isolated systems and over cosmological volumes. For example, the haloes identified in cosmological $N$-body simulations on $\Lambda$CDM cosmology, are known to be triaxial \citep[][]{1988ApJ...327..507F}, and their sphericalised mass profiles are found to have a universal form \citep{1996ApJ...462..563N,1997ApJ...490..493N,2010MNRAS.402...21N}.
 
 The dark matter haloes also provide the primary environment for the formation and evolution of the galaxies \citep[e.g.,][]{wr78} and hence a key ingredient in understanding the astrophysics of galaxies. In order to form galaxies, we need gas with their various non-gravitational baryonic interactions that can cool and condense towards the centre \citep{1988MNRAS.234..459S,1998MNRAS.295..319M}, eventually producing stars and other astrophysical bodies. However, the lack of complete knowledge and the complexity of those baryonic processes, along with their large dynamic range make it impossible to study the formation of galaxies directly from first principles using cosmological simulations. 
 
@@ -105,20 +106,25 @@ In this thesis, we study the interplay of the galaxy formation and the dark matt
 
 
 \section*{Overview}
-In chapter 1, we introduce the background material and the primary objectives of the thesis along with a review of the existing knowledge and relevance of this work in the broader context of the ongoing research in physics.
+\subsection*{Chapter 1}
+Here we introduce the background material and the primary objectives of the thesis along with a review of the existing knowledge and relevance of this work in the broader context of the ongoing research in physics.
 
-In chapter 2, we describe the simulation data and the techniques that are primarily employed in this thesis. Currently, the most robust technique to understand the consequences of gas assembly and galaxy formation on dark matter structure is the use of high-resolution cosmological hydrodynamical (zoom) simulations, using `sub-grid' recipes for modelling very small-scale astrophysics such as feedback from stellar/supernovae activity or the effects of active galactic nuclei (AGN). In this thesis, we mainly use the publicly available data from such cosmological simulations of galaxies that were performed as part of large collaborative projects namely IllustrisTNG\cite{2019ComAC...6....2N}, EAGLE\cite{2015MNRAS.446..521S} and CAMELS\cite{CAMELS_presentation,CAMELS_DR1}. A brief description of those simulations and the identification of halo objects in their respective cosmological volumes is provided in chapter 2, focusing on the details relevent in this thesis.
+\subsection*{Chapter 2}
+We describe the simulation data and the techniques that are primarily employed in this thesis. Currently, the most robust technique to understand the consequences of gas assembly and galaxy formation on dark matter structure is the use of high-resolution cosmological hydrodynamical (zoom) simulations, using `sub-grid' recipes for modelling very small-scale astrophysics such as feedback from stellar/supernovae activity or the effects of active galactic nuclei (AGN). In this thesis, we mainly use the publicly available data from such cosmological simulations of galaxies that were performed as part of large collaborative projects namely IllustrisTNG\cite{2019ComAC...6....2N}, EAGLE\cite{2015MNRAS.446..521S} and CAMELS\cite{CAMELS_presentation,CAMELS_DR1}. A brief description of those simulations and the identification of halo objects in their respective cosmological volumes is provided in this chapter, focusing on the details relevant in this thesis.
 
 In the same chapter, we develop a matching algorithm to assign each of the haloes in the full hydrodynamic simulations with a matched `partner' halo in a collisionless, gravity-only simulation performed using the same initial random fluctuations. We also demonstrate its robustness since a comparison of those hydrodynamically simulated haloes against their partner haloes is key to the investigation of the simulated backreaction of the galaxies on the dark matter haloes. 
 
 Early work have modelled the halo response using adiabatic invariants within individual haloes
 \citep[][]{osti6457593,1984MNRAS.211..753B,1986ApJ...301...27B,1987ApJ...318...15R}. 
-Using simplifying assumptions such as spherical symmetry, no shell crossing, angular momentum conservation with circular orbits for dark matter particles, a simple formula has been derived to quantify the \emph{adiabatic relaxation} of the radial distribution of the dark matter in terms of the radial distribution of the baryons (we discuss this in detail later). This idealized model of the adiabatic relaxation \citep[][]{1986ApJ...301...27B} was found to be an inaccurate description of the response in a variety of simulations \citep[see, e.g.,][]{2004ApJ...616...16G,2006PhRvD..74l3522G,2010MNRAS.402..776P,2010MNRAS.406..922T,2010MNRAS.405.2161D,2010MNRAS.407..435A,2011MNRAS.414..195T,2016MNRAS.461.2658D,2019A&A...622A.197A,2022MNRAS.511.3910F}. This has led to the development of various models that are direct extensions of this idealised model with additional parameters constrained by the simulated response \citet{2010MNRAS.407..435A,2004ApJ...616...16G,2006PhRvD..74l3522G,2010MNRAS.405.2161D}.
+Using simplifying assumptions such as spherical symmetry, no shell crossing, angular momentum conservation with circular orbits for dark matter particles, a simple formula has been derived to quantify the \emph{adiabatic relaxation} of the radial distribution of the dark matter in terms of the radial distribution of the baryons (we discuss this in detail later). This idealized model of the adiabatic relaxation \citep[][]{1986ApJ...301...27B} was found to be an inaccurate description of the response in a variety of simulations \citep[see, e.g.,][]{2004ApJ...616...16G,2006PhRvD..74l3522G,2010MNRAS.402..776P,2010MNRAS.406..922T,2010MNRAS.405.2161D,2010MNRAS.407..435A,2011MNRAS.414..195T,2016MNRAS.461.2658D,2019A&A...622A.197A,2022MNRAS.511.3910F}. This has led to the development of various models that are direct extensions of the idealised model with additional parameters constrained by the simulated response \citep{2010MNRAS.407..435A,2004ApJ...616...16G,2006PhRvD..74l3522G,2010MNRAS.405.2161D}.
 
-We characterize the halo response primarily within this quasi-adaibatic relaxation framework, primarily through the relation between the following two quantities: relaxation ratio quantifying the changes in sphericalised mass profiles of the dark matter and baryons respectively. We conclude the chapter 2, with a description and demonstration of our techniques employed in computing these quantities in simulated pairs of haloes.
+We characterize the halo response within this quasi-adaibatic relaxation framework, primarily through the relation between relaxation ratios and enclosed mass ratios, that quantify the changes in sphericalised mass profiles of the dark matter and baryons respectively. We conclude this chapter, with a description and demonstration of our techniques employed in computing these quantities in simulated pairs of haloes. 
 
 
 
+\subsection*{Chapter 3}
+
+In this chapter we perform a systematic, statistical study of the dark matter response to galaxies in high-resolution hydrodynamical simulations incorporating realistic feedback and quantify it using simple analytical forms, including the sensitivity of this response to halo-centric distance and halo and galaxy properties. To this end, we use the publicly available suites of simulations from the IllustrisTNG and EAGLE projects. 
 
 
 Physically, one expects that the overall response of the halo is mediated by a combination of different astrophysical processes that occur in the galaxy. Feedback processes are known to reduce the contraction of the halo significantly; e.g.,
@@ -130,17 +136,22 @@ In massive haloes hosting galaxy groups or clusters, while the formation of powe
 it can still significantly reduce the adiabatic contraction of the halo \citep[][]{2011MNRAS.414..195T}.
 Moreover, the fluctuation in gravitational potential due to such feedback can expel the dark matter from the inner halo producing inner cores \citep[][]{2012MNRAS.422.3081M}.
 
-Different aspects of the halo response, such as the change in its mass profile, shape, phase space distribution and substructure population, have been explored to date in a variety of hydrodynamical simulations \citep[see, e.g.,][]{2004ApJ...611L..73K,2008ApJ...681.1076D,2014MNRAS.441.2986D,2015MNRAS.451.1247S,2017MNRAS.466.3876Z,2017MNRAS.472.4343C,2019MNRAS.484..476C,2021arXiv210900012C,2021MNRAS.501.5679C,2020MNRAS.494.4291C,freundlich+20,riggs+22}.
-Understanding the nature of this response (or `baryonic backreaction') is critical in building accurate and robust models of halo shapes and sizes, for use in interpreting the results of upcoming large-volume surveys (\citealp{2015JCAP...12..049S,2018MNRAS.480.3962C,2021MNRAS.503.3596A}; see also \citealp{velliscig+14,hwvh15,mead+15}) as well as the detailed prediction of rotation curves and related statistics \citep{2021MNRAS.507..632P,2021arXiv211200026P}.
 
-
-The goal of the present work is to perform a systematic, statistical study of this dark matter response in high-resolution hydrodynamical simulations incorporating realistic feedback and quantify it using simple analytical forms, including the sensitivity of this response to halo-centric distance and halo and galaxy properties. To this end, we use the publicly available suites of simulations from the IllustrisTNG and EAGLE projects. 
-
-The most realistic description of halo response or `relaxation' in the presence of baryons is provided by hydrodynamical simulations that include calibrated effects of star formation, radiative cooling, feedback due to stellar winds and supernovae as well as the triggering of AGN activity in super-massive black holes and its feedback on star formation \cite{2015Schaye_EAGLE,2018TNG_Pillepich_etal}. 
 In our earlier work \cite{2023Velmani&Paranjape} we quantified this response in the IllustrisTNG \cite{2018TNG_Pillepich_etal}
 and EAGLE \cite{2015Schaye_EAGLE} %
 simulation suites by studying the mass profiles of matched pairs of halos in the hydrodynamical and gravity-only runs of the simulation, and described the response in the language of quasi-adiabatic relaxation \cite{2011TeyssierMMDM}. %
 In particular, we showed that the original quasi-adiabatic prescription accurately describes the relaxation of halos in simulations provided we include the halo-centric distance in units of the halo radius as an additional parameter. We further provided convenient fitting forms for this parametrised relaxation at $z=0$ and explored its dependence on various halo and galaxy properties such as halo concentration, stellar mass, star formation rate, etc.
+
+
+
+\subsection*{Chapter 4}
+
+\subsection*{Chapter 5}
+
+\subsection*{Chapter 6}
+
+The most realistic description of halo response or `relaxation' in the presence of baryons is provided by hydrodynamical simulations that include calibrated effects of star formation, radiative cooling, feedback due to stellar winds and supernovae as well as the triggering of AGN activity in super-massive black holes and its feedback on star formation \cite{2015Schaye_EAGLE,2018TNG_Pillepich_etal}. 
+
 
 Physically, however, the mechanisms driving this halo response are not entirely clear. In principle, this question can also be addressed using hydrodynamical simulations by systematically varying the physical prescriptions defining different processes, particularly the observationally uncertain ones associated with stellar and especially AGN feedback. This, however, is a very computationally expensive exercise requiring multiple runs of expensive simulations \cite{2015Schaye_EAGLE,2021camels_presentation}.
 We will report the results of such an exercise using the CAMELS simulation suite \cite{2022camels_data_release1} in a separate publication. In the present work, we investigate whether we can gain some physical insights into the problem of halo relaxation due to baryonic backreaction using a simplified, spherically symmetric toy model of galaxy evolution.
@@ -155,16 +166,15 @@ the main relevance to us is the fact that the inner disk radius undergoes an app
 \emph{Importantly, we self-consistently solve for the evolution of the gas and the dark matter simultaneously using a novel iterative technique.} This approach allows us to reliably estimate the relaxation of the dark matter due to baryonic backreaction in this self-similar model. The inclusion of cooling and the formation of a pseudo-disk also brings our self-similar model of galaxy formation substantially closer to the more realistic results of hydrodynamical simulations. We leave the incorporation of the formation of stars and a central black hole, and the associated stellar and AGN feedback, to future work.
 
 
-\section*{Overview of the thesis}
+\subsection*{Chapter 7}
+We conclude this thesis with a brief summary of the key findings and their applications. We also discuss the future directions to this work in this chapter.
 
 
 \section*{Organization of the thesis}
 
-In the first chapter of this thesis, we introduce dark matter haloes and the usual methods employed in studying them. This primarily involves simulations of cosmological volumes such as N-body simulations for gravity computation and hydrodynamical simulations for gas. We then define the primary objective of this thesis, along with its relevance to the broader context.
+In the first chapter of this thesis, we review the background material and then define the primary objective of this thesis, along with its relevance to the broader context.
 
-In the second chapter, the specific techniques we employed in studying the halo relaxation using the simulations is described.
-
-
+In the second chapter, we demonstrate the specific techniques we employed in studying simulated response of the dark matter halo to the galaxy formation and evolution in simulations of cosmological volumes.
 
 In the third chapter, we present our findings from state-of-the-art galaxy formation simulations, IllustrisTNG and EAGLE simulations, characterizing the dark matter response in a wide variety of haloes. We present novel fitting functions that accurately describe this relaxation response, revealing an additional dependence on halo-centric distance and highlighting the significant role of star formation-related feedback processes. 
 
@@ -174,11 +184,45 @@ In the fifth chapter, we uncover the causal connections between star formation a
 
 In the sixth chapter, we develop a spherical self-similar model for galaxy formation that simultaneously and self-consistently solves for the evolution of gas and dark matter, producing pseudo galaxy disks within the halo. This complementary approach offers a framework to rapidly explore the sensitivity of halo response to various astrophysical processes. We find quasi-adiabatic halo relaxation similar to full non-linear simulations, with similarly strong trends over the gas equation of state.
 
-\section*{Publications}
+In the seventh chapter, we summarize the key findings in this thesis and discuss the future outlook.
+
+% \section*{Publications}
+\section*{Publications included}
+
+\noindent
+1. Velmani P., Paranjape A., 2023, "The quasi-adiabatic relaxation of haloes in the IllustrisTNG and EAGLE cosmological simulations", \textit{Monthly Notices of the Royal Astronomical Society}, 
+\textbf{520}(2):2867-2886. 
+\doi{10.1093/mnras/stad297}
+\href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.2867V}{https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.2867V}
+
+\vspace{0.5cm}
+
+\noindent
+2. Velmani P., Paranjape A., 2024, "Dynamics of the response of dark matter halo to galaxy evolution in IllustrisTNG", \textit{arXiv e-prints}, 
+\href{https://ui.adsabs.harvard.edu/abs/2024arXiv240708030V}{arXiv:2407.08030}. 
+\doi{10.48550/arXiv.2407.08030}
+
+\vspace{0.5cm}
+
+\noindent
+3. Velmani P., Paranjape A., 2024, "A self-similar model of galaxy formation and dark halo relaxation", \textit{Journal of Cosmology and Astroparticle Physics}, 
+\textbf{2024}(5):080. 
+\doi{10.1088/1475-7516/2024/05/080}
+\href{https://ui.adsabs.harvard.edu/abs/2024JCAP...05..080V}{https://ui.adsabs.harvard.edu/abs/2024JCAP...05..080V}
+
+\vspace{0.5cm}
+
+\noindent
+4. Velmani P., Paranjape A., 2024, "Role of astrophysical modeling on dark matter halo relaxation response at redshifts z = 0 and z = 1", \textit{in prep.}
+
+
+% % Include the bibliography
+% \bibliographystyle{plain} % You can choose another style such as plain, abbrv, unsrt, etc.
+% \bibliography{publications} % 'publications' is the name of your .bib file without the extension
 
 
 
-\bibliographystyle{unsrtnat}
+\bibliographystyle{abntex2-num}
 \bibliography{Bibliography,references-AdiabRelxn1,references-SelfSimRelxn}
 
 
