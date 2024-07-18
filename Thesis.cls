@@ -205,7 +205,6 @@
     \let\footnoterule\relax
     \let \footnote \thanks
     \setcounter{footnote}{0}
-    \null\vfil
     \vskip 60\p@
     \begin{center}
       \setlength{\parskip}{0pt}
@@ -218,7 +217,7 @@
       {\huge \bf \@title \par}
       \vfill
       \bigskip
-      {\large Thesis submitted for the degree of \par}
+      {\large Synopsis of the thesis submitted for the degree of \par}
       {\large \textbf{Doctor of Philosophy} (in Physics) \par}
       {\LARGE by \par}
       \smallskip
@@ -227,8 +226,6 @@
       {\large supervised by \par}
       {\Large \facname \par}
       \bigskip
-      % {\large in the \par}
-      % {\large \deptname \par}
       {\large to \par}
       {\large \univname \par}
       \bigskip
@@ -240,7 +237,6 @@
     \end{center}
     \par
     \@thanks
-    \vfil\null
   \end{titlepage}
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
@@ -253,8 +249,9 @@
   \global\let\author\relax
   \global\let\date\relax
   \global\let\and\relax
-  \cleardoublepage
+  \pagestyle{plain} % Reset page style
 }
+
 \newenvironment{abstract}
 {
   \btypeout{Abstract Page}
