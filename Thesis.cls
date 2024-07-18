@@ -217,7 +217,7 @@
       {\huge \bf \@title \par}
       \vfill
       \bigskip
-      {\large Synopsis of the thesis submitted for the degree of \par}
+      {\large Thesis submitted for the degree of \par}
       {\large \textbf{Doctor of Philosophy} (in Physics) \par}
       {\LARGE by \par}
       \smallskip
