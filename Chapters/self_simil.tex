@@ -8,8 +8,6 @@
 \noindent
 The formation and evolution of galaxies and their associated dark matter halos is one of the primary astrophysical questions being currently addressed both observationally \cite{2020SDSS_Ahumadaetal_16th_data,2017Willetetal_GalxayZoo_HST,2023Harikane_etal_JWST}
 and theoretically \cite{2015SomervilleDave,2018WechslerTinker}
-
-
 Extensive theoretical work has been performed using numerical hydrodynamical simulations of both individual objects \cite{2006Dekel&Birnboim,2014Hopkins_FIRE,2015LauNagaietal,2023FIRE-2_publicrelease} as well as cosmological volumes \cite{2010Schaye_OWLS,2014Genel_Illustris,2015Schaye_EAGLE,2017Kaviraj_HorizonAGN,2018TNG_Pillepich_etal,2019Dave_SIMBA,2021camels_presentation} 
 to understand the impact of a variety of astrophysical processes involved in galaxy evolution. From a cosmological viewpoint, these `baryonic' effects are often a nuisance in parameter inference; e.g., the effects of feedback due to an active galactic nucleus (AGN) can be degenerate with the effects of a massive neutrino species or a thermally produced `warm' dark matter candidate at Fourier scales $k\sim1\,h\,{\rm Mpc}^{-1}$ (see, e.g., \cite{2019Chisari_etal_Baryfeedback,2020AricoAnguloetal_baryonifi}).
 More generally, the response of the dark matter (DM) to the presence of baryons first must be quantified and then distinguished from the observational effects of (non-standard) primordial physics. While the former problem has a long history \cite{1986Blumenthal,2004Gnesin_etal,2005SellwoodMcGaugh,2006Gustafsson_FS,2010Abadi_NFBS,2010DuffySchaye_etal,2010PedrosaTissera_etal,2010TisseraWhite_etal,2019ArtalePedrosa_etal,2022ForouharMoreno_etal,2023Velmani&Paranjape},
@@ -470,12 +468,22 @@ In the context of quasi-adiabatic relaxation, as discussed in \secref{sec:method
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[height=10cm,trim={0 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-s.pdf}
-\includegraphics[height=10cm,trim={2.2cm 0cm 0.2cm 0},clip]{plots/relx_reln_cold_vary-s.pdf}
-\includegraphics[height=10cm,trim={2.2cm 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-lamshsp.pdf}
+\includegraphics[height=9cm,trim={0 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-s.pdf}
+\includegraphics[height=9cm,trim={2.2cm 0cm 0.2cm 0},clip]{plots/relx_reln_cold_vary-s.pdf}
+\includegraphics[height=9cm,trim={2.2cm 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-lamshsp.pdf}
 \caption{Relaxation response of dark matter halo to galaxy formation: Investigating the impact of different parameters in our self-similar model. The upper panels feature a comparison of mass profiles, and the corresponding bottom panels depict the relationship between relaxation ratio and mass ratio, akin to \figref{fig:relx_reln-ch:ssr}. In the left column, the accretion rate is varied while keeping the rest of the parameters fixed at reference values. In the middle column, the accretion rate is varied specifically for the case of cold mode accretion, as illustrated in \figref{fig:gaso-cold-vary-s-ch:ssr}. In the right column, the shock location is varied as demonstrated in \figref{fig:gaso-vary-lamshsp-ch:ssr}. }
 \label{fig:relx_reln_all1-ch:ssr}
 \end{figure}
+
+% \begin{figure}[htbp]
+%     \centering
+%     % \includegraphics[height=10cm,trim={0 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-s.pdf}
+%     % \includegraphics[height=10cm,trim={2.2cm 0cm 0.2cm 0},clip]{plots/relx_reln_cold_vary-s.pdf}
+%     \includegraphics[height=10cm,trim={2.2cm 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-lamshsp.pdf}
+%     \includegraphics[height=10cm,trim={0 0cm 0.2cm 0},clip]{plots/relx_reln_shocked_vary-lamdish.pdf}
+%     \caption{Relaxation response of dark matter halo to galaxy formation: Investigating the impact of different parameters in our self-similar model. The upper panels feature a comparison of mass profiles, and the corresponding bottom panels depict the relationship between relaxation ratio and mass ratio, akin to \figref{fig:relx_reln-ch:ssr}. In the left column, the accretion rate is varied while keeping the rest of the parameters fixed at reference values. In the middle column, the accretion rate is varied specifically for the case of cold mode accretion, as illustrated in \figref{fig:gaso-cold-vary-s-ch:ssr}. In the right column, the shock location is varied as demonstrated in \figref{fig:gaso-vary-lamshsp-ch:ssr}. }
+%     \label{fig:relx_reln_all1-ch:ssr}
+% \end{figure}
 
 
 \paragraph{Role of halo and galaxy properties:}
@@ -483,9 +491,9 @@ By varying the parameters in our model, we have studied the universality of the 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[height=10cm,trim={0 0cm 0.2cm 0},clip]{plots/relx_reln_shocked_vary-lamdish.pdf}
-\includegraphics[height=10cm,trim={2.2cm 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-gam.pdf}
-\includegraphics[height=10cm,trim={2.2cm 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-cooling.pdf}
+\includegraphics[height=9cm,trim={0 0cm 0.2cm 0},clip]{plots/relx_reln_shocked_vary-lamdish.pdf}
+\includegraphics[height=9cm,trim={2.2cm 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-gam.pdf}
+\includegraphics[height=9cm,trim={2.2cm 0 0.2cm 0},clip]{plots/relx_reln_shocked_vary-cooling.pdf}
 \caption{Relaxation response of dark matter halo to galaxy formation: Investigating the impact of different parameters in our self-similar model. The upper panels feature a comparison of mass profiles, and the corresponding bottom panels depict the relationship between relaxation ratio and mass ratio, akin to \figref{fig:relx_reln-ch:ssr}. In the left column, the size of the pseudo-disk is varied, while the middle and right columns showcase variations in the gas equation of state and cooling rate, respectively, as detailed in \figref{fig:gaso-all2-ch:ssr}.}
 \label{fig:relx_reln_all2-ch:ssr}
 \end{figure}
