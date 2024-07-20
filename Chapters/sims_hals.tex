@@ -219,6 +219,60 @@ In a straightforward extension, the baryonification procedures described in \cit
 Various quasi-adiabatic models have been proposed, offering different approaches to this framework \citep{2010MNRAS.407..435A,2004ApJ...616...16G,2023Velmani&Paranjape}.
 
 
-\section{Haloes}
 
-\section{Characterizing the halo response}
+
+
+\section{Choice of matching algorithm}
+\label{sec:apndx-matching-ch:z0main}
+In this work, we studied the response of dark matter halo to galaxy by comparing the haloes in hydrodynamical simulations to their counterparts in gravity-only runs. We described the matching procedure in \secref{sec:methods-match-ch:z0main}, here we discuss some of the specific choices in that procedure.
+For this purpose, let us consider the FOF group haloes in TNG300 simulation with $\log M(\Mh)>10.5$.  There are 543588 FOF groups satisfying this criterion in the hydrodynamical run of TNG300, with each of them having more than 500 particles within their $R_{\rm vir}$ in the highest resolution run.
+Following the matching procedure described in \secref{sec:method-ch:z0main} (requiring only that the matching fraction of the hydrodynamical halo with respect to the gravity-only halo is greater than 0.5), we get a matching halo in the gravity-only run for 541594 of them, leaving out only 1994 haloes unmatched, that is a negligible 0.4\% spread across the mass range (\figref{fig:efficiency-mass-ch:z0main}).
+However, if we follow the same procedure using matching fraction between the central subhaloes instead of FOF group themselves, then we get a order of magnitude more unmatched haloes as can be seen in the \figref{fig:efficiency-mass-ch:z0main}.  
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass.pdf}
+    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown as a function of mass $M_{200c}$.}
+    \label{fig:efficiency-mass-ch:z0main}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{plots/hal_match_accuracy_hist2d.pdf}
+\caption{Histogram of matching accuracy of haloes in the FOF group matched catalogue (left) and central subhalo matched catalogue (right). The x-axis is the fraction of dark matter particles in the hydrodynamical halo that is also in the gravity-only halo.}
+\label{fig:accuracy-hist2d-ch:z0main}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass_rev.pdf}
+    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown in left panel as a function of mass $M_{200c}$ after removing asymmetrical matches (see text in appendix \ref{sec:apndx-matching-ch:z0main}.}
+    \label{fig:efficiency-mass-rev-ch:z0main}
+\end{figure}
+
+While obtaining matches for as many haloes as possible, we also have to ensure the quality of match. To check how well the haloes in each of the pairs in our catalogue are matching we look at the particle matching fraction of each halo in the pair with respect to the other as shown in \figref{fig:accuracy-hist2d-ch:z0main}. By definition the gravity-only halo in every pair has atleast 50\% of the dark matter particles of the hydrodynamical halo in that pair. But note that in FOF group matching based catalogue, for a significant number of pairs the hydrodynamical halo in the pair has less than 10\% of the gravity-only halo's particles. By visually inspecting some of those halo pairs we find that, they represent haloes with ongoing merger events. This explains the significant loss in matching efficiency when we used central subhalo matching. 
+
+In the \figref{fig:efficiency-mass-rev-ch:z0main}, matching loss as a function of halo mass is shown after removing all those pairs in which the particle matching fraction of the gravity-only halo with respect to hydrodynamical halo is less than 50\%. Since this symmetrical matching condition produces consistent matched catalogue of haloes, we apply this additional matching condition  but stick to matching whole FOF groups. With this procedure, our final matched catalogue for TNG300 contains 524841 pairs, leaving 18747 out of 543588 hydrodynamical haloes unmatched. The additional unmatched haloes primarily reside in dense environments, and we can't find match for those haloes because of the inherent issues with 3d FOF algorithm in dealing with mergers. 
+
+
+\section{Mock particles in a Galaxy-Halo system}
+\label{appen:Mock-ch:z0main}
+Here we validate our method used in extracting the relaxation relation (see \secref{sec:methods-relx-reln-ch:z0main}) using mock galaxy-halo systems.
+In this, we use Hernquist profile for the initial unrelaxed dark matter halo and similar analytical mass profiles for the baryon components \citep[see appendix of][]{2021MNRAS.507..632P}. We then get the relaxed dark matter profile using quasi-adiabatic relaxation model with different values of $q$. Mock particle data is then generated with these mass profiles for different components of hydrodynamical halo and the corresponding gravity-only halo.
+
+\begin{figure*}
+    \centering
+    (a) Mass profiles\\
+    \includegraphics[clip,trim={0.2cm 0.5cm 0.4cm 0cm}, width=0.49\linewidth]{plots/mock_stargas_N=10000-Mr}
+    \includegraphics[clip,trim={0.2cm 0.5cm 0.4cm 0cm}, width=0.49\linewidth]{plots/mock_stargas_N=100000-Mr}
+    (b) Relaxation ratio\\
+    \includegraphics[clip,trim={0.2cm 0.5cm 0.4cm 0cm}, width=0.49\linewidth]{plots/mock_stargas_N=10000-ratio}
+    \includegraphics[clip,trim={0.2cm 0.5cm 0.4cm 0cm}, width=0.49\linewidth]{plots/mock_stargas_N=100000-ratio}
+    \caption{Mock halo with Hernquist profile for unrelaxed dark matter and with the analytical baryon mass profile from \citet{2021MNRAS.507..632P} for gas and star components. The relaxed dark matter profile is modelled by quasi-adiabatic relaxation with different choices of q parameter. Haloes are sampled by \textbf{$10^4$} particles in left panel and \textbf{$10^5$} particles in the right panel.
+        (a) Mass enclosed within spherical shell as a function of the shell radius for different components. 
+        (b) Relaxation ratio as a function of the ratio of total mass enclosed. The linestyle indicate the different values for the model parameter $q$ used in generating the mock data, while the colourbar shows the final radius. While the solid lines represent the expected relaxation relation for each case, the colored markers show the computed relaxation relation from the mock particle data parametrized by the relaxed radius in units of the virial radius.}
+    \label{fig:mock-ch:z0main}
+\end{figure*}
+
+For those mock halo pairs, we compute the mass profiles and obtain the relaxation ratio as a function of the dark matter shell radius as discussed in \secref{sec:method-ch:z0main}. We then repeat this for mock halo pairs generated with different particle resolutions. We find that the computed relaxation relation shown by colored markers matches with expected relaxation relation shown in solid lines; however, the choice of radial bins is limited by the particle resolution (see \figref{fig:mock-ch:z0main}).
+% \section{Haloes}
+
+% \section{Characterizing the halo response}
