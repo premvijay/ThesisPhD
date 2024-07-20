@@ -87,7 +87,7 @@ Physically, one expects that the overall response of the halo is mediated by a c
 
 % Different aspects of the halo response, such as the change in its mass profile, shape, phase space distribution and substructure population, have been explored to date in a variety of hydrodynamical simulations \citep[see, e.g.,][]{2004ApJ...611L..73K,2008ApJ...681.1076D,2014MNRAS.441.2986D,2015MNRAS.451.1247S,2017MNRAS.466.3876Z,2017MNRAS.472.4343C,2019MNRAS.484..476C,2021arXiv210900012C,2021MNRAS.501.5679C,2020MNRAS.494.4291C,freundlich+20,riggs+22}.
 % A detailed understanding of the formation and evolution of galaxies and their interaction with their environment is a pressing open problem. 
-Understanding the nature of this response (or `baryonic backreaction') is critical in building accurate and robust models of dark matter haloes, for use in interpreting the results of upcoming large-volume surveys (\citealp{2015JCAP...12..049S,2018MNRAS.480.3962C,2021MNRAS.503.3596A}; see also \citealp{velliscig+14,hwvh15,mead+15}) as well as the detailed prediction of rotation curves and related statistics \citep{2021MNRAS.507..632P,2021arXiv211200026P}. In addition, understanding the dynamical behaviour of the dark haloes during the evolution of the galaxies they host is a key ingredient needed for building a complete picture of galaxy evolution.
+
 % The goal of this chapter is to perform a systematic, statistical study of this dark matter response in high-resolution hydrodynamical simulations incorporating realistic feedback and quantify it using simple analytical forms, including the sensitivity of this response to halo-centric distance and halo and galaxy properties. To this end, we use the publicly available suites of simulations from the IllustrisTNG and EAGLE projects. 
 
 
@@ -108,18 +108,19 @@ The self-similar model was pioneered by Fillmore and Goldreich (1984) \cite{1984
 
 Extending those works, Bertschinger (1989) \citep{1989Bertschinger} also studied self-similar cooling flows of gas, focusing on the inner regions of galaxies. In contrast, Owen et al. (1998) \citep{1998OwenWeinberg_etal} derived a set of cooling functions that guarantee self-similar evolution by ensuring that the cooling time-scale remains a constant fraction of the Hubble time in an object with a characteristic clustering mass. Abadi et al. (2000) \citep{2000Abadi_etal_SelfSimCool} studied the self-similar accretion of gas with radiative cooling in the EdS Universe.
 
-Later on, Shi (2016a) \cite{2016ShiDMLamCDM} generalised self-similar models to Lambda-cold dark matter ($\Lambda$CDM) models, focusing on the outer profile and, notably, the outermost caustic or `splashback radius' of dark matter collapse which has gained recent popularity \cite{2014DiemerKrastov,2014AdhikariDalalChamberlain,2018Changetal_DES_splashback}.
+Later on, Shi (2016a) \cite{2016ShiDMLamCDM} generalised self-similar models to $\Lambda$CDM models, focusing on the outer profile and, notably, the outermost caustic or `splashback radius' of dark matter collapse which has gained recent popularity \cite{2014DiemerKrastov,2014AdhikariDalalChamberlain,2018Changetal_DES_splashback}.
 In a complementary study, Shi (2016b) \cite{2016ShiICM} probed the self-similar accretion of shocked gas, dissecting its behavior with respect to accretion rates and revealing correlations between the shock radius of gas and the dark matter's splashback radius. In general, the self-similar assumption offers a powerful tool to simplify the problem and render it more tractable.
 
 
 
-\section{Open Problems and Research Motivation}
+% \section{Open Problems and Research Motivation}
+\section{Objectives}
 
-Despite the advances in numerical simulations, there remain significant uncertainties regarding the effects of baryonic physics on dark matter haloes. Different simulations often produce varying results, reflecting the uncertainties in modeling complex baryonic processes. Understanding the response of dark matter haloes to baryonic interactions is crucial for interpreting cosmological observations and for making accurate predictions about the Universe's evolution.
+In this thesis, we perform a comprehensive investigation of the interplay between galaxy formation and its host halo evolution, focusing on the changes in the radial distribution of dark matter in response to galaxy formation and evolution. Through state-of-the-art galaxy formation simulations, we investigate the exact nature of the relaxation response and its dynamical evolution along with its connection to various galaxy and halo properties. To complement this, we also study the relaxation response by building a more tractable self-similarly evolving systems of individual galaxies with their host haloes. This unified picture of the role of various galactic astrophysical processes in mediating the response of dark matter haloes also provides useful timescales for predicting dynamical changes in radial mass profiles caused by astrophysical effects.
 
-From a cosmological perspective, the effects of baryons are often considered nuisances in the inference of fundamental parameters. For instance, feedback from AGN can mimic the effects of other cosmological parameters, such as the presence of massive neutrinos or warm dark matter candidates, at certain scales \citep{2019Chisari_etal_Baryfeedback,2020AricoAnguloetal_baryonifi}. Distinguishing between these effects requires a detailed understanding of baryonic processes and their impact on dark matter.
+Understanding the nature of this response (or `baryonic backreaction') is critical in building accurate and robust models of dark matter haloes, for use in interpreting the results of upcoming large-volume surveys (\citealp{2015JCAP...12..049S,2018MNRAS.480.3962C,2021MNRAS.503.3596A}; see also \citealp{velliscig+14,hwvh15,mead+15}) as well as the detailed prediction of rotation curves and related statistics \citep{2021MNRAS.507..632P,2022MNRAS.517..130P}. In addition, understanding the dynamical behaviour of the dark haloes during the evolution of the galaxies they host is a key ingredient needed for building a complete picture of galaxy evolution.
 
-This thesis aims to address some of these open problems by investigating the response of dark matter to baryonic physics using state-of-the-art cosmological simulations. Specifically, it will focus on the role of baryonic astrophysical modeling in controlling halo relaxation and the evolution of haloes at early epochs. By leveraging the IllustrisTNG, EAGLE, and CAMELS simulations, this work will explore the coupled evolution of dark matter and baryons and develop a self-similar model for galaxy formation. This research will contribute to a better understanding of the interplay between dark matter and baryonic processes, providing insights that are crucial for both cosmology and astrophysics.
+From the cosmological perspective, the effects of baryons are often considered nuisances in the inference of fundamental cosmological parameters. For instance, feedback from AGN can mimic the effects of other cosmological parameters, such as the presence of massive neutrinos or warm dark matter candidates, at certain scales \citep{2019Chisari_etal_Baryfeedback,2020AricoAnguloetal_baryonifi}. Distinguishing between these effects requires a detailed understanding of baryonic processes and their impact on dark matter.
 
 
 
@@ -135,9 +136,9 @@ This thesis aims to address some of these open problems by investigating the res
 
 % \subsection{Simulations with galaxy formation}
 
-\subsection{Relaxation response of dark matter}
+% \subsection{Relaxation response of dark matter}
 
-\section{Objective}
+% \section{Objective}
 
 % \section{Quasi-adiabatic relaxation}
 
