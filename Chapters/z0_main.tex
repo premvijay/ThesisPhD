@@ -294,6 +294,35 @@ Turning to $q_1$, while we see no clear dependence of its constituent parameters
     \label{fig:demo-fit-ch:z0main}
 \end{figure}
 
+\section{Dependence on galaxy properties in the cluster scale}
+The effect of different halo and galaxy properties on the response of the dark matter is presented here for clusters. The relaxation parameters $q_0(r)$ and $q_1(r)$ is shown in \figref{fig:fit-func-rf-13514-ch:z0main} as our three parameter description fails for these cluster scale haloes (see section \ref{sec:dep-on-hal-gal-props-ch:z0main} for details). Notice that unlike low mass haloes, the relaxation in these clusters doesn't show any clear monotonic trend with the set of halo and galaxy properties explored in this chapter. Notice that the features in radial dependence of these relaxation parameters is shifted between these subsample of haloes. For example, the less concentrated haloes shows a peak in $q_{1}$ at a slightly larger halo-centric distance than the more concentrated haloes among $10^{14}$. We present these results here for completeness, and more investigations are needed especially regarding the mergers and substructure distribution to interpret these results.  
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M_T_13.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M_T_13.5.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M_T_14.pdf}
+    
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-cs_T_13.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-cs_T_13.5.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-cs_T_14.pdf}
+    
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fs1_T_13.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fs1_T_13.5.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fs1_T_14.pdf}
+    
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-ssfr1_T_13.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-ssfr1_T_13.5.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-ssfr1_T_14.pdf}
+    
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fg_T_13.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fg_T_13.5.pdf}
+    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fg_T_14.pdf}
+    
+    \caption{Similar to upper panel of \figref{fig:rf-fit-params-ch:z0main} with cluster-scale haloes further split by other properties. In top row, only halo mass dependence is shown, whereas in the next three rows, we further show the dependence on halo concentration, stellar mass fraction, specific star formation rate and gas fraction in terms of percentiles respectively.} 
+    \label{fig:fit-func-rf-13514-ch:z0main}
+\end{figure*}
+
 
 
 
@@ -320,7 +349,18 @@ As an example, we compare the relaxed profiles predicted by this procedure -- us
 For simplicity, in this analysis we ignore the dependence of the dark matter response on halo properties other than the mass;
 we use $q_0$ and $q_1$ as a function of $r_f/R_{\rm{vir}}$ as shown in the \figref{fig:rf-fit-params-ch:z0main} for each halo mass bin. In the upper panel of Fig.~\ref{fig:demo-fit-ch:z0main}, we show this estimated mass profile along with the actual mass profiles found in the IllustrisTNG simulation.
 For comparison, we also show the results of replacing the relaxation relation with simpler approximations from the literature (while still using the unrelaxed and baryonic mass profiles from the simulation as inputs in the iterative procedure).
-Our model produces significantly better estimates of the relaxed dark matter profile, especially in the inner halo we obtain an order of magnitude better accuracy in comparison to such simple models (see lower panel of Fig.~\ref{fig:demo-fit-ch:z0main}). In Appendix \ref{sec:apndx-demo-ch:z0main}, we show that even the simple three parameter model gives a reasonably good prediction of the relaxed mass profile, while also being easier to incorporate into the existing procedures that use an adiabatic relaxation model. 
+Our model produces significantly better estimates of the relaxed dark matter profile, especially in the inner halo we obtain an order of magnitude better accuracy in comparison to such simple models (see lower panel of Fig.~\ref{fig:demo-fit-ch:z0main}). Below in \secref{sec:apndx-demo-ch:z0main}, we show that even the simple three parameter model gives a reasonably good prediction of the relaxed mass profile, while also being easier to incorporate into the existing procedures that use an adiabatic relaxation model. 
+
+\section{Using the three parameter model}
+\label{sec:apndx-demo-ch:z0main}
+Here we show the relaxed mass profile predicted by our 3-parameter model \eqn{eq:q3-model-ch:z0main} for the haloes with mass, $M\leq10^{13}\Mh$. We follow a similar procedure as described above in \secref{sec:mass-prof-demo-ch:z0main}; once again we consider the response as a function of only the halo mass and ignore the dependence on other halo properties. For a given halo we obtain the values of the three parameters namely $q_0$, $q_{10}$ and $q_{11}$ by simply interpolating the fitted parameters shown in \figref{fig:3-param-mass-only-ch:z0main} as a function of mass. We find that accounting for radial dependence through a simple \eqn{eq:q3-model-ch:z0main}, gives a mass profile that is within $10\%$ of the simulation even upto $2 \%$ of virial radii (see upper left panel of \figref{fig:relxn_models_compare-ch:z0main}) and within $3 \%$ for the low mass haloes. The upper right panel of \figref{fig:relxn_models_compare-ch:z0main}, shows the corresponding profiles assuming a mass independent fixed values for the parameters $q_0\simeq-0.05$, $q_{10}\simeq1.1$ and $q_{11}\simeq0.5$. In addition to these, we also compare with mass profiles predicted by the standard adiabatic relaxation of Blumenthal et al. (1986) \citep{1986ApJ...301...27B} and few other relaxation models from Gnedin et al. (2004) \citep{2004ApJ...616...16G}, Paranjape $\&$ Sheth (2021) \citep{2021MNRAS.507..632P} and Cautun et al. (2020) \citep{2020MNRAS.494.4291C} for the IllustrisTNG haloes.
+
+\begin{figure*}
+    \centering
+    \includegraphics[width=0.85\linewidth]{plots/relxn_model_comparison.pdf}
+    \caption{Ratio of the relaxed dark matter mass profile predicted by various models to the dark matter profile found in the hydrodynamical simulation IllustrisTNG is shown by solid curves. Here the mass profiles are stacked across multiple haloes selected by their mass and the color coding follows \figref{fig:mass_bin_label-ch:z0main}. Results from our three parameter model \eqn{eq:q3-model-ch:z0main} is shown in the upper panel, while the left panel accounts for mass dependence in the parameters, the right panel assumes fixed values namely $q_0\simeq-0.05$, $q_{10}\simeq1.1$ and $q_{11}\simeq0.5$. In the rest of the panels, the corresponding ratio is shown for the mass profiles predicted by few existing models as mentioned in the appendix \ref{sec:apndx-demo-ch:z0main}. The result from this work, as shown in bottom panel of \figref{fig:demo-fit-ch:z0main} is shown in dashed curves for reference.}
+    \label{fig:relxn_models_compare-ch:z0main}
+\end{figure*}
 
 
 \subsection{Rotation curves}
@@ -378,45 +418,9 @@ Finally, building a more in-depth understanding of our results will need a physi
 
 
 
-\section{Appendix: Using the three parameter model}
-\label{sec:apndx-demo-ch:z0main}
-Here we show the relaxed mass profile predicted by our 3-parameter model \eqn{eq:q3-model-ch:z0main} for the haloes with mass, $M\leq10^{13}\Mh$. We follow a similar procedure as described in \secref{sec:mass-prof-demo-ch:z0main}; once again we consider the response as a function of only the halo mass and ignore the dependence on other halo properties. For a given halo we obtain the values of the three parameters namely $q_0$, $q_{10}$ and $q_{11}$ by simply interpolating the fitted parameters shown in \figref{fig:3-param-mass-only-ch:z0main} as a function of mass. We find that accounting for radial dependence through a simple \eqn{eq:q3-model-ch:z0main}, gives a mass profile that is within $10\%$ of the simulation even upto $2 \%$ of virial radii (see upper left panel of \figref{fig:relxn_models_compare-ch:z0main}) and within $3 \%$ for the low mass haloes. The upper right panel of \figref{fig:relxn_models_compare-ch:z0main}, shows the corresponding profiles assuming a mass independent fixed values for the parameters $q_0\simeq-0.05$, $q_{10}\simeq1.1$ and $q_{11}\simeq0.5$. In addition to these, we also compare with mass profiles predicted by the standard adiabatic relaxation of Blummenthal et al. (1986) \citep{1986ApJ...301...27B} and few other relaxation models from Gnedin et al. (2004) \citep{2004ApJ...616...16G}, Paranjape $\&$ Sheth (2021) \citep{2021MNRAS.507..632P} and Cautun et al. (2020) \citep{2020MNRAS.494.4291C} for the IllustrisTNG haloes.
-
-\begin{figure*}
-    \centering
-    \includegraphics[width=0.85\linewidth]{plots/relxn_model_comparison.pdf}
-    \caption{Ratio of the relaxed dark matter mass profile predicted by various models to the dark matter profile found in the hydrodynamical simulation IllustrisTNG is shown by solid curves. Here the mass profiles are stacked across multiple haloes selected by their mass and the color coding follows \figref{fig:mass_bin_label-ch:z0main}. Results from our three parameter model \eqn{eq:q3-model-ch:z0main} is shown in the upper panel, while the left panel accounts for mass dependence in the parameters, the right panel assumes fixed values namely $q_0\simeq-0.05$, $q_{10}\simeq1.1$ and $q_{11}\simeq0.5$. In the rest of the panels, the corresponding ratio is shown for the mass profiles predicted by few existing models as mentioned in the appendix \ref{sec:apndx-demo-ch:z0main}. The result from this work, as shown in bottom panel of \figref{fig:demo-fit-ch:z0main} is shown in dashed curves for reference.}
-    \label{fig:relxn_models_compare-ch:z0main}
-\end{figure*}
 
 
-\section{Appendix: Dependence on galaxy properties in the cluster scale}
-The effect of different halo and galaxy properties on the response of the dark matter is presented here; the relaxation parameters $q_0(r)$ and $q_1(r)$ is shown in \figref{fig:fit-func-rf-13514-ch:z0main} as our three parameter description fails for these cluster scale haloes (see section \ref{sec:dep-on-hal-gal-props-ch:z0main} for details).
 
-\begin{figure*}
-    \centering
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M_T_13.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M_T_13.5.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M_T_14.pdf}
-    
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-cs_T_13.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-cs_T_13.5.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-cs_T_14.pdf}
-    
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fs1_T_13.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fs1_T_13.5.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fs1_T_14.pdf}
-    
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-ssfr1_T_13.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-ssfr1_T_13.5.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-ssfr1_T_14.pdf}
-    
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fg_T_13.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fg_T_13.5.pdf}
-    \includegraphics[width=0.32\linewidth]{plots/fit_params_rf_M-fg_T_14.pdf}
-    
-    \caption{Similar to upper panel of \figref{fig:rf-fit-params-ch:z0main} with cluster-scale haloes further split by other properties. In top row, only halo mass dependence is shown, whereas in the next three rows, we further show the dependence on halo concentration, stellar mass fraction, specific star formation rate and gas fraction in terms of percentiles respectively.} 
-    \label{fig:fit-func-rf-13514-ch:z0main}
-\end{figure*}
+
 
 % \section{Locally linear relaxation relation}
