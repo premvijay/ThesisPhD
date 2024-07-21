@@ -1,7 +1,18 @@
 \chapter{Role of astrophysical modeling on dark matter halo relaxation response at redshifts $z=0$ and $z=1$}
 \label{chap:physvar_z01}
 
-In this chapter, we begin by exploring the relaxation response at an earlier redshift in the IllustrisTNG reference simulation. This allows us to understand how the different galactic processes occurring at earlier times affect dark matter halo relaxation. Following this, we examine variations in the baryonic prescriptions in the CAMELS and EAGLE simulations.
+% Relaxation response of the dark matter haloes to the formation and evolution galaxies 
+
+Advancements in computational cosmology have produced state-of-the-art hydrodynamical simulations of cosmological volumes with realistic galaxies (see, e.g., OWLS \citep{2010MNRAS.402.1536S}, Illustris \citep{2014MNRAS.445..175G}, FIRE \citep{2014MNRAS.445..581H}, EAGLE \citep{2015MNRAS.446..521S}, Horizon-AGN \citep[][]{2017MNRAS.467.4739K}, SIMBA \citep[][]{2019MNRAS.486.2827D}, IllustrisTNG \citep{2019ComAC...6....2N}). However, many sub-galactic astrophysical processes, such as star formation, are not resolved by these simulations. Instead, they rely on subgrid prescriptions with parameters calibrated to a set of empirical observations. Ambiguities in the modeling and the calibrated quantities have led to inconsistent results. Additionally, these simulations are computationally expensive to perform, which is why dark matter haloes have typically been studied using gravity-only simulations. Nevertheless, the impact of baryonic processes on the dark matter can be significant and must be accounted for before comparing against observations.
+
+Early studies of individual haloes modeled the response of the radial distribution of dark matter to galaxy formation as adiabatic relaxation \citep[][]{osti6457593,1984MNRAS.211..753B,1986ApJ...301...27B,1987ApJ...318...15R}. However, this idealistic model rarely predicts the dark matter distribution within haloes in hydrodynamical cosmological simulations \citep[e.g.,][]{2004ApJ...616...16G,2010MNRAS.407..435A}. Moreover, the halo response was found to vary widely across haloes and in different simulations \citep[][]{2004ApJ...616...16G,2006PhRvD..74l3522G,2010MNRAS.402..776P,2010MNRAS.406..922T,2010MNRAS.405.2161D,2010MNRAS.407..435A,2011MNRAS.414..195T,2016MNRAS.461.2658D,2019A&A...622A.197A,2022MNRAS.511.3910F,2023Velmani&Paranjape}, leading to the development of various models of the response, some of which are direct extensions of adiabatic relaxation \citep[e.g.,][]{2004ApJ...616...16G,2006PhRvD..74l3522G,2010MNRAS.407..435A}.
+
+In \chapref{chap:z0_main}, we have demonstrated that introducing an additional dependence on the halo-centric distance makes the relation between $r_f/r_i$ and $M_i/M_f$ linear across a variety of haloes in both IllustrisTNG and EAGLE simulations at the present epoch ($z=0$). Based on those results, we have presented a simple prescription for computing the relaxed dark matter mass profiles. In the first part of this chapter, we investigate if such a relaxation model can also be used at earlier redshift.
+
+Previous works have shown that feedback from various galactic processes strongly influences halo relaxation \citep{2011MNRAS.414..195T}. These effects primarily affect the offset in the relaxation relation, quantifying the excess relaxation experienced by the dark matter \citep{2023Velmani&Paranjape}. We have argued in \chapref{chap:z0_main}, that this could be the reason for the small deviations in the relaxation offset across haloes with different star formation activities. In this chapter, we systematically the role of various astrophysical processes in the galaxy, such as feedback, in mediating the relaxation response of the halo using simulations with variations in the feedback implementation.
+
+This chapter is organized as follows. In \secref{sec:res-itng-z01}, we explore the relaxation response at an earlier redshift in the IllustrisTNG reference simulation. This allows us to understand how the different galactic processes occurring at earlier times affect dark matter halo relaxation. Then in \secref{sec:res-physvar-CAMELS}, we systematically study the relaxation response as a function of the feedback related parameters in the IllustrisTNG model using the set of simulations from CAMELS as described in \secref{sec:sims-CAMELS}. 
+Following this, we investigate the role of a variety of astrophysical processes in the EAGLE physics variation simulations described in \secref{sec:sims-EAGLE} and conclude in \secref{sec:conclusion-ch:physvar}
 
 \section{Early epoch in IllustrisTNG simulations}
 \label{sec:res-itng-z01}
@@ -16,7 +27,7 @@ In this section, we systematically investigate the relaxation in the IllustrisTN
 
 For each of these four sets of halo samples, the overall relaxation relation ($r_f/r_i$ vs $M_i/M_f$) is shown in \figref{fig:fit-view-mass-indep}. We find that, for a given halo mass, relaxation is usually stronger at the earlier epoch (top left panel) compared to the present time $z=0$ (bottom right panel). In both cases, the trend in relaxation with halo mass is similar, with the strongest relaxation observed in $10^{12} \Mh$ haloes. Interestingly, cluster-scale haloes with masses of $10^{14} \Mh$ at redshift $z=1$ exhibit significant relaxation, unlike clusters of similar size at the present time.
 
-The progenitors at redshift $z=1$ of the same haloes found at $z=0$ show even stronger relaxation, especially in Milky Way-scale and larger haloes, as shown in the top right panel of \figref{fig:fit-view-mass-indep}. The relaxation follows the simple quasi-adiabatic model \eqref{eq:chi-linear} with $q=0.33$ among larger cluster-scale ($10^{14} \Mh$) haloes, while group-scale haloes are consistent with the second-order polynomial relation proposed by Abadi et al. (2010) \cite{2010MNRAS.407..435A}. In the bottom left panel, the relaxation relation is shown for all haloes within a narrow mass bin around the median mass of the progenitors of the haloes selected at $z=0$. Notice that the relaxation relation shifts further lower in Milky Way-scale haloes and smaller clusters with the inclusion of those additional haloes.
+The progenitors at redshift $z=1$ of the same haloes found at $z=0$ show even stronger relaxation, especially in Milky Way-scale and larger haloes, as shown in the top right panel of \figref{fig:fit-view-mass-indep}. The relaxation follows the simple quasi-adiabatic model \eqref{eq:chi-linear-ch:sims} with $q=0.33$ among larger cluster-scale ($10^{14} \Mh$) haloes, while group-scale haloes are consistent with the second-order polynomial relation proposed by Abadi et al. (2010) \cite{2010MNRAS.407..435A}. In the bottom left panel, the relaxation relation is shown for all haloes within a narrow mass bin around the median mass of the progenitors of the haloes selected at $z=0$. Notice that the relaxation relation shifts further lower in Milky Way-scale haloes and smaller clusters with the inclusion of those additional haloes.
 
 \begin{figure}[htbp]
 \centering
@@ -31,13 +42,13 @@ The progenitors at redshift $z=1$ of the same haloes found at $z=0$ show even st
 \includegraphics[width=0.48\linewidth]{plots/fit_view_M_T_snap049_smpl98.pdf}
 \includegraphics[width=0.48\linewidth]{plots/fit_view_M_T_snap049_smpl98_allHalsMrange.pdf}
 \includegraphics[width=0.48\linewidth]{plots/fit_view_M_T_snap098.pdf}
-\caption{The stacked relation between relaxation ratio and mass ratio as a function of halo mass in IllustrisTNG at $z=0$ \emph{(bottom right panel)} and $z=1$ \emph{(other panels)}. In the top right panel, relaxation is shown at $z=1$ for the progenitors of the haloes selected at $z=0$. In the second row, left panel, relaxation is shown at different mass bins at $z=1$, indicated by corresponding mass bins at $z=0$. Points represent stacks over fixed halo-centric distances, and solid lines represent stacks over fixed mass ratios. The color-coding follows Fig.~\ref{fig:mass_bin_label}. The quasi-adiabatic relaxation model \eqref{eq:chi-linear} with $q=0.68$ and $q=0.33$ are shown by the dot-dashed and dashed purple lines, respectively, in each panel.}
+\caption{The stacked relation between relaxation ratio and mass ratio as a function of halo mass in IllustrisTNG at $z=0$ \emph{(bottom right panel)} and $z=1$ \emph{(other panels)}. In the top right panel, relaxation is shown at $z=1$ for the progenitors of the haloes selected at $z=0$. In the second row, left panel, relaxation is shown at different mass bins at $z=1$, indicated by corresponding mass bins at $z=0$. Points represent stacks over fixed halo-centric distances, and solid lines represent stacks over fixed mass ratios. The color-coding follows Fig.~\ref{fig:mass_bin_label}. The quasi-adiabatic relaxation model \eqref{eq:chi-linear-ch:sims} with $q=0.68$ and $q=0.33$ are shown by the dot-dashed and dashed purple lines, respectively, in each panel.}
 \label{fig:fit-view-mass-indep}
 \end{figure*}
 
-In Velmani \& Paranjape (2023) \cite{2023Velmani&Paranjape}, we proposed a locally linear model of the relaxation relation as follows:
+In \chapref{chap:z0_main}, we proposed a locally linear model of the relaxation relation as follows:
 \begin{align}
-\label{eq:chi-linear-q0}
+\label{eq:chi-linear-q0-ch:physvar}
 \frac{r_f}{r_i} - 1 &= q_1(r_f) \left[ \frac{M_i(r_i)}{M_f(r_f)} - 1 \right] + q_0(r_f),.
 \end{align}
 We have tested this relation with our halo samples at $z=1$ and found it to hold reasonably well. For each halo sample, at each $r_f$, the relationship between mass ratio and relaxation ratio across all haloes is fitted by a linear curve to obtain the parameters $q_0(r_f)$ and $q_1(r_f)$. These radial profiles of the relaxation parameters are shown in \figref{fig:rf-fit-params}.
@@ -85,7 +96,7 @@ In particular, the x-intercept parameter $q_x$ is presented in the \figref{fig:c
 Due to the limited resolution of the CAMELS simulation, the y-intercept of the relation was available only in smaller number of haloes. In other haloes, the mass ratios were always above one in the resolved outer regions of the halo. Hence we ignore the y-intercept.
 
  
- We then consider wider mass bins providing a few hundreds of haloes within the small volume of the CAMELS simulation. Using the radially dependent relation analysis we have obtained the $q_0(r_f)$ and study its mean across the halo. This is presented in \figref{fig:camels-qoq1}. We find that at $z=1$, the magnitude of $q_0$ is larger with stronger AGN feedback indicated by larger $A_{\rm{AGN1}}$. However this trend is absent is totally absent in $z=0$. This could be because of a strong suppression in star formation rate at present epoch due to the stronger AGN feedback in the past.
+ We then consider wider mass bins providing a few hundreds of haloes within the small volume of the CAMELS simulation. Using the radially dependent relation analysis we have obtained the $q_0(r_f)$ and study its mean across the halo. This is presented in \figref{fig:camels-q0q1}. We find that at $z=1$, the magnitude of $q_0$ is larger with stronger AGN feedback indicated by larger $A_{\rm{AGN1}}$. However this trend is absent is totally absent in $z=0$. This could be because of a strong suppression in star formation rate at present epoch due to the stronger AGN feedback in the past.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.pdf}
@@ -160,7 +171,7 @@ Due to the significantly smaller box size, we don't get enough haloes to obtain 
 
 
 \section{Conclusion}
-\label{sec:conclusion}
+\label{sec:conclusion-ch:physvar}
 % In this work, we have studied the relaxation response of dark matter halo in simulation with variation in the baryonic astrophysics and at different epoch. 
 % \begin{itemize}
 %     \item Through IllustrisTNG simulations, we found that the relaxation is significantly different at $z=1$ from the $z=0$. This difference could not be accounted by a simple halo property such as its mass or the peak height.
