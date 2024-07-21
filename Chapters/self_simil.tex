@@ -31,7 +31,7 @@ the main relevance to us is the fact that the inner disk radius undergoes an app
 
 \emph{Importantly, we self-consistently solve for the evolution of the gas and the dark matter simultaneously using a novel iterative technique.} This approach allows us to reliably estimate the relaxation of the dark matter due to baryonic backreaction in this self-similar model. The inclusion of cooling and the formation of a pseudo-disk also brings our self-similar model of galaxy formation substantially closer to the more realistic results of hydrodynamical simulations. We leave the incorporation of the formation of stars and a central black hole, and the associated stellar and AGN feedback, to future work.
 
-The paper is organised as follows. In \secref{sec:methods-ch:ssr}, we outline the self-similar model of dark matter halo collapse and collisional gas, followed by a description of our new self-similar galaxy formation model in an EdS universe. In \secref{sec:results-ch:ssr}, we discuss the solutions to our self-similar galaxy formation model and its co-evolution with the self-similar collapse of the host dark matter halo, including the impact of variations in the free parameters of our model. We conclude in \secref{sec:conclusion-ch:ssr}.
+The paper is organised as follows. We outline the self-similar model of dark matter halo collapse and collisional gas, followed by a description of our new self-similar galaxy formation model in an EdS universe. Then, we discuss the solutions to our self-similar galaxy formation model and its co-evolution with the self-similar collapse of the host dark matter halo, including the impact of variations in the free parameters of our model. We conclude in \secref{sec:conclusion-ch:ssr}.
 
 
 
@@ -44,9 +44,9 @@ The paper is organised as follows. In \secref{sec:methods-ch:ssr}, we outline th
 
 
 
-\section{Methods}
-\label{sec:methods-ch:ssr}
-\subsection{Self-similar evolution of dark matter infall}
+% \section{Methods}
+% \label{sec:methods-ch:ssr}
+\section{Self-similar model of dark matter infall}
 \label{sec:methods-dm-ch:ssr}
 We start with an outline of the self-similar spherical collapse model of the self-gravitating dark matter halo in the EdS universe. We describe our model of galaxy-halo co-evolution in the following (sub)sections. The evolution of spherical shells with physical radius $r(t)$ under the gravitational influence of the mass enclosed is given by, 
 \begin{align}
@@ -98,7 +98,7 @@ where $H(x)$ is the Heaviside step function.
 For an initial guess of the mass profile $\mathcal{M}(\lambda)$, the differential \eqn{eq:traj_DM_selfsim-ch:ssr} is solved for the shell trajectory, which is then integrated using \eqn{eq:mass_integ_DM-ch:ssr} to obtain a corresponding mass profile. The trajectory in this updated mass profile is then solved to update the trajectory; following this iteratively we obtain converged solution for the self-similar collapse of dark matter.
 
 
-\subsection{Self-similar evolution of galaxy formation}
+\section{Self-similar model of galaxy formation}
 For spherical shells of collisional gas accreting due to self-gravity, the \eqn{eq:gas_traj_phys_accl-ch:ssr} gets an additional pressure term,
 \begin{align}
 \label{eq:gas_traj_phys_accl-ch:ssr}
@@ -137,7 +137,7 @@ The hydrodynamics of the self-similar collapse of adiabatic gas is then given by
 \end{align}
 where a prime denotes the first-order derivative of the corresponding self-similar quantity with respect to the self-similar radius $\lambda$.
 
-\subsubsection{Shock formation}%
+\subsection{Shock formation}%
 As the gas shells turn around and free fall to the centre, they are assumed to get shocked at a radius proportional to the turnaround radius of the shell turning around at that time. Such a shock maintains the self-similarity by 
 propagating outwards as the halo grows by accreting mass.
 In the self-similar gas profiles, this shock remains at a fixed radius $(\lambda_{\rm s})$, outside which the gas profiles are evolved pressurelessly starting from the turn-around radius;
@@ -163,7 +163,7 @@ Usually, this shock radius $(\lambda_{\rm s})$ is fine-tuned such that gas shell
 
 
 
-\subsubsection{Cooling of shock heated gas}%
+\subsection{Cooling of shock heated gas}%
 In this section, we outline the incorporation of gas cooling into our self-similar galaxy formation model. The hot gas within the shock is allowed to cool radiatively with a luminosity \Cal{L} per unit volume. 
 For a small patch of gas occupying volume \Cal{V}, energy conservation dictates $- \Cal{L}\Cal{V}~dt = dU + p~d\Cal{V}$; where the thermal energy for an ideal gas is expressed as $U = p \Cal{V}/(\gamma-1)$, yielding the following expression:
 \begin{align*}
@@ -198,7 +198,7 @@ Note that here, the $\Lambda_0$ can have implicit time dependence. For example w
 
 
 
-\subsubsection{Galaxy pseudo-disk formation}%
+\subsection{Galaxy pseudo-disk formation}%
 To mitigate the formation of massive black holes resulting from the accretion of cooled shells toward the center, we introduce a corrective artificial viscosity-like force term in this study. We assume this force is proportional to $vr^{-\nu_d}$, where $\nu_d>3$, so that it becomes dominant in the inner region ($r \rightarrow 0$) when shells exhibit high infall velocities. As the shells decelerate, the force diminishes, approaching zero as the velocity ($v$) tends to zero. In the context of self-similar quantities, the modified acceleration equation, accounting for this additional force term, is represented as follows:
 \begin{align}
 \label{eq:selfsim-sph_hydro_accl_disk_gen-ch:ssr}
@@ -248,7 +248,7 @@ where thermal to kinetic ratio $\mathcal{T} \equiv P / D\bar{V}^2$ and
 
 
 
-\subsection{Interplay of galaxy and dark matter halo}
+\section{Modelling the interplay of galaxy and dark matter halo}
 \label{sec:methods-interplay-ch:ssr}
 When we include both a pressureless dark matter and gas, their evolution gets coupled only by gravity which is given by the total enclosed mass $\mathcal{M}_g(\lambda)+\mathcal{M}_d(\lambda)$. The self-similar evolution of gas profiles in the presence of dark matter profile is
 \begin{align}
@@ -285,7 +285,7 @@ Similarly the evolution dark matter shells is now influenced by the total enclos
 \end{align}
 We solve this coupled evolution by an iterative procedure. Starting with dark matter only solution for the dark matter mass profile, we solve the hydrodynamical equations to obtain the gas profiles. Then we add the gas mass profile to \eqn{eq:gas-dm-dm-traj-ch:ssr} and recompute the dark matter shell trajectory and hence the correponding mass profile by integrating using \eqn{eq:mass_integ_DM-ch:ssr}. The updated dark matter mass is then used to solve for the gas profile and the iteration is continued. As we will show below, this iterative procedure converges to self-consistent profiles for dark matter and gas. By comparing the solutions of the dark matter mass profile obtained in such systems with the mass profile obtained in the absence of galaxy, we characterize the response of the halo to galaxy formation.
 
-\subsubsection{The relaxation relation}
+\subsection*{The relaxation relation}
 \label{sec:methods-relx-reln-ch:ssr}
 The influence of galaxy formation on the dark halo is often interpreted as a process of (quasi-)adiabatic relaxation, where the orbits of dark matter particles respond to the condensation of baryons \citep[][]{1986Blumenthal,2010Abadi_NFBS,2011TeyssierMMDM,2023Velmani&Paranjape}. Assuming that the dark matter halo maintains a spherical shape and avoids shell crossing as baryons condense toward the center, the extent of adiabatic relaxation for a specific dark matter shell is determined by the change in baryonic mass within that shell. Consider a shell at radius $r_i$ that encompasses a mass of \emph{dark matter} denoted as $M_i^d(r_i)$ within the unrelaxed halo. Following the relaxation process, the shell's radius changes to $r_f$. According to the definition, the dark matter mass, $M_f^d(r_f)$, enclosed at $r_f$ in the relaxed halo is simply given by
 \begin{equation}
@@ -304,7 +304,7 @@ Building upon this simplified scenario, quasi-adiabatic relaxation models delve 
 \frac{r_f}{r_i} &= 1 + \chi \left( \frac{M_i(r_i)}{M_f(r_f)} \right) .
 \label{eq:qAR-ch:ssr}
 \end{align}
-In a prior study \cite{2023Velmani&Paranjape}, we have demonstrated that this relationship exhibits a local linear behaviour in a wide range of haloes within cosmological hydrodynamical simulations incorporating state-of-the-art baryonic astrophysics. In the present work, we aim to characterize this response by comparing the mass profiles between the self-similar collapse of a self-gravitating dark matter halo and the self-similar collapse of a dark matter halo co-evolving with a self-similar galaxy-like structure through the relation between relaxation ratio 
+In the present work, we aim to characterize this response by comparing the mass profiles between the self-similar collapse of a self-gravitating dark matter halo and the self-similar collapse of a dark matter halo co-evolving with a self-similar galaxy-like structure through the relation between relaxation ratio 
 $r_f/r_i=\lambda_f/\lambda_i$ and mass ratio, $M_i/M_f=\mathcal{M}_i(\lambda_i)/\mathcal{M}_f(\lambda_f)$.
 
 
@@ -334,12 +334,12 @@ $\lambda_{\rm d}$ & radius of disk-like model galaxy & 5\% $\lambda_{\rm s}$ & 2
 \end{table}
 
 
-\section{Results}
-\label{sec:results-ch:ssr}
+% \section{Results}
+% \label{sec:results-ch:ssr}
 
 
 
-\subsection{Gas accretion onto galaxy}
+\section{ Self-similar solution to gas accretion onto galaxy}
 \label{sec:results-gaso-ch:ssr}
 In this section, we delve into the behaviour of self-similar gas accretion in our galaxy formation model, excluding the presence of dark matter. The effect of co-evolving with a self-similar dark matter halo is explored in \secref{sec:results-gas-dm-coevolve-ch:ssr}. In this particular scenario, self-gravitating gas undergoes pressureless accretion outside a self-similar shock, which generates pressure as described by \eqnref{eq:shock_jump_selfsim-ch:ssr}. The hot gas supported by this pressure inside the shock subsequently cools and accretes onto a galaxy disk-like structure, following the dynamics governed by \eqnref{eq:selfsim-sph_hydro-mat-gaso-ch:ssr}. To illustrate the overall behaviour, we will focus on a specific case using the reference parameter values outlined in Table \ref{tab:parameters-descr-ch:ssr}. The self-similar solution in this context is depicted by the orange solid curves in \figref{fig:gaso-vary-s-ch:ssr}, where the left panel illustrates the inward velocity profile characterized by $-\bar{V}$ (equation~\ref{eq:Vbar-def-ch:ssr}) and the middle panel represents the density profile.  
 
@@ -374,7 +374,7 @@ The self-similar solution in this galaxy formation model, with higher and lower 
 
 
 
-\subsubsection{Shock location}
+\subsection{Shock location}
 Previous works ignoring cooling and disk formation have used the inner boundary condition to determine the shock radius $\lambda_{\rm s}$ of the gas \cite{1985Bertschinger}. In such models, the shock is placed at a fine-tuned radius in order to absorb most but not all of the kinetic energy of the infalling gas into thermal energy so that it still reaches the center without forming a black hole. Even a crude approximation of setting post-shock velocity $V_2$ to be zero in the first shock jump \eqn{eq:shock_jump_selfsim-ch:ssr}, we expect that such a shock needs to be placed at more inner radius for faster accretion rates and softer gas equation states. Such a trend is in fact seen for the fine-tuned value of the shock radius in the self-similar collapse of adiabatic gas in the absence of any galaxy formation; in particular for gas with the equation of state $\gamma=5/3$, this shock radius is close to the splashback radius of the self-similar collapse of dark matter which is also known to become smaller with faster accretion rate \cite{2016ShiICM}. It has been found that even in full hydrodynamical simulation this shock radius is closely tied to the dark matter splashback radius \cite{2015LauNagaietal}.
 
 In our model, on the contrary, we can set the shock radius arbitrarily and still form a galaxy disk-like structure. This is demonstrated in the \figref{fig:gaso-vary-lamshsp-ch:ssr}, where the self-similar solution with different choices on the location of the shock denoted by $R_{\rm s} = \lambda_{\rm s}/ \lambda_{\rm sp}$ is shown. When the shock happens at an inner radius, it will not sufficiently slow down the gas shells; however it just accretes quickly onto the galaxy disk-like structure rather than forming a blackhole. This can be seen in the right panel of \figref{fig:gaso-vary-lamshsp-ch:ssr} with shells reaching much smaller radii but at an earlier time $\tau$ for smaller values of $R_{\rm s}$. On the other hand, when the gas shells get shocked at a larger radius, even if the shells come to a halt after the shock, cooling in our models allows the gas to continue accreting on the galaxy. As an extreme case when $R_{\rm s}=1.1$, the shells physically start expanding after crossing the shock. This is illustrated in the left panel of \figref{fig:gaso-vary-lamshsp-ch:ssr}, indicated by an inward velocity ($-\bar{V}$) going below the dotted line (corresponding to $V=0$) briefly before cooling brings it back allowing the shells to accrete further. 
@@ -413,7 +413,7 @@ A unique scenario involves maintaining the fixed disk-like structure of the gala
 
 
 
-\subsubsection{Gas properties}
+\subsection{Gas properties}
 In this section, we demonstrate the role of various gas properties such as its equation of state, cooling behavior and the viscosity-like force it experiences in our galaxy formation model by varying only one parameter at a time.
 In our model for self-similar collapse of gas, the strength of the viscosity-like term that brings the halts the shells mimicking a galaxy formation is conveniently quantified by the size of that disk-like structure $\lambda_{\rm d}$. Aligning with the usual choice in the literature \cite{2006Dekel&Birnboim}, we set this to be $5\%$ of the virial shock radius for our reference model value. By varying this parameter, we demonstrate in the top row of \figref{fig:gaso-all2-ch:ssr}, that our galaxy formation model can be extended to produce much larger and smaller galaxies too. With the smaller value of $\lambda_{\rm d}$, the gas shells accrete quicker to more inner regions producing smaller but denser galaxies. Interestingly for larger galaxies, the profiles approach the self-similar collapse of gas with neither cooloing nor galaxy formation.
 
@@ -431,14 +431,14 @@ this prevents us from solving the evolution of gas shells further in this self-s
 
 
 
-\subsection{Galaxy Halo co-evolution}
+\section{Self-similar solution to galaxy halo co-evolution}
 \label{sec:results-gas-dm-coevolve-ch:ssr}
 In this section, we 
 present the self-similar solution of gas accretion onto galaxy that is co-evolving with a self-similar collapse of dark matter halo. These solutions are obtained by following the iterative procedure as described in \secref{sec:methods-interplay-ch:ssr}. We first separately discuss the impact of the dark matter potential on the evolution of the galaxy, followed by the response of the dark matter itself to the presence of the co-evolving galaxy.
 
 
 
-\subsubsection{Effect of background dark matter halo on gas}
+\subsection{Effect of background dark matter halo on gas}
 In general, we observe that the presence of a dark matter halo tends to cause a slightly slower accretion of gas shells in most cases. This phenomenon is demonstrated by comparing the profiles of gas co-evolved with dark matter against that of gas in the absence of dark matter in the left column of \figref{fig:halo-influence-on-gas-ch:ssr} for two distinct accretion rates. To recall, for the gas-only halo, we set the total mass within turnaround to be gas mass; on the other hand in the halo with co-evolving dark matter and gas, the cosmic baryon fraction times the total mass within turnaround is considered to be the gas mass and the rest is considered the dark matter mass. Although the velocity is marginally reduced, the overall behavior remains consistent. This is evident in the mass distribution, where a slightly larger disk is portrayed by the density profile in the bottom-left panel of \figref{fig:halo-influence-on-gas-ch:ssr}. It is worth noting that this response is consistent across various cases presented in \secref{sec:results-gaso-ch:ssr}, where different model parameters were considered.
 \begin{figure}[htbp]
 \centering
@@ -454,7 +454,7 @@ Importantly, our findings suggest that this behavior is not solely attributed to
 
 
 
-\subsubsection{Relaxation of dark halo due to galaxy}
+\subsection{Relaxation of dark halo due to galaxy}
 Next, we explore the relaxation response of dark matter halo to galaxy formation. As described in \secref{sec:methods-interplay-ch:ssr}, we obtain this solution to self-similar collapse of dark matter halo co-evolving with self-similar gas accretion onto a galaxy by an iterative procedure. At each iteration, we compute the relaxation relation as described in \secref{sec:methods-relx-reln-ch:ssr}, the relation between relaxation ratio, $r_f/r_i$ and mass ratio, $M_i/M_f$. We then continued iteration until this relaxation relation satisfies our convergence criterion, that the relative change in the relaxation ratio for $10^{-2}<r_f/r_{\smallfrown}<1$ (as shown in the right panel of \figref{fig:relx_reln-ch:ssr}) is within $0.01$ for two consecutive iterations. Such converged solution for the mass profiles and the corresponding relaxation relation is shown in \figref{fig:relx_reln-ch:ssr} in our model with the reference value of the parameters. By examining the mass profile ($M_d$) of dark matter that has co-evolved with a self-similar galaxy and contrasting it with the mass profile of dark matter collapse alone ($M_{\rm DMo}$) scaled by the cosmic dark matter fraction ($f_d \equiv 1-f_b$), we observe that the dark matter halo contracts in response to the galaxy's presence. 
 
 \begin{figure}[htbp]

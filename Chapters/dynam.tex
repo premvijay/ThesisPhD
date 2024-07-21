@@ -66,9 +66,7 @@ we explore some key properties of the halo (and its central galaxy) and their ov
 % Their role in mediating the halo relaxation response is presented in \secref{sec:methods-stat}. 
 % \AP{why isn't this para in the last para of the introduction? you are anticipating all the way to section 4!}
 
-\subsection{IllustrisTNG simulations}
-\label{sec:methods-itng}
-IllustrisTNG provides hydrodynamical simulations of three different cosmological volumes namely TNG50, TNG100, and TNG300, with periodic box sizes of $35 \Mpch$, $75 \Mpch$, and $200 \Mpch$, respectively, consistent with the cosmology from Planck collaboration \citep[][]{2016A&A...594A..13P}. In each box, we utilise the highest resolution runs with dark matter mass resolution of $5.4 \times 10^5 \Msun$, $8.8 \times 10^{6} \Msun$ and $7.0 \times 10^7 \Msun$ respectively from the smallest TNG50 to largest TNG300; along with their corresponding gravity-only simulation of same volumes. Initial conditions for these cosmological boxes were constructed using the \textsc{N-GenIC} code \citep[][]{2015ascl.soft02003S} with the Zel'dovich approximation \citep[][]{1970A&A.....5...84Z} at $z = 127$. All these simulations employed the \textsc{arepo} code \citep[][]{2020ApJS..248...32W} utilizing a moving mesh approach defined by Voronoi tessellation \citep[][]{2010MNRAS.401..791S} for the hydrodynamics. These simulations incorporate a state-of-the-art subgrid prescription for the major baryonic processes such as cooling, star formation, stellar, and AGN feedback along with cosmic magnetic field \citep[][]{2017MNRAS.465.3291W,2018MNRAS.473.4077P}. In this work, we utilise data from redshift $z=0$ all the way to redshift $z=5$ for both hydrodynamical and corresponding gravity-only runs.
+ In this work, we utilise data from redshift $z=0$ all the way to redshift $z=5$ for both hydrodynamical and corresponding gravity-only runs.
 
 \subsection{Halo selection}
 \label{sec:methods-halopairsel}
@@ -96,7 +94,7 @@ In cosmological simulations, it is particles that are evolved in cosmological vo
 From this catalogue, we remove all those haloes that had a major merger during this period with a dark matter mass ratio above four. Further, we also remove those pairs of evolving haloes that are either separated by more than their virial radius or have sizes differing by more than $25\% $ at any given redshift. This leaves us with a sample of evolving matched haloes for around $50\%$ to $80\%$ of the populations of all haloes in our $z \sim 0$ catalogue. For these halo pairs, we study the relaxation by comparing the spherically averaged radial distribution of matter within their virial radii; this is described in  \secref{sec:methods-relchar}. Before that, we explore some of the key properties of these haloes in \secref{sec:hal-gal-props} that are relevant in this work.
 % \PV{Mean evolution of some halo and galaxy properties plot}
 
-\subsection{Halo and galaxy properties}
+\subsection{Astrophysical evolutionary history}
 \label{sec:hal-gal-props}
 When it comes to the role of galactic astrophysical processes in mediating the halo relaxation, feedback processes are known to play a significant role \cite{2011MNRAS.414..195T,2023Velmani&Paranjape}. To understand this, we look into the properties of the halo that quantify various galactic processes involved in producing the feedback. 
 % In this regard, we first focus on the star formation rate since newly formed massive stars are among the major sources of the feedback. These feedback processes inject metals into the surrounding gas and contribute to galactic winds. In addition to this, accretion onto AGN also produce powerful winds.
@@ -122,7 +120,7 @@ All these quantities are defined for the hydrodynamic halo of each matched group
 \label{fig:evolution-hal-gal-props}
 \end{figure}
 
-\section{Characterizing Relaxation Response}
+\section{Time evolution of the halo response}
 \label{sec:methods-relchar}
 % \subsubsection{Mass Profiles}
 The overall relaxation response of dark matter in a halo, such as an expansion or contraction in response to galaxy formation, is usually analysed through changes in the spherically averaged mass profiles. In our catalogue of matched evolving pairs of haloes, while the hydrodynamic ones with galaxies include this relaxation response, the gravity-only counterparts provide the corresponding unrelaxed dark haloes. These radial dark matter mass profiles are obtained as the cumulative sum of the mass contributed by all dark matter particles within concentric spherical shells. In the case of the gravity-only halo, we consider the cosmic dark matter fraction of the mass in each particle of the gravity-only halo to be contributing to the dark matter. Characterizing the relaxation from these profiles is done using the quasi-adiabatic relaxation framework as described below.
@@ -193,7 +191,7 @@ In addition to this model parameter $q_0$, we also define a somewhat model-agnos
 
 
 
-\section{Statistical analysis}
+\section{Statistical connections}
 \label{sec:methods-stat}
 The average evolution of the relaxation parameters shown in \figref{fig:evolution-hal-reln-offset} and other properties shown in \figref{fig:evolution-hal-gal-props} already suggest that the relaxation offset is strongest following the peak star formation period. However, we must study their evolution in individual haloes to further understand the role of different astrophysical processes. This additional information can be captured using correlations not only across haloes in the population but also over time between these quantities. In the \secref{sec:sfr-metallicity} below, we develop this methodology as we explore the connection between star formation rate and metallicity ($Z^{\star}_{\rm{O}}$) through these correlations. In the following (sub)section, we use this method to study the connection between relaxation and various galactic processes. 
 
