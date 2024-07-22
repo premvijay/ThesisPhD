@@ -89,13 +89,10 @@ The offset parameter $q_0$ shown in the lower subpanels is relatively uniform ac
 \label{sec:res-physvar-CAMELS}
 In this section, we present the role of various feedback parameters prescribed in the IllustrisTNG simulations using set of CAMELS simulations performed with the IllustrisTNG model. This includes a set of 41 hydrodynamical simulations, with one replicating the reference TNG model in the smaller cosmological volume, and 10 simulations each by varying 4 different feedback parameters as described in \secref{sec:sims-CAMELS}. To recall, this includes two supernovae feedback parameters ($A_{\mathrm{SN1}}$ and $A_{\mathrm{SN2}}$) and another two AGN feedback parameters ($A_{\mathrm{AGN1}}$ and $A_{\mathrm{AGN2}}$). 
 
-% Let us first focus on the relaxation characterised by the intercepts in the relaxation relation of individual haloes. 
-
-% \subsubsection*{Model independent relaxation offset}
 
 Due to the limited resolution and the smaller volumes of the CAMELS simulation, among all the mass bins shown in \figref{fig:mass_bin_label-z01}, we consider only $10^{11} \Mh$, $10^{11.5}$ and $10^{12} \Mh$ at both redshifts $z=0$ and $z=1$. Even in these mass bins we consider only the outer well resolved regions of the haloes. Also since the cosmological volume is smaller than even the smallest TNG50 simulation, we have only smaller sample of haloes at each of this halo mass bins. We find this sample size insufficient to estimate the radially-dependent relaxation parameters at each of this mass bin. We consider the following two approaches to alleviate this issue. 
 
-\subsection*{Intercepts in the Relaxation Relaxation}
+\subsection*{Intercepts in the Relaxation Relation}
 
 The intercepts of the relaxation relation, given by the relation between $M_i/M_f-1$ and $r_f/r_i-1$ already give interesting information about the relaxation.
 For example, the y-intercept denotes the offset in the relaxation ratio $rf/ri$ from unity for the shells having a mass ratio of unity $M_i/M_f=1$. And similarly the x-intercept denotes the offset in the mass ratio $M_i/M_f$ from unity for the shells having a relaxation ratio $rf/ri = 1$ of unity.
@@ -107,6 +104,31 @@ Due to the limited resolution of the CAMELS simulation, the outer well-resolved 
 \subsection*{Wider mass bin}
 We found that the radially-dependent relaxation parameters are usually more uniform across a wider range of halo masses. We leverage this to consider haloes in a wider mass bin from $10^{11}\Mh$ to $10^{12}\Mh$, this gives a sufficient number of haloes to obtain the radially-dependent relaxation model parameters.
 However still, the radial range is not sufficient to accurately model the radial dependence of the slope parameter $q_1(r_f)$, we only investigate the offset parameter $q_0$ defined as the mean of the $q_0(r_f)$. This parameter $q_0$ is usually negative and it is expected to be more negative when offset produced by overall feedback effects are stronger. This model-dependent offset parameter is present in \figref{fig:camels-q0q1} at both redshifts $z=0$ and $z=1$.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.pdf}
+    \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.5.pdf}
+    \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_12.pdf}
+    \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.pdf}
+    \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.5.pdf}
+    \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_12.pdf}
+    \caption[]{Relaxation offset parameter $q_x$ as a function of the baryonic astrophysical feedback parameters in haloes found in CAMELS-TNG at three different halo masses. Top: z=1, Bottom: z=0}
+    \label{fig:camels-qx0}
+    \end{figure}
+    
+    
+    
+    
+    \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q0_sn18.pdf}
+    % \includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q1_sn18.pdf}
+    \includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q0_sn33.pdf}
+    % \includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q1_sn33.pdf}
+    \caption[]{Relaxation offset parameter $q_0$ as a function of the baryonic feedback parameters in CAMELS-TNG. Left: $z=1$, Right: $z=0$.}
+    \label{fig:camels-q0q1}
+    \end{figure}
 
 \subsection*{Discussion}
 We find that among all haloes investigated, the feedback strength parameters $A_{\mathrm{SN1}}$ and $A_{\mathrm{AGN1}}$ have a strong influence on the relaxation, however, the wind speed parameters $A_{\mathrm{SN2}}$ and $A_{\mathrm{AGN2}}$ have negligible effect on the relaxation characterized by $q_x$ and $q_0$. 
@@ -120,41 +142,7 @@ We find that the AGN feedback strength has generally stronger influence on the r
 The relaxation offset in the outer region of haloes characterised by $q_x$ is always larger with the stronger implementation of AGN feedback at both \( z=0 \) and \( z=1 \). However, in the slightly inner regions, stronger AGN feedback implementation leads to a weaker relaxation offset at \( z=0 \) and a stronger offset at \( z=1 \). We interpret this as a consequence of the overall reduction in total feedback at \( z=0 \) due to the suppression of star formation caused by higher AGN feedbacks in the past. These results highlight the significance of feedback mechanisms in building a physical understanding of dark matter halo relaxation.
 
 We find that at $z=1$, the magnitude of $q_0$ is larger with stronger AGN feedback indicated by larger $A_{\rm{AGN1}}$. However this trend is absent is totally absent in $z=0$. This could be because of a strong suppression in star formation rate at present epoch due to the stronger AGN feedback in the past.
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.5.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_12.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.5.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_12.pdf}
-\caption[]{Relaxation offset parameter $q_x$ as a function of the baryonic astrophysical feedback parameters in haloes found in CAMELS-TNG at three different halo masses. Top: z=1, Bottom: z=0}
-\label{fig:camels-qx0}
-\end{figure}
 
-
-
-
-% \begin{figure}[htbp]
-% \centering
-% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qy0_sn18_11.5.pdf}
-% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qy0_sn18_12.pdf}
-% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qy0_sn18_12.5.pdf}
-% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qy0_sn33_11.5.pdf}
-% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qy0_sn33_12.pdf}
-% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qy0_sn33_12.5.pdf}
-% \caption[]{Response as a function of baryonic parameters in CAMELS-TNG. \\\hspace{\textwidth}Top: $z=1$, Bottom: $z=0$.}
-% \label{fig:camels-qy0}
-% \end{figure}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q0_sn18.pdf}
-% \includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q1_sn18.pdf}
-\includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q0_sn33.pdf}
-% \includegraphics[width=0.49\linewidth]{plots/CAMELS_I_q1_sn33.pdf}
-\caption[]{Relaxation offset parameter $q_0$ as a function of the baryonic feedback parameters in CAMELS-TNG. Left: $z=1$, Right: $z=0$.}
-\label{fig:camels-q0q1}
-\end{figure}
 
 
 
