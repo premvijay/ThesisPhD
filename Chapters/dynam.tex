@@ -221,15 +221,18 @@ When computed at distinct time steps ($\tau = m \Delta t$) for integer $m=0, \pm
 \label{eq:def-full-corr}
 \rho^s_f (\tau = m \Delta t) &= 
 \begin{cases}
-\rho^s [ ~\rm{SFR}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T-m}\}), ~Z^{\star}_{\rm{O}}(\{1 \ldots N\}, ~\{t_{1+m} \ldots t_T\}) ~]  \qquad \text{if } m \geq 0 \\
-\rho^s [ ~\rm{SFR}(\{1 \ldots N\}, ~\{t_{-m+1} \ldots t_T\}), ~Z^{\star}_{\rm{O}}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T+m}\}) ~] \qquad \text{if } m < 0
+\rho^s [ ~\rm{SFR}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T-m}\}), ~Z^{\star}_{\rm{O}}(\{1 \ldots N\}, ~\{t_{1+m} \ldots t_T\}) ~] \\
+  \hfill \qquad \text{if } m \geq 0 \\
+\rho^s [ ~\rm{SFR}(\{1 \ldots N\}, ~\{t_{-m+1} \ldots t_T\}), ~Z^{\star}_{\rm{O}}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T+m}\}) ~] \\
+ \hfill \qquad \text{if } m < 0
 \end{cases}.
 \end{align}
 This considers $(T-m) \times N$ values of both SFR and $Z^{\star}_{\rm{O}}$ at each time lag $\tau = m \Delta t$; Suppose the ranks are denoted as $R^m_{\rm{SFR}}(n,t_i)$ and $R^m_{Z^{\star}_{\rm{O}}}(n,t_i)$, then for a positive value of $m$,
-\begin{align}
-\rho^s_f (\tau = m \Delta t) &= \frac{ \sum_{i=1}^{T-m} \sum_{n=1}^{N} R^m_{\rm{SFR}}(n,t_i) \times  R^m_{Z^{\star}_{\rm{O}}}(n,t_j) - \mu_{n,t} [ R_{\rm{SFR}}(n,t_i) ]  \times \mu_{n,t} [R_{Z^{\star}_{\rm{O}}}(n,t_j)] }
+\begin{gather}
+\rho^s_f (\tau = m \Delta t) = \nonumber\\
+ \frac{ \sum_{i=1}^{T-m} \sum_{n=1}^{N} R^m_{\rm{SFR}}(n,t_i) \times  R^m_{Z^{\star}_{\rm{O}}}(n,t_j) - \mu_{n,t} [ R_{\rm{SFR}}(n,t_i) ]  \times \mu_{n,t} [R_{Z^{\star}_{\rm{O}}}(n,t_j)] }
 { N(T-m) \times \sigma_{n,t} [ R_{\rm{SFR}}(n,t_i) ]  \times \sigma_{n,t} [R_{Z^{\star}_{\rm{O}}}(n,t_j)] }
-\end{align}
+\end{gather}
 where the mean ($\mu_{n,t}$), standard deviation ($\sigma_{n,t}$) and the ranks are computed over the $(T-m) \times N$ values,
 \begin{align}
 R^m_{\rm{SFR}}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T-m}\}) &= R[ ~\rm{SFR}(\{1 \ldots N\}, ~\{t_1 \ldots t_{T-m}\}) ~]\\
