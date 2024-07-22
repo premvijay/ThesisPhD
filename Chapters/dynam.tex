@@ -1,9 +1,6 @@
 \chapter{Dynamics of the response of dark matter halo to galaxy evolution in IllustrisTNG}
 \label{chap:dynam-relxn}
 
-We present the dynamical evolution of the dark matter's relaxation response to galaxies and their connection to the astrophysical properties as simulated in the IllustrisTNG suite of cosmological hydrodynamical simulations.
-
-We perform multiple time-series analyses to determine the possible causal connections between the relaxation mechanism and astrophysical processes such as star formation and associated feedback processes, as well as feedback due to active galactic nuclei.
 
 In the standard paradigm of cosmology, galaxies form within the gravitationally collapsed structures called haloes, primarily made of dark matter that doesn't interact with baryonic galaxies except through gravity \citep[][]{wr78}. Formation and the evolution of these haloes and the galaxies they host are crucial in both cosmological and astrophysical studies. However, the presence of baryonic matter introduces additional complexities. The gravitational coupling between baryons and dark matter can significantly alter the spatial distribution and evolution of the latter, necessitating a detailed study of this interaction. 
 
@@ -11,26 +8,22 @@ In \chapref{chap:z0_main}, we examined this impact of baryonic processes on dark
 
 However, by empirical modelling within the context of quasi-adiabatic relaxation, simple relations were found to describe the nature of the halo relaxation response. Building on those results, we systematically investigate the dynamical evolution of dark matter halo relaxation and its connection to the evolution of halo and galaxy properties. 
 
-In this chapter, we use data from the IllustrisTNG simulation project towards this goal. By comparing the properties of haloes in the baryonic simulations of this suite with their counterparts in the corresponding gravity-only simulations, we characterize the relaxation behaviour of a variety of haloes across a wide range of masses over a time from redshift $z \sim 5$ to $z \sim 1$.
+In this chapter, we use data from the IllustrisTNG simulation project towards this goal. By comparing the properties of haloes in the baryonic simulations of this suite with their counterparts in the corresponding gravity-only simulations, we characterize the relaxation behaviour of a variety of haloes across a wide range of masses over a time from redshift $z \sim 5$ to $z \sim 1$. We then perform multiple time-series analyses to determine the possible causal connections between the relaxation mechanism and astrophysical processes such as star formation and associated feedback processes, as well as feedback due to active galactic nuclei.
 
-The structure of this chapter is as follows. We start with a brief description of the numerical simulations and the construction of a catalogue of matched haloes along with their evolutionary tracks in \secref{sec:simhals}. Then, in \secref{sec:methods-relchar}, we characterize the relaxation response in the context of a quasi-adiabatic framework and study their evolution in halo populations. This is followed in \secref{sec:methods-stat} by a statistical exploration of the connection between halo properties such as star formation rate and metallicity and their role in mediating the halo relaxation response. This analysis especially focuses on the rank correlations between these quantities not only across haloes in the populations but also over time. %\AP{abrupt end of para}
-Finally, we conclude with a summary of our key findings and their applications in \secref{sec:conclusion}.
+The structure of this chapter is as follows. We start with a brief description of the numerical simulations and the construction of a catalogue of matched haloes along with their evolutionary tracks in \secref{sec:simhals}. Then, in \secref{sec:methods-relchar}, we characterize the relaxation response in the context of a quasi-adiabatic framework and study their evolution in halo populations. This is followed in \secref{sec:methods-stat} by a statistical exploration of the connection between halo properties such as star formation rate and metallicity and their role in mediating the halo relaxation response. This analysis especially focuses on the rank correlations between these quantities not only across haloes in the populations but also over time. Finally, we conclude with a summary of our key findings and their applications in \secref{sec:conclusion}.
 
 
-\section{Simulations and haloes}
+\section{Simulations of evolving pairs of haloes}
 \label{sec:simhals}
-In this work, we use all three different cosmological volumes of the publicly available IllustrisTNG simulations at their highest resolution \citep{2019ComAC...6....2N}; details of these simulations are outlined in \secref{sec:sims-IllTNG}. Then, we describe in \secref{sec:methods-halopairsel} the identification and selection of haloes across a wide range of masses along with their corresponding matched halo simulated without any baryonic astrophysics. We need evolving haloes to study the dynamical relaxation; these are constructed using the merger trees consisting of the progenitor haloes matched across time as described in \secref{sec:methods-tracehals}. Finally, in \secref{sec:hal-gal-props}, we explore some key properties of the halo (and its central galaxy) and their overall evolution in the population. In this analysis, we utilise data from redshift $z=0$ all the way to redshift $z=5$ for both hydrodynamical and corresponding gravity-only runs.
+Here we use all three different cosmological volumes of the publicly available IllustrisTNG simulations at their highest resolution \citep{2019ComAC...6....2N}; details of these simulations are outlined in \secref{sec:sims-IllTNG}. Then, we describe in \secref{sec:methods-halopairsel} the identification and selection of haloes across a wide range of masses along with their corresponding matched halo simulated without any baryonic astrophysics. We need evolving haloes to study the dynamical relaxation; these are constructed using the merger trees consisting of the progenitor haloes matched across time as described in \secref{sec:methods-tracehals}. Finally, in \secref{sec:hal-gal-props}, we explore some key properties of the halo (and its central galaxy) and their overall evolution in the population. In this analysis, we utilise data from redshift $z=0$ all the way to redshift $z=5$ for both hydrodynamical and corresponding gravity-only runs.
 
-\subsection{Halo selection}
+\subsection{Evolving pairs of haloes}
 \label{sec:methods-halopairsel}
-Haloes in these simulations were identified using a friend-of-friends (FoF) algorithm as described in \secref{sec:hals}. We match the haloes from the full hydrodynamic simulations with the haloes in the corresponding gravity-only runs as described in \secref{sec:hals}. This gives a set of matched halo pairs showing the strongest overlap in their proto-haloes among the nearby haloes of similar sizes found by the KD-tree algorithm. From this catalogue, we select populations of matched halo pairs by the logarithmic mass of the gravity-only halo $(\log(M/\Mh))$ in bins centred at $11.5, 12, 12.5, 13, 13.5, 14$ with a bin width of 0.3 at redshift $z=0.01$. While the small volume TNG50 offers well-resolved low-mass haloes $10^{11.5} \Mh$ and $10^{12} \Mh$, the TNG100 cosmological box gives $10^{12.5} \Mh$ and $10^{13} \Mh$ haloes and the largest volume TNG300 provides an adequate number of cluster-scale haloes of masses $10^{13.5} \Mh$ and $10^{14} \Mh$. 
-   
+Haloes in these simulations were identified using a friend-of-friends (FoF) algorithm as described in \secref{sec:hals}. We match the haloes from the full hydrodynamic simulations with the haloes in the corresponding gravity-only runs as described in \secref{sec:hals}. From this catalogue, we select populations of matched halo pairs by the logarithmic mass of the gravity-only halo $(\log(M/\Mh))$ in bins centred at $11.5, 12, 12.5, 13, 13.5, 14$ with a bin width of 0.3 at redshift $z=0.01$. While the small volume TNG50 offers well-resolved low-mass haloes $10^{11.5} \Mh$ and $10^{12} \Mh$, the TNG100 cosmological box gives $10^{12.5} \Mh$ and $10^{13} \Mh$ haloes and the largest volume TNG300 provides an adequate number of cluster-scale haloes of masses $10^{13.5} \Mh$ and $10^{14} \Mh$. 
 
-\subsection{Tracing evolutionary history}
-\label{sec:methods-tracehals}
 In cosmological simulations, it is particles that are evolved in cosmological volumes, and hence haloes need not be tracked explicitly. Rather, the haloes found at different snapshots in time are matched to construct the evolutionary tracks of the haloes. We identify the central subhaloes pairs corresponding to each pair of FoF group halos at $z\sim 0$ in our catalogue. These central subhaloes are traced back along the most massive progenitor branch using merger trees constructed by the \textsc{SubLink} code \citep{2015RodriguezGeneletalSubLink}. Then, the corresponding host FoF group haloes are considered as the progenitors of the matched haloes in our catalogue at $z \sim 0$. This gives us a catalogue of evolving pairs of haloes from redshift $z \sim 5$ to $z \sim 0$ corresponding to a cosmological look-back time of $12.63$ Gyr.
 
-From this catalogue, we remove all those haloes that had a major merger during this period with a dark matter mass ratio above four. Further, we also remove those pairs of evolving haloes that are either separated by more than their virial radius or have sizes differing by more than $25\% $ at any given redshift. This leaves us with a sample of evolving matched haloes for around $50\%$ to $80\%$ of the populations of all haloes in our $z \sim 0$ catalogue. For these halo pairs, we study the relaxation by comparing the spherically averaged radial distribution of matter within their virial radii; this is described in  \secref{sec:methods-relchar}. Before that, we explore some of the key properties of these haloes in \secref{sec:hal-gal-props} that are relevant in this work.
+From this catalogue, we remove all those haloes that had a major merger during this period with a dark matter mass ratio above four. Further, we also remove those pairs of evolving haloes that are either separated by more than their virial radius or have sizes differing by more than $25\% $ at any given redshift. This leaves us with a sample of evolving matched haloes for around $50\%$ to $80\%$ of the populations of all haloes in our $z \sim 0$ catalogue. For these halo pairs, we study the relaxation by comparing the spherically averaged radial distribution of matter within their virial radii; this is described in  \secref{sec:methods-relchar}. Before that, we explore some of the key properties of these haloes in \secref{sec:hal-gal-props} that are relevant in this analysis.
 % \PV{Mean evolution of some halo and galaxy properties plot}
 
 \subsection{Astrophysical evolution}
@@ -53,43 +46,12 @@ All these quantities are defined for the hydrodynamic halo of each matched group
 
 \section{Time evolution of the halo response}
 \label{sec:methods-relchar}
-The overall relaxation response of dark matter in a halo, such as an expansion or contraction in response to galaxy formation, is usually analysed through changes in the spherically averaged mass profiles. In our catalogue of matched evolving pairs of haloes, while the hydrodynamic ones with galaxies include this relaxation response, the gravity-only counterparts provide the corresponding unrelaxed dark haloes. These radial dark matter mass profiles are obtained as the cumulative sum of the mass contributed by all dark matter particles within concentric spherical shells. In the case of the gravity-only halo, we consider the cosmic dark matter fraction of the mass in each particle of the gravity-only halo to be contributing to the dark matter. Characterizing the relaxation from these profiles is done using the quasi-adiabatic relaxation framework as described below.
-
-\subsection{Quasi-adiabatic relaxation framework}
-\label{sec:methods-adiab}
-All the relaxation response on cold dark matter happens entirely through gravitational encounters with the baryons. In particular, it is an integrated effect of the flow of baryonic mass in the past due to galactic processes such as inflows and feedback. The quasi-adiabatic relaxation is a physically motivated framework to model the change in the spherically averaged dark matter distribution at a given time as a function of just the spherically averaged baryonic distribution at that same time. This baryonic profile includes all the mass other than the dark matter, including the mass in gas cells assigned by a Gaussian kernel to concentric spherical shells. 
-
-Early works made further assumptions that the halo is spherical and that the dark particles maintain their radial ordering while responding adiabatically to the flow of the baryonic particles across them \citep[][]{1986ApJ...301...27B}. Suppose a dark matter particle at radius $r_i$ in the unrelaxed
-% \AP{unrelaxed?}
-halo ends up in radius $r_f$ in the relaxed halo, then the enclosed dark matter within spheres of those radii will be equal.
-
-\be 
-M_f^d(r_f) = M_i^d(r_i)\,.
-\label{eq:DMmass}
-\ee
-However, the \emph{total} mass enclosed within those spheres is not necessarily equal $M_i(r_i) \neq M_f(r_f)$ due to the flow of baryonic mass. When the dark matter particles conserve angular momentum, maintaining nearly circular orbits, this change in total mass enclosed must be consistent with the amount of relaxation,
-% then the amount of relaxation of the shell is completely determined by the change in this total mass within the shell
-\citep[][]{1986ApJ...301...27B},
-\begin{align}
-    r_i \,M_i(r_i) = r_f \,M_f(r_f) %
-    \implies 
-\frac{r_f}{r_i} = \frac{M_i(r_i)}{M_f(r_f)}\,. 
-\label{eq:AR}
-\end{align}
-The quasi-adiabatic relaxation framework is an empirical extension to this idealised scenario and considers the relaxation ratio $r_f/r_i$ as a function of the mass ratio $M_i/M_f$.
-\begin{align}
-\frac{r_f}{r_i} &= 1 + \chi \left( \frac{M_i(r_i)}{M_f(r_f)} \right) 
-\label{eq:qAR}
-\end{align}
-In a simple extension, the baryonification procedures in \cite{2015JCAP...12..049S,2021MNRAS.503.4147P} include dark matter response as a quasi-adiabatic relaxation with $\chi(y) = q (y-1)$. However, a variety of quasi-adiabatic models have been proposed \citep{2023Velmani&Paranjape}.  
-
-\subsection{Relaxation offset}
 In \chapref{chap:z0_main}, we found that the relaxation relation follows a locally linear relation. 
 \begin{align}
     \label{eq:chi-linear-q0}
     \frac{r_f}{r_i} - 1 &= q_1(r_f) \left[ \frac{M_i(r_i)}{M_f(r_f)} - 1 \right] + q_0(r_f)\,.
 \end{align}
-For a given halo sample, at each $r_f$, the relation between mass ratio and relaxation ratio across all the haloes is fitted by a linear curve to obtain the parameters $q_0(r_f)$ and $q_1(r_f)$. It was also found that the $q_0(r_f)$ is usually roughly uniform from the inner to the outer haloes. In this work, we have tested that this radial dependent linear model is a good description of the halo relaxation over their evolution history back to at least redshift $z=5$ in populations of all six halo masses considered and at halo centric distance from the virial radius to at least $5 \%$ of that radius. To characterize the halo-to-halo variation in the relaxation offset, we define the following relaxation quantity for each halo in the population. 
+For a given halo sample, at each $r_f$, the relation between mass ratio and relaxation ratio across all the haloes is fitted by a linear curve to obtain the parameters $q_0(r_f)$ and $q_1(r_f)$. It was also found that the $q_0(r_f)$ is usually roughly uniform from the inner to the outer haloes. \emph{Here we report that this radial dependent linear model is a good description of the halo relaxation over their evolution history back to at least redshift $z=5$} in populations of all six halo masses considered and at halo centric distance from the virial radius to at least $5 \%$ of that radius. To characterize the halo-to-halo variation in the relaxation offset, we define the following relaxation quantity for each halo in the population. 
 \begin{align}
 \label{eq:def-q0hal}
 q_0 |_{h}(r_f) &\equiv \frac{r_f}{r_i} - 1 - q_1(r_f) \left[ \frac{M_i(r_i)}{M_f(r_f)} - 1 \right]\,.
@@ -103,7 +65,6 @@ This quantity $q_0 |_{h}(r_f)$ is usually uniform within each of the haloes; We 
 \end{figure}
 % \subsubsection{Model independent}
 In addition to this model parameter $q_0$, we also define a somewhat model-agnostic quantity to characterize just the offset in the relaxation. For each matched halo, the y-intercept of the relaxation relation is given by the relation between $M_i/M_f-1$ and $r_f/r_i-1$ for each matched halo. This parameter, denoted as $q_y$, is the offset in the relaxation ratio $r_f/r_i$ from unity for the shells having a mass ratio of unity $M_i/M_f=1$. The evolution history of these relaxation offset parameters for our halo populations is shown in \figref{fig:evolution-hal-reln-offset}. We find that the average evolution of $q_0$ and $q_y$ are similar for all haloes. The relaxation offset starts with smaller values and reaches peak magnitudes before approaching zero, consistent with the $z \sim 0$ results presented in \chapref{chap:z0_main}. We have also checked that they show good correlation across haloes, especially $q_y$ shows good correlation with the $q_0^{\rm{in}}$. Hence, in this study, we will primarily focus the relaxation offset parameters $q_0(r)$,  $q_0^{\rm{in}} ~\& ~q_0^{\rm{out}}$.
-% While the average evolution suggests that this offset parameter peaks following the peak star formation period, 
 
 
 
