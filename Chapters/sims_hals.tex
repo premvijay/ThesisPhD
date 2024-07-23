@@ -1,4 +1,4 @@
-\chapter{Simulations of Halo Response}
+\chapter{Simulations and analysis of halo response}
 \label{chap:sims-hals}
 % \lhead{\emph{Simulations of Halo Response}}
 
@@ -110,7 +110,37 @@ the inherent issues with 3D FOF algorithm in dealing with mergers. Similar resul
 For illustrative purpose, a visual representation of two randomly chosen halo pairs, one each from IllustrisTNG and EAGLE, is shown in \figref{fig:single-halo-pair-ch:sims}. 
 
 
+\section{Choice of matching algorithm}
+\label{sec:apndx-matching-ch:sims}
+\AP{all Appendices should be gathered together at the end of the entire thesis. see sujatha's thesis.}\PV{There is Appendix only for this chapter so instead I merged them to the main text. }
+In this thesis, we primarily study the response of dark matter halo to galaxy by comparing the haloes in hydrodynamical simulations to their counterparts in gravity-only runs.
+We described the matching procedure in \secref{sec:methods-match-ch:sims}, here we discuss some of the specific choices in that procedure.
+For this purpose, let us consider the FOF group haloes in TNG300 simulation with $\log M(\Mh)>10.5$.  There are 543588 FOF groups satisfying this criterion in the hydrodynamical run of TNG300, with each of them having more than 500 particles within their $R_{\rm vir}$ in the highest resolution run.
+Following the matching procedure described in \secref{sec:methods-match-ch:sims} (requiring only that the matching fraction of the hydrodynamical halo with respect to the gravity-only halo is greater than 0.5), we get a matching halo in the gravity-only run for 541594 of them, leaving out only 1994 haloes unmatched, that is a negligible 0.4\% spread across the mass range (\figref{fig:efficiency-mass-ch:sims}).
+However, if we follow the same procedure using matching fraction between the central subhaloes instead of FOF group themselves, then we get a order of magnitude more unmatched haloes as can be seen in the \figref{fig:efficiency-mass-ch:sims}.  
 
+\begin{figure}
+    \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass.pdf}
+    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown as a function of mass $M_{200c}$.}
+    \label{fig:efficiency-mass-ch:sims}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{plots/hal_match_accuracy_hist2d.pdf}
+\caption{Histogram of matching accuracy of haloes in the FOF group matched catalogue (left) and central subhalo matched catalogue (right). The x-axis is the fraction of dark matter particles in the hydrodynamical halo that is also in the gravity-only halo.}
+\label{fig:accuracy-hist2d-ch:sims}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass_rev.pdf}
+    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown in left panel as a function of mass $M_{200c}$ after removing asymmetrical matches (see text in appendix \ref{sec:apndx-matching-ch:sims}.}
+    \label{fig:efficiency-mass-rev-ch:sims}
+\end{figure}
+
+While obtaining matches for as many haloes as possible, we also have to ensure the quality of match. To check how well the haloes in each of the pairs in our catalogue are matching we look at the particle matching fraction of each halo in the pair with respect to the other as shown in \figref{fig:accuracy-hist2d-ch:sims}. By definition the gravity-only halo in every pair has atleast 50\% of the dark matter particles of the hydrodynamical halo in that pair. But note that in FOF group matching based catalogue, for a significant number of pairs the hydrodynamical halo in the pair has less than 10\% of the gravity-only halo's particles. By visually inspecting some of those halo pairs we find that, they represent haloes with ongoing merger events. This explains the significant loss in matching efficiency when we used central subhalo matching. 
+
+In the \figref{fig:efficiency-mass-rev-ch:sims}, matching loss as a function of halo mass is shown after removing all those pairs in which the particle matching fraction of the gravity-only halo with respect to hydrodynamical halo is less than 50\%. Since this symmetrical matching condition produces consistent matched catalogue of haloes, we apply this additional matching condition  but stick to matching whole FOF groups. With this procedure, our final matched catalogue for TNG300 contains 524841 pairs, leaving 18747 out of 543588 hydrodynamical haloes unmatched. The additional unmatched haloes primarily reside in dense environments, and we can't find match for those haloes because of the inherent issues with 3d FOF algorithm in dealing with mergers. 
 
 
 
@@ -174,51 +204,11 @@ This is because each `particle' in the gravity-only halo consists of collisionle
 The value of $M_i(r_i)$ then follows from direct mass counting in the unrelaxed (i.e., gravity-only) halo in radius $r_i$, and the value of $M_f(r_f)$ follows from direct mass counting in the relaxed (i.e. hydrodynamical) halo in radius $r_f$, as described in \secref{subsec:massprofiles-ch:sims}. In practice, we first obtain the unrelaxed mass profile $M_i(r_i)$ for a wide range of radii in finely spaced bins, in order to then compute the inverse in \eqn{eq:inv-mass} by interpolation.
 
 Thus, for any shell defined by its relaxed radius $r_f$, we can obtain both the relaxation ratio $r_f/r_i$ and the mass ratio $M_i/M_f$ from its unrelaxed radius computed from mass profiles. Hence we can obtain the relaxation relation by placing multiple concentric shells around the halo all the way to its virial radius $R_{\rm{vir}}$.
-In Appendix \ref{appen:Mock-ch:sims}, we have tested this algorithm on mock halo + galaxy systems generated with fixed known relaxation relations.
+In the following section, we demonstrate the robustness of this algorithm on mock halo + galaxy systems generated with fixed known relaxation relations.
 
 
 
-
-
-
-
-
-
-
-\section{Appendix: Choice of matching algorithm}
-\label{sec:apndx-matching-ch:sims}
-\AP{all Appendices should be gathered together at the end of the entire thesis. see sujatha's thesis.}
-In this thesis, we primarily study the response of dark matter halo to galaxy by comparing the haloes in hydrodynamical simulations to their counterparts in gravity-only runs.
-We described the matching procedure in \secref{sec:methods-match-ch:sims}, here we discuss some of the specific choices in that procedure.
-For this purpose, let us consider the FOF group haloes in TNG300 simulation with $\log M(\Mh)>10.5$.  There are 543588 FOF groups satisfying this criterion in the hydrodynamical run of TNG300, with each of them having more than 500 particles within their $R_{\rm vir}$ in the highest resolution run.
-Following the matching procedure described in \secref{sec:methods-match-ch:sims} (requiring only that the matching fraction of the hydrodynamical halo with respect to the gravity-only halo is greater than 0.5), we get a matching halo in the gravity-only run for 541594 of them, leaving out only 1994 haloes unmatched, that is a negligible 0.4\% spread across the mass range (\figref{fig:efficiency-mass-ch:sims}).
-However, if we follow the same procedure using matching fraction between the central subhaloes instead of FOF group themselves, then we get a order of magnitude more unmatched haloes as can be seen in the \figref{fig:efficiency-mass-ch:sims}.  
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass.pdf}
-    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown as a function of mass $M_{200c}$.}
-    \label{fig:efficiency-mass-ch:sims}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=\linewidth]{plots/hal_match_accuracy_hist2d.pdf}
-\caption{Histogram of matching accuracy of haloes in the FOF group matched catalogue (left) and central subhalo matched catalogue (right). The x-axis is the fraction of dark matter particles in the hydrodynamical halo that is also in the gravity-only halo.}
-\label{fig:accuracy-hist2d-ch:sims}
-\end{figure}
-
-\begin{figure}
-    \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass_rev.pdf}
-    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown in left panel as a function of mass $M_{200c}$ after removing asymmetrical matches (see text in appendix \ref{sec:apndx-matching-ch:sims}.}
-    \label{fig:efficiency-mass-rev-ch:sims}
-\end{figure}
-
-While obtaining matches for as many haloes as possible, we also have to ensure the quality of match. To check how well the haloes in each of the pairs in our catalogue are matching we look at the particle matching fraction of each halo in the pair with respect to the other as shown in \figref{fig:accuracy-hist2d-ch:sims}. By definition the gravity-only halo in every pair has atleast 50\% of the dark matter particles of the hydrodynamical halo in that pair. But note that in FOF group matching based catalogue, for a significant number of pairs the hydrodynamical halo in the pair has less than 10\% of the gravity-only halo's particles. By visually inspecting some of those halo pairs we find that, they represent haloes with ongoing merger events. This explains the significant loss in matching efficiency when we used central subhalo matching. 
-
-In the \figref{fig:efficiency-mass-rev-ch:sims}, matching loss as a function of halo mass is shown after removing all those pairs in which the particle matching fraction of the gravity-only halo with respect to hydrodynamical halo is less than 50\%. Since this symmetrical matching condition produces consistent matched catalogue of haloes, we apply this additional matching condition  but stick to matching whole FOF groups. With this procedure, our final matched catalogue for TNG300 contains 524841 pairs, leaving 18747 out of 543588 hydrodynamical haloes unmatched. The additional unmatched haloes primarily reside in dense environments, and we can't find match for those haloes because of the inherent issues with 3d FOF algorithm in dealing with mergers. 
-
-
-\section{Appendix: Mock particles in a Galaxy-Halo system}
+\section{Mock particles in a Galaxy-Halo system}
 \label{appen:Mock-ch:sims}
 Here we validate our method used in extracting the relaxation relation (see \secref{sec:methods-relx-reln-ch:sims}) using mock galaxy-halo systems.
 In this, we use Hernquist profile for the initial unrelaxed dark matter halo and similar analytical mass profiles for the baryon components \citep[see appendix of][]{2021MNRAS.507..632P}. We then get the relaxed dark matter profile using quasi-adiabatic relaxation model with different values of $q$. Mock particle data is then generated with these mass profiles for different components of hydrodynamical halo and the corresponding gravity-only halo.
