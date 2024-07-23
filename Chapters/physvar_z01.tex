@@ -47,18 +47,7 @@ The progenitors at redshift $z=1$ of the same haloes found at $z=0$ show even st
 \label{fig:fit-view-mass-indep}
 \end{figure*}
 
-In \chapref{chap:z0_main}, we proposed a locally linear model of the relaxation relation as follows:
-\begin{align}
-\label{eq:chi-linear-q0-ch:physvar}
-\frac{r_f}{r_i} - 1 &= q_1(r_f) \left[ \frac{M_i(r_i)}{M_f(r_f)} - 1 \right] + q_0(r_f),.
-\end{align}
-We have tested this relation with our halo samples at $z=1$ and found it to hold reasonably well. For each halo sample, at each $r_f$, the relationship between mass ratio and relaxation ratio across all haloes is fitted by a linear curve to obtain the parameters $q_0(r_f)$ and $q_1(r_f)$. These radial profiles of the relaxation parameters are shown in \figref{fig:rf-fit-params}.
 
-The universality in these profiles extends to much larger mass haloes ($\sim 10^{13.5} \Mh$) at $z=1$ (top left panel) compared to $z=0$ (bottom right panel). This universality extends across all halo samples especially when considering all haloes identified by the median progenitor mass (shown in bottom left panel). Also we note that these radially-dependent relaxation results differ noticeably between bottom left panel and the top right panel. For example, in large clusters ($10^{14} \Mh$), the overall relaxation relation remains the same (black curves in \figref{fig:fit-view-mass-indep}), following the $q=0.33$ model. However, they differ when analyzed through the radially dependent relaxation model, as seen in \figref{fig:rf-fit-params} by comparing the black curves between the top right and bottom left panels. \AP{not sure about this... to me the black curves in bottom left and top right look very similar, except in the innermost parts of the halo}
-
-The offset parameter $q_0$ shown in the lower subpanels is relatively uniform across the halo in all populations. The \figref{fig:fit-fit-func-q} shows the mean of $q_0$ in all four sets of halo samples. The $q_0$ parameter is usually more negative across all $z=1$ halo populations compared to $z=0$, indicating a stronger relaxation offset. Additionally, the values are more universal with halo mass at $z=1$. 
-
-\AP{some physics discussion needed to explain differences seen between different samples}
 
 \begin{figure}[htbp]
 \centering
@@ -69,6 +58,23 @@ The offset parameter $q_0$ shown in the lower subpanels is relatively uniform ac
 \caption{Linear quasi-adiabatic relaxation model parameters $q_1$ and $q_0$ as a function of the halo-centric distance at different halo masses in IllustrisTNG at $z=0$ \emph{(bottom right panel)} and $z=1$ \emph{(other panels)}. In the top right panel, relaxation is shown at $z=1$ for the progenitors of the haloes selected at $z=0$. In the second row, left panel, relaxation is shown at different mass bins at $z=1$, indicated by corresponding mass bins at $z=0$. The color-coding follows Fig.~\ref{fig:mass_bin_label-z01}.}
 \label{fig:rf-fit-params}
 \end{figure}
+
+In \chapref{chap:z0_main}, we proposed a locally linear model of the relaxation relation as follows:
+\begin{align}
+\label{eq:chi-linear-q0-ch:physvar}
+\frac{r_f}{r_i} - 1 &= q_1(r_f) \left[ \frac{M_i(r_i)}{M_f(r_f)} - 1 \right] + q_0(r_f),.
+\end{align}
+We have tested this relation with our halo samples at $z=1$ and found it to hold reasonably well. \red{For each halo sample, at each halo-centric distance $r_f$, the relationship between mass ratio and relaxation ratio across all haloes is best fitted by a linear curve with the slope and offset parameters namely $q_1(r_f)$ and $q_0(r_f)$. The radial profiles of these two relaxation parameters are shown for the four set of halo populations in \figref{fig:rf-fit-params} with the color-coding given by \figref{fig:mass_bin_label-z01} for the associated halo mass.}
+
+\red{Notice that the universality in these relaxation profiles extends to much larger mass haloes ($\sim 10^{13.5} \Mh$) at $z=1$ (top left panel) compared to $z=0$ (bottom right panel). This is despite the fact that such massive haloes are even rarer at $z=1$ than at $z=0$, as indicated by the value of $\nu$ in \figref{fig:mass_bin_label-z01}. For all the halo samples selected at $z=0$, their traced progenitor populations at $z=1$ show nearly universal relaxation profiles, with the exception of $q_0(r_f)$ in the inner halo (shown in the top right panel). This universality is even more apparent among the halo populations selected in narrow mass bins at $z=1$ based on the median masses of the progenitor populations (see bottom left panel).}
+
+\red{The less universal and relatively noisier profiles in direct progenitors might be due to the inclusion of low mass fast accretion haloes together with high mass slow accreting haloes or simply a systematic issue such as a few misidentified progenitors. This difference between the direct progenitor populations and the haloes selected by the median progenitor masses seems to be more noticeable in the relaxation profiles than in the radially independent relaxation relations. For example, the black curves (corresponding to $10^{14} \Mh$) are noticeably different especially in inner regions between top left and bottom right panels in \figref{fig:rf-fit-params}, however, the overall relaxation relation shown in \figref{fig:fit-view-mass-indep} is well-fitted by the linear $q=0.33$ model in both the panels. While the exact reason is not yet clear, we note that the radially-dependent relaxation might be more sensitive to this difference. \AP{not sure about this... to me the black curves in bottom left and top right look very similar, except in the innermost parts of the halo}~\PV{Edited for clarity} Another interesting to note is that $q_1(r_f)$ shows a small non-monotonic behavior in the outer haloes at all masses in $z=1$ (e.g., see lower left panel) that is not seen at $z=0$ (lower right panel).}
+
+The offset parameter $q_0$ shown in the lower sub-panels is relatively uniform across the halo especially among the low mass haloes. The \figref{fig:fit-fit-func-q} shows the mean of $q_0$ in all four sets of halo samples. The $q_0$ parameter is usually more negative across all $z=1$ halo populations compared to $z=0$, indicating a stronger relaxation offset. Additionally, the values are more universal with halo mass at $z=1$. \red{Recall that a negative value of $q_0$ is expected to be a result of recent feedback outflows (see \secref{sec:results-rad-dep-qadiab-ch:z0main} for a detailed discussion). These feedback outflows are produced by a combination of AGN and stellar feedbacks. In the high mass haloes, powerful AGN feedbacks at earlier epochs lead to significant suppression in the star formation activity reducing the stellar feedbacks at present epoch. The reduction in the magnitude of $q_0$ from $z=1$ to $z=0$ in the high mass haloes could be simply due to the reduction in overall feedback among those haloes. We systematically investigate these effects in \chapref{chap:dynam-relxn}.}
+
+\AP{some physics discussion needed to explain differences seen between different samples}~\PV{Added discussion}
+
+
 
 \begin{figure}[htbp]
 \centering
@@ -86,7 +92,7 @@ The offset parameter $q_0$ shown in the lower subpanels is relatively uniform ac
 
 
 
-\section{Variation in astrophysical feedback using CAMELS simulations}
+\section{Varying feedback strengths using CAMELS simulations}
 \label{sec:res-physvar-CAMELS}
 In this section, we present the role of various feedback parameters prescribed in the IllustrisTNG simulations using the set of CAMELS simulations performed with the IllustrisTNG model. This includes a set of 41 hydrodynamical simulations, with one replicating the reference TNG model in a smaller cosmological volume, and 10 simulations each by varying 4 different feedback parameters as described in \secref{sec:sims-CAMELS}. To recall, this includes two supernovae feedback parameters ($A_{\mathrm{SN1}}$ and $A_{\mathrm{SN2}}$) and another two AGN feedback parameters ($A_{\mathrm{AGN1}}$ and $A_{\mathrm{AGN2}}$).
 
@@ -106,13 +112,14 @@ We found that the radially-dependent relaxation parameters are usually more unif
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.5.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_12.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.5.pdf}
-\includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_12.pdf}
-\caption{Relaxation offset parameter $q_x$ \AP{axis labels say $q_{0}^x$ while text uses $q_x$} as a function of the baryonic astrophysical feedback parameters in haloes found in CAMELS-TNG at three different halo masses. Top: $z=1$, Bottom: $z=0$}
+% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.pdf}
+% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_11.5.pdf}
+% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn18_12.pdf}
+% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.pdf}
+% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_11.5.pdf}
+% \includegraphics[width=0.325\linewidth]{plots/CAMELS_I_qx0_sn33_12.pdf}
+\includegraphics[width=\linewidth]{plots/CAMELS_I_qx0.pdf}
+\caption{Relaxation offset parameter $q_x$ \AP{axis labels say $q_{0}^x$ while text uses $q_x$}\PV{updated plot} as a function of the baryonic astrophysical feedback parameters in haloes found in CAMELS-TNG at three different halo masses. Top: $z=1$, Bottom: $z=0$}
 \label{fig:camels-qx0}
 \end{figure}
 
@@ -135,12 +142,16 @@ the wind speed parameters $A_{\mathrm{SN2}}$ and $A_{\mathrm{AGN2}}$ have neglig
 
 Recall that when varying only a wind speed parameter, it affects the burstiness of the feedback outflows while keeping the overall flux constant. Suppose the deviations in the relaxation relation from the idealized adiabatic model, quantified by non-zero offset parameters, are caused by the transfer of angular momentum between the dark matter particles and the baryonic particles. In that case, one may expect that the nature of the baryonic feedback quantified by the wind speed parameters will have a significant influence on the value of $q_x$. However, our results suggest otherwise.
 
-This suggests that the strong influence of the overall feedback outflow flux on the relaxation is likely due to the time delay in the relaxation response of the halo. \AP{explain what this means. why is time delay relevant?} Also, the larger offsets characterized by $q_x$ in \figref{fig:camels-qx0}, with stronger feedback implementation, are consistent with our discussion in \secref{subsubsec:sim-relax-ch:z0main}. \AP{briefly describe how you infer this consistency}
+% These results suggest that the overall feedback outflows controlled by the 
+\red{Recall that in \secref{subsubsec:sim-relax-ch:z0main}, we have argued that the relaxation offset is a reflection of the fact that the dark matter shells have not yet expanded in response to the recent feedback gas outflows. These results suggest that the time taken for the dark matter shells to expand are sufficiently long enough, that only the overall gas outflow is relevant irrespective of the speed and burstiness. We investigate these timescales in \chapref{chap:dynam-relxn}.} 
+\AP{explain what this means. why is time delay relevant?} \AP{briefly describe how you infer this consistency}\PV{Edited for clarity}
 
-We find that the AGN feedback strength generally has a stronger influence on the relaxation among the high-mass haloes, whereas the supernova feedback strength has a stronger influence in lower-mass haloes. This is consistent with our expectations that AGN feedbacks dominate in more massive haloes. However, at all masses, AGN feedback starts dominating the value of $q_x$ with unrealistically \AP{on what basis are these unrealistic? do we even care whether they are unrealistic or not? why mention this word?} strong AGN feedback implementations, indicated by the green curves in \figref{fig:camels-qx0}.
+We find that the AGN feedback strength generally has a stronger influence on the relaxation among the high-mass haloes, whereas the supernova feedback strength has a stronger influence in lower-mass haloes. This is consistent with our expectations that AGN feedbacks dominate in more massive haloes. However, at all masses, AGN feedback starts dominating the value of $q_x$ \red{when their strengths are set to be higher than the reference model of TNG} \AP{on what basis are these unrealistic? do we even care whether they are unrealistic or not? why mention this word?}; this is indicated by the green curves in \figref{fig:camels-qx0}. \red{This suggests that the relative importance of AGN and supernovae feedback on the dark matter relaxation depends strongly on their implementation.}
 
-\AP{this para seems disconnected from previous one.}
-The relaxation offset in the outer region of haloes characterized by $q_x$ is always larger with the stronger implementation of AGN feedback at both \( z=0 \) and \( z=1 \). However, in the slightly inner regions \AP{which part of which plot shows me the effect on these slightly inner regions, and why?}, stronger AGN feedback implementation leads to a weaker relaxation offset at \( z=0 \) and a stronger offset at \( z=1 \). \AP{are you talking about $q_0$ or $q_x$?} We interpret this as a consequence of the overall reduction in total feedback at \( z=0 \) due to the suppression of star formation caused by higher AGN feedbacks in the past. These results highlight the significance of feedback mechanisms in building a physical understanding of dark matter halo relaxation.
+\AP{this para seems disconnected from previous one.}\PV{Added discussion and edited for clarity}
+\AP{which part of which plot shows me the effect on these slightly inner regions, and why?}
+\AP{are you talking about $q_0$ or $q_x$?}
+\red{While $q_x$ which characterizes the relaxation offset predominantly in the outer halo,} is always larger with the stronger implementation of AGN feedback at both \( z=0 \) and \( z=1 \), \red{the value of $q_0$, which is averaged over both inner and outer halo, shows a different trend.}  Notice, in \figref{fig:camels-q0q1}, that the stronger AGN feedback implementation leads to a weaker relaxation offset at \( z=0 \) and a stronger offset at \( z=1 \).  We interpret this as a consequence of the overall reduction in total feedback at \( z=0 \) due to the suppression of star formation caused by higher AGN feedbacks in the past. This led to reduction in the relaxation offset in the inner haloes, \red{the outer halo has not yet responded by $z=0$}. These results highlight the significance of feedback mechanisms in building a physical understanding of dark matter halo relaxation.
 
 % We find that at $z=1$, the magnitude of $q_0$ is larger with stronger AGN feedback indicated by larger $A_{\rm{AGN1}}$. However, this trend is absent at $z=0$. This could be due to a strong suppression in star formation rate at the present epoch due to the stronger AGN feedback in the past. \AP{did you just forget to delete this para? it seems like a shorter and less informative version of the previous para. what is the point of this para?}
 
@@ -152,7 +163,7 @@ The relaxation offset in the outer region of haloes characterized by $q_x$ is al
 
 
 
-\section{Role of astrophysical models in EAGLE simulations}
+\section{Role of astrophysical modeling in EAGLE simulations}
 \label{sec:res-physvar-eagle}
 
 In this section, we present insights from small boxes of EAGLE simulations on the role of different feedback mechanisms on the relaxation response. These physics variation simulations from the EAGLE suite are described in \secref{sec:sims-EAGLE}. Again, due to the significantly smaller box size and resolution, we only consider haloes in three different mass bins centered at $10^{10.5} \Mh$, $10^{11} \Mh$, and $10^{11.5} \Mh$ as discussed in \secref{sec:res-physvar-CAMELS}. In these narrow mass bins, the mean relaxation relation obtained by stacking independent of the halo-centric distance is shown in \figref{fig:EAGLE-rad-indep} for these physics variation simulations. We find that the deviation in the relaxation across different astrophysical modeling is usually much smaller than the differences from one halo mass to the other. However, notice that the gas equation of state has a strong influence on the relaxation relation, especially among low-mass haloes. In particular, stiffer equations of state lead to a very large $r_f/r_i$ indicating a stronger expansion of the dark matter shells in response to galaxy formation.
@@ -184,10 +195,10 @@ In this chapter, we investigated the influence of astrophysical modeling on the 
 % \subsubsection*{1. Early Epoch in IllustrisTNG Simulations}
 We began by examining the relaxation response at an earlier redshift (\( z=1 \)) in the IllustrisTNG simulations using three distinct sets of halo samples, which highlight the variations in relaxation across different halo masses. Our study reveals that dark matter relaxation tends to be stronger (smaller \( r_f/r_i \)) at the earlier epoch compared to the present among haloes of the same mass. This is even more prominent among the progenitors of present epoch haloes. Notably, we observe that cluster-scale haloes at \( z=1 \) show significant relaxation (\( r_f/r_i < 1 \)) that is also a function of the change in the enclosed mass (\( M_i/M_f \)). This is in contrast to similar haloes at the present epoch, where \( r_f/r_i \) stayed close to unity on average irrespective of the value of \( M_i/M_f \).
 
-We also find that the locally linear quasi-adiabatic relaxation model is a good description of the relaxation relation at this earlier epoch, demonstrating its robustness in capturing the dark matter response across redshifts. Moreover, the parameters of the radially dependent relaxation are found to be more universal across a much wider range of masses at \( z=1 \). For example, the progenitors of even the most massive clusters are well characterized by the simple three-parameter model of relaxation that was developed with a focus on galactic-scale haloes at \( z=0 \). \AP{speculate on why this is the case.}
+We also find that the locally linear quasi-adiabatic relaxation model is a good description of the relaxation relation at this earlier epoch, demonstrating its robustness in capturing the dark matter response across redshifts. Moreover, the parameters of the radially dependent relaxation are found to be more universal across a much wider range of masses at \( z=1 \). For example, the progenitors of even the most massive clusters are well characterized by the simple three-parameter model of relaxation that was developed with a focus on galactic-scale haloes at \( z=0 \). \red{This suggests that the deviation from the three-parameter model are a result of late-time events such as mergers in the cluster scale haloes.}\AP{speculate on why this is the case.}
 
 % \subsubsection*{2. Variation in Astrophysical Feedback Using CAMELS Simulations}
-Next, we explored variations in astrophysical feedback strengths within the IllustrisTNG model using simulations from the CAMELS project, which varies four different feedback parameters: two for stellar feedback and two for AGN feedback. Our analysis shows that the parameters controlling the energy flux of the feedback have a significant impact on the relaxation of dark matter at different epochs. In contrast, the parameters governing the speed and burstiness of feedback have negligible effects on the halo relaxation response. \AP{mention this is consistent with discussion of meaning of $q_0$}
+Next, we explored variations in astrophysical feedback strengths within the IllustrisTNG model using simulations from the CAMELS project, which varies four different feedback parameters: two for stellar feedback and two for AGN feedback. Our analysis shows that the parameters controlling the energy flux of the feedback have a significant impact on the relaxation of dark matter at different epochs. In contrast, the parameters governing the speed and burstiness of feedback have negligible effects on the halo relaxation response. \red{This further strengthens our argument that the relaxation offset is caused by the dark matter shells that have not yet responded to the recent feedback outflows.} \AP{mention this is consistent with discussion of meaning of $q_0$}
 
 We find that variations in stellar feedback strengths have a larger impact among dwarf galaxy-scale haloes, while variations in AGN feedback parameters exert a stronger influence on Milky Way-scale haloes. Notably, the relaxation offset in the outer well-resolved regions is stronger at the present epoch than at \( z=1 \), contrasting with results from the inner regions explored in the IllustrisTNG simulations in the first part of this chapter.
 
