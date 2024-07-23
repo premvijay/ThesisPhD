@@ -98,7 +98,7 @@ these matching fractions to decide if the given pair can be considered a valid m
 Computing the matching fractions 
 for every pair of haloes is computationally expensive with $O(n^2)$ for millions of haloes in the catalogue. We decrease the complexity to $O(n)$ by supplying, for each halo in the hydro-simulation, an ordered list of most probable match candidates in the gravity-only run. These candidate lists of gravity-only haloes are generated and ranked based on the spatial positions of the haloes and their masses using a KD-tree based neighbour finding algorithm, implemented using \texttt{scipy.spatial.KDTree}.
 For each halo in the hydro run, we test if the matching fraction of this halo with respect to any of the haloes in its match candidate list exceeds the value of 0.5. This ensures that at most one halo is selected as a match for each of the hydrodynamical haloes, so that our matched catalogue of halo pairs will be a subset of the source catalogue without repetitions.
-While we match as many haloes as possible, it is also important to ensure that false matches don't plague our study. Based on the results in Appendix \ref{sec:apndx-matching-ch:sims}, we therefore additionally require that in a valid matched pair, the gravity-only FOF halo must also have a matching fraction of more than 0.5 with respect to the hydrodynamical halo.
+While we match as many haloes as possible, it is also important to ensure that false matches don't plague our study. We therefore additionally require that in a valid matched pair, the gravity-only FOF halo must also have a matching fraction of more than 0.5 with respect to the hydrodynamical halo.
 Our FOF based matching can be compared with
 Lovell et al. (2018) \citep[][]{2018MNRAS.481.1950L} where a similar matching algorithm has been followed for central subhaloes.
 
@@ -113,8 +113,8 @@ For illustrative purpose, a visual representation of two randomly chosen halo pa
 \section{Choice of matching algorithm}
 \label{sec:apndx-matching-ch:sims}
 \AP{all Appendices should be gathered together at the end of the entire thesis. see sujatha's thesis.}\PV{There is Appendix only for this chapter so instead I merged them to the main text. }
-In this thesis, we primarily study the response of dark matter halo to galaxy by comparing the haloes in hydrodynamical simulations to their counterparts in gravity-only runs.
-We described the matching procedure in \secref{sec:methods-match-ch:sims}, here we discuss some of the specific choices in that procedure.
+% In this thesis, we primarily study the response of dark matter halo to galaxy by comparing the haloes in hydrodynamical simulations to their counterparts in gravity-only runs.
+Here we discuss some of the specific choices in the matching procedure described in \secref{sec:methods-match-ch:sims}.
 For this purpose, let us consider the FOF group haloes in TNG300 simulation with $\log M(\Mh)>10.5$.  There are 543588 FOF groups satisfying this criterion in the hydrodynamical run of TNG300, with each of them having more than 500 particles within their $R_{\rm vir}$ in the highest resolution run.
 Following the matching procedure described in \secref{sec:methods-match-ch:sims} (requiring only that the matching fraction of the hydrodynamical halo with respect to the gravity-only halo is greater than 0.5), we get a matching halo in the gravity-only run for 541594 of them, leaving out only 1994 haloes unmatched, that is a negligible 0.4\% spread across the mass range (\figref{fig:efficiency-mass-ch:sims}).
 However, if we follow the same procedure using matching fraction between the central subhaloes instead of FOF group themselves, then we get a order of magnitude more unmatched haloes as can be seen in the \figref{fig:efficiency-mass-ch:sims}.  
@@ -134,7 +134,7 @@ However, if we follow the same procedure using matching fraction between the cen
 
 \begin{figure}
     \includegraphics[width=\linewidth]{plots/hal_match_efficiency_mass_rev.pdf}
-    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown in left panel as a function of mass $M_{200c}$ after removing asymmetrical matches (see text in appendix \ref{sec:apndx-matching-ch:sims}.}
+    \caption{Fraction of haloes in the TNG300-1 hydrodynamical simulation that have not found a match is shown in left panel as a function of mass $M_{200c}$ after removing asymmetrical matches.}
     \label{fig:efficiency-mass-rev-ch:sims}
 \end{figure}
 
