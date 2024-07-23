@@ -237,6 +237,9 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 \mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
 \pagestyle{fancy}  % Return the page headers back to the "fancy" style
 
+\fancyhead[L]{\emph{\leftmark}}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
 % Include the chapters of the thesis, as separate files
 % Just uncomment the lines as you write the chapters
 
