@@ -1,15 +1,10 @@
-%% ----------------------------------------------------------------
-%% Thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
-%% ---------------------------------------------------------------- 
 
-% Set up the document
-\documentclass[a4paper, 12pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
-\graphicspath{Figures/}  % Location of the graphics files (set up for graphics to be in PDF format)
+\documentclass[a4paper, 12pt, oneside]{Thesis}  %
+\graphicspath{Figures/}  %
 
-% Include any extra LaTeX packages required
-\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
-\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
-\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\usepackage[square, numbers, comma, sort&compress]{natbib}  %
+\usepackage{verbatim}  %
+\usepackage{vector}  %
 \usepackage[utf8]{inputenc}
 \usepackage{aas_macros}
 \usepackage{amsfonts}
@@ -20,9 +15,8 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
 \usepackage{soul}
-\hypersetup{colorlinks=true,allcolors=teal}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+\hypersetup{colorlinks=true,allcolors=teal}  %
 
-% \hypersetup{colorlinks=true,allcolors=teal}
 
 \newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
 \newcommand{\Hi}{\textsc{Hi}}
@@ -68,95 +62,60 @@
 \newcommand{\PV}[1]{\emph{\color{violet}[PV: #1]}}
 \newcommand{\red}[1]{\textcolor{red}{#1}}
 
-%% ----------------------------------------------------------------
 \begin{document}
-\frontmatter      % Begin Roman style (i, ii, iii, iv...) page numbering
+\frontmatter      %
 
-% Set up the Title Page
 \title  {Interplay of galaxy formation and the evolution of dark matter haloes in the cosmic web}
 \authors    {\texorpdfstring{\href{premv@iucaa.in}{Premvijay Velmani}}{Premvijay Velmani}}
-\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
+\addresses  {\groupname\\\deptname\\\univname}  %
 \date       {\today}
 \subject    {}
 \keywords   {}
 
 \maketitle
-%% ----------------------------------------------------------------
 
-\setstretch{1.5}  % It is better to have smaller font and larger line spacing than the other way round
+\setstretch{1.5}  %
 
-% Define the page headers using the FancyHdr package and set up for one-sided printing
-\fancyhead{}  % Clears all page headers and footers
-\rhead{\thepage}  % Sets the right side header to show the page number
-\lhead{}  % Clears the left side page header
+\fancyhead{}  %
+\rhead{\thepage}  %
+\lhead{}  %
 
-\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+\pagestyle{fancy}  %
 
-% %% ----------------------------------------------------------------
-% % Declaration Page required for the Thesis, your institution may give you a different text to place here
-% \Declaration{
 
-% \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-% I, Premvijay Velmani, declare that this thesis titled, `Interplay of galaxy formation and the evolution of dark matter haloes in the cosmic web' and the work presented in it are my own. I confirm that:
 
-% \begin{itemize} 
-% \item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
- 
-% \item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
- 
-% \item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
- 
-% \item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
- 
-% \item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
- 
-% \item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.
-% \\
-% \end{itemize}
  
  
-% Signed:\\
-% \rule[1em]{25em}{0.5pt}  % This prints a line for the signature
  
-% Date:\\
-% \rule[1em]{25em}{0.5pt}  % This prints a line to write the date
-% }
-\clearpage  % Declaration ended, now start a new page
+ 
+ 
+ 
+ 
+ 
+\clearpage  %
 
-% %% ----------------------------------------------------------------
-% % The "Funny Quote Page"
-\pagestyle{empty}  % No headers or footers for the following pages
+\pagestyle{empty}  %
 
-% \null\vfill
-% % Now comes the " Quote", written in italics
-% % \textit{``Write a quote here.''}
 
-% \begin{flushright}
-% If the quote is taken from someone, their name goes here
-% \end{flushright}
 
 \vfill\vfill\vfill\vfill\vfill\vfill\null
-\clearpage  % Funny Quote page ended, start a new page
-%% ----------------------------------------------------------------
+\clearpage  %
 
-% The Abstract Page
-\addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
+\addtotoc{Abstract}  %
 \abstract{
-\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-\AP{Abstract cannot be so long. It has to be published in annual report also. restrict to 300 words. what is written here right now is a synopsis, not an abstract.}
+\addtocontents{toc}{\vspace{1em}}  %
+%
 
 Dark matter haloes contain a multitude of information about cosmology, particle physics, and galactic astrophysics. This thesis attempts to decouple the astrophysical effects on the radial distribution within haloes. We statistically explore this relaxation response across various haloes in realistic cosmological simulations from IllustrisTNG and EAGLE. We characterize them accurately with a simple quasi-adiabatic model that accounts for astrophysical feedback effects and an explicit dependence on halo-centric distance. Through extensive CAMELS simulations, we analyze how variations in feedback implementation affect halo relaxation across different epochs, revealing insights into the underlying physical mechanisms. While the amount of feedback outflows has a strong effect on relaxation, their exact nature seems irrelevant. EAGLE simulations with a variety of astrophysical models further show that the gas equation of state strongly influences relaxation alongside feedback effects. By examining the dynamical evolution of relaxation in halo populations from $z=5$ to $z=0$, we statistically investigate possible causal connections with astrophysical processes such as star formation, and the production of wind and metals. These connections typically manifest immediately in inner regions, but with a 2 to 3 Gyr delay in the outer halo, elucidating the dependence on halo-centric distance. These findings can enhance baryonification schemes and semi-analytical models. Lastly, we develop a spherical self-similar model, incorporating radiative cooling and artificial viscosity to accreting gas, that mimics the formation of a galaxy disk. By evolving gas and dark matter self-consistently, we produce halo relaxation responses in this tractable system that qualitatively match full simulations. Initial applications reveal that, besides accretion rate, the gas equation of state significantly affects halo relaxation, aligning with findings from EAGLE simulations.
 }
 
-\clearpage  % Abstract ended, start a new page
-%% ----------------------------------------------------------------
+\clearpage  %
 
-\setstretch{1.5}  % Reset the line-spacing to 1.3 for body text (if it has changed)
+\setstretch{1.5}  %
 
-% The Acknowledgements page, for thanking everyone
 \acknowledgements{
-\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+\addtocontents{toc}{\vspace{1em}}  %
 
 I will start by acknowledging the universe for having had sufficiently random fluctuations that allowed for the formation of self-sustaining entities such as humans, that continuously increase their correlation with the universe through a systematic process of building knowledge through science. In the contemporary era of science, research like this is made possible through the funds contributed by every common citizen, through organizations like UGC and research institutions like IUCAA; I am honored to be part of this. I would not have been here if not for the limitless curiosity I was born with, which was constantly nurtured by my loving family, supportive teachers, and caring friends, for which I am infinitely grateful.
 
@@ -178,10 +137,9 @@ Finally I would like to thank the IUCAA administration, directors and deans who 
 While I am definitely grateful to everyone who made me what I am today and in making this thesis possible, I could not mention every name here. All such interactions, including those off the record, will stay in my memories forever.
 
 }
-\clearpage  % End of the Acknowledgements
-%% ----------------------------------------------------------------
+\clearpage  %
 
-\pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+\pagestyle{fancy}  %
 
 \section*{List of Publications included}
 \lhead{\emph{List of Publications}}
@@ -220,111 +178,60 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 \doi{10.1093/mnras/stac2605}
 
 
-%% ----------------------------------------------------------------
-\lhead{\emph{Contents}}  % Set the left side page header to "Contents"
-\tableofcontents  % Write out the Table of Contents
+\lhead{\emph{Contents}}  %
+\tableofcontents  %
 
-%% ----------------------------------------------------------------
-\lhead{\emph{List of Figures}}  % Set the left side page header to "List if Figures"
-\listoffigures  % Write out the List of Figures
+\lhead{\emph{List of Figures}}  %
+\listoffigures  %
 
-%% ----------------------------------------------------------------
-\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
-\listoftables  % Write out the List of Tables
-
-% %% ----------------------------------------------------------------
-% \setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
-% \clearpage  % Start a new page
-% \lhead{\emph{Abbreviations}}  % Set the left side page header to "Abbreviations"
-% \listofsymbols{ll}  % Include a list of Abbreviations (a table of two columns)
-% {
-% % \textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
-% \textbf{LAH} & \textbf{L}ist \textbf{A}bbreviations \textbf{H}ere \\
-
-% }
-
-% %% ----------------------------------------------------------------
-% \clearpage  % Start a new page
-% \lhead{\emph{Physical Constants}}  % Set the left side page header to "Physical Constants"
-% \listofconstants{lrcl}  % Include a list of Physical Constants (a four column table)
-% {
-% % Constant Name & Symbol & = & Constant Value (with units) \\
-% Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
-
-% }
-
-% %% ----------------------------------------------------------------
-% \clearpage  %Start a new page
-% \lhead{\emph{Symbols}}  % Set the left side page header to "Symbols"
-% \listofnomenclature{lll}  % Include a list of Symbols (a three column table)
-% {
-% % symbol & name & unit \\
-% $a$ & distance & m \\
-% $P$ & power & W (Js$^{-1}$) \\
-% & & \\ % Gap to separate the Roman symbols from the Greek
-% $\omega$ & angular frequency & rads$^{-1}$ \\
-% }
-%% ----------------------------------------------------------------
-% End of the pre-able, contents and lists of things
-% Begin the Dedication page
-
-\setstretch{1.5}  % Return the line spacing back to 1.3
-
-% \pagestyle{empty}  % Page style needs to be empty for this page
-% \dedicatory{For/Dedicated to/To my\ldots}
-
-% \addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+\lhead{\emph{List of Tables}}  %
+\listoftables  %
 
 
-%% ----------------------------------------------------------------
-\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
-\pagestyle{fancy}  % Return the page headers back to the "fancy" style
+
+
+
+
+\setstretch{1.5}  %
+
+
+
+
+\mainmatter	  %
+\pagestyle{fancy}  %
 
 \fancyhead[L]{\emph{\leftmark}}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 
-% Include the chapters of the thesis, as separate files
-% Just uncomment the lines as you write the chapters
 
-\input{Chapters/intro.tex} % Introduction
+\input{Chapters/intro.tex} %
 
 \input{Chapters/sims_hals.tex}
 
-\input{Chapters/z0_main.tex} % 
+\input{Chapters/z0_main.tex} %
 
-\input{Chapters/physvar_z01.tex} % 
+\input{Chapters/physvar_z01.tex} %
 
-\input{Chapters/dynam.tex} % 
+\input{Chapters/dynam.tex} %
 
-\input{Chapters/self_simil.tex} % 
+\input{Chapters/self_simil.tex} %
 
-%\input{Chapters/Chapter6} % Results and Discussion
 
-\input{Chapters/concl.tex} % Conclusion
+\input{Chapters/concl.tex} %
 
-%% ----------------------------------------------------------------
-% Now begin the Appendices, including them as separate files
 
-\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+\addtocontents{toc}{\vspace{2em}} %
 
-\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+\appendix %
 
-% \input{Appendices/AppendixA}	% Appendix Title
 
-%\input{Appendices/AppendixB} % Appendix Title
 
-%\input{Appendices/AppendixC} % Appendix Title
 
-\addtocontents{toc}{\vspace{2em}}  % Add a gap in the Contents, for aesthetics
+\addtocontents{toc}{\vspace{2em}}  %
 \backmatter
 
-%% ----------------------------------------------------------------
 \label{Bibliography}
-\lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
-% \bibliographystyle{unsrtnat}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+\lhead{\emph{Bibliography}}  %
 \bibliographystyle{unsrtnat}
-\bibliography{Bibliography}  %,references-AdiabRelxn1,references-SelfSimRelxn}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
-% \bibliography{references-AdiabRelxn1}
-% \bibliography{references-SelfSimRelxn}
-\end{document}  % The End
-%% ----------------------------------------------------------------
+\bibliography{Bibliography}  %
+\end{document}  %

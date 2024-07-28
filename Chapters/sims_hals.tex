@@ -1,6 +1,5 @@
 \chapter{Simulations and analysis of halo response}
 \label{chap:sims-hals}
-% \lhead{\emph{Simulations of Halo Response}}
 
 In this chapter, we delve into the simulation data and methodologies fundamental to our investigations. This thesis primarily focuses on understanding the impact of gas assembly and galaxy formation on the structure of dark matter using high-resolution cosmological hydrodynamical simulations of galaxy formation. For all such simulations employed in this thesis, we provide a brief description focusing on the information relevant for our analysis in \secref{sec:sims}.
 
@@ -58,7 +57,6 @@ In our study, we specifically utilize the TNG suite's 1P set of simulations, a s
         \item $A_{\mathrm{AGN2}}$: Varied between 0.5 to 2, this parameter controls the burstiness and the temperature of the heated gas during AGN feedback "bursts" by changing the wind speed of the AGN feedback.
     \end{itemize}
 \end{itemize}
-% 
 All these parameters have a value of one in the fiducial simulation, and there are five simulations with higher values and another five simulations with lower values for each of these parameters. In total, we utilize these 41 hydrodynamical simulations and compare them against the gravity-only simulation over the same cosmological volume.
 
 
@@ -112,8 +110,7 @@ For illustrative purpose, a visual representation of two randomly chosen halo pa
 
 \section{Choice of matching algorithm}
 \label{sec:apndx-matching-ch:sims}
-\AP{all Appendices should be gathered together at the end of the entire thesis. see sujatha's thesis.}\PV{There is Appendix only for this chapter so instead I merged them to the main text. }
-% In this thesis, we primarily study the response of dark matter halo to galaxy by comparing the haloes in hydrodynamical simulations to their counterparts in gravity-only runs.
+%
 Here we discuss some of the specific choices in the matching procedure described in \secref{sec:methods-match-ch:sims}.
 For this purpose, let us consider the FOF group haloes in TNG300 simulation with $\log M(\Mh)>10.5$.  There are 543588 FOF groups satisfying this criterion in the hydrodynamical run of TNG300, with each of them having more than 500 particles within their $R_{\rm vir}$ in the highest resolution run.
 Following the matching procedure described in \secref{sec:methods-match-ch:sims} (requiring only that the matching fraction of the hydrodynamical halo with respect to the gravity-only halo is greater than 0.5), we get a matching halo in the gravity-only run for 541594 of them, leaving out only 1994 haloes unmatched, that is a negligible 0.4\% spread across the mass range (\figref{fig:efficiency-mass-ch:sims}).
@@ -228,6 +225,4 @@ In this, we use Hernquist profile for the initial unrelaxed dark matter halo and
 \end{figure*}
 
 For those mock halo pairs, we compute the mass profiles and obtain the relaxation ratio as a function of the dark matter shell radius as discussed in \secref{sec:char_relxn_reln-ch:sims}. We then repeat this for mock halo pairs generated with different particle resolutions. We find that the computed relaxation relation shown by colored markers matches with expected relaxation relation shown in solid lines; however, the choice of radial bins is limited by the particle resolution (see \figref{fig:mock-ch:sims}).
-% \section{Haloes}
 
-% \section{Characterizing the halo response}
