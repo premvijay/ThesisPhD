@@ -150,16 +150,16 @@
 \degree      {}
 \authors     {}
 \university  {\texorpdfstring{\href{University Web Site URL Here (include http://)}
-                {University Name}}
+                {Jawaharlal Nehru University}}
                 {University Name}}
 \UNIVERSITY  {\texorpdfstring{\href{University Web Site URL Here (include http://)}
-                {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
+                {JAWAHARLAL NEHRU UNIVERSITY}}
                 {UNIVERSITY NAME (IN BLOCK CAPITALS)}}
 \department  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {Department or School Name}}
+                {Inter-Universtity Centre of Astronomy and Astrophysics}}
                 {Department or School Name}}
 \DEPARTMENT  {\texorpdfstring{\href{Department or School Web Site URL Here (include http://)}
-                {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
+                {INTER-UNIVERSTITY CENTRE OF ASTRONOMY AND ASTROPHYSICS}}
                 {DEPARTMENT OR SCHOOL NAME (IN BLOCK CAPITALS)}}
 \group       {\texorpdfstring{\href{Research Group Web Site URL Here (include http://)}
                 {Research Group Name}}
@@ -168,7 +168,7 @@
                 {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
                 {RESEARCH GROUP NAME (IN BLOCK CAPITALS)}}
 \faculty     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
-                {Faculty Name}}
+                {Prof. Aseem Paranjape}}
                 {Faculty Name}}
 \FACULTY     {\texorpdfstring{\href{Faculty Web Site URL Here (include http://)}
                 {FACULTY NAME (IN BLOCK CAPITALS)}}
@@ -176,6 +176,23 @@
 \addresses   {}
 \subject     {}
 \keywords    {}
+% \newcommand{\descripline}[1]{\def\@mydescripline{#1}}
+
+% % Define the boolean
+% \newif\if@synopsis
+% \@synopsisfalse % Initialize to false
+
+% % mythesis.cls
+% \newcommand{\setsynopsis}[1]{%
+%     \ifthenelse{\equal{#1}{true}}{%
+%         \@synopsistrue
+%         \decripline{Synopsis of the thesis submitted for the degree of }
+%     }{%
+%         \@synopsisfalse
+%     }%
+% }
+
+
 \renewcommand\maketitle{
   \btypeout{Title Page}
   \hypersetup{pdftitle={\@title}}
@@ -188,34 +205,38 @@
     \let\footnoterule\relax
     \let \footnote \thanks
     \setcounter{footnote}{0}
-    \null\vfil
     \vskip 60\p@
     \begin{center}
       \setlength{\parskip}{0pt}
-      {\large\textbf{\UNIVNAME}\par}
+      {\Large\textbf{\DEPTNAME}\par}
       \vfill
+      \bigskip
+      {\includegraphics[height=3cm]{Figures/IUCAA-logo.png}}
+      \vfill
+      \bigskip
       {\huge \bf \@title \par}
       \vfill
+      \bigskip
+      {\large Thesis submitted for the degree of \par}
+      {\large \textbf{Doctor of Philosophy} (in Physics) \par}
       {\LARGE by \par}
       \smallskip
       {\LARGE \authornames \par}
+      \bigskip
+      {\large supervised by \par}
+      {\Large \facname \par}
+      \bigskip
+      {\large to \par}
+      {\large \univname \par}
+      \bigskip
+      {\includegraphics[height=2.5cm]{Figures/JNU_logo.jpg}}
+      \bigskip
       \vfill
-      {\large A thesis submitted in partial fulfillment for the \par}
-      {\large degree of Doctor of Philosophy \par}
-      \bigskip
-      \bigskip
-      {\large in the \par}
-      {\large \facname \par}
-      {\large \deptname \par}
-      \bigskip
-      \bigskip
-      \bigskip
       {\Large \@date \par}
       \bigskip
     \end{center}
     \par
     \@thanks
-    \vfil\null
   \end{titlepage}
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
@@ -228,20 +249,21 @@
   \global\let\author\relax
   \global\let\date\relax
   \global\let\and\relax
-  \cleardoublepage
+  \pagestyle{plain} % Reset page style
 }
+
 \newenvironment{abstract}
 {
   \btypeout{Abstract Page}
   \thispagestyle{empty}
-  \null\vfil
+  % \null\vfil
   \begin{center}
     \setlength{\parskip}{0pt}
-    {\normalsize \UNIVNAME \par}
-    \bigskip
+    % {\normalsize \UNIVNAME \par}
+    % \bigskip
     {\huge{\textit{Abstract}} \par}
     \bigskip
-    {\normalsize \facname \par}
+    % {\normalsize \facname \par}
     {\normalsize \deptname \par}
     \bigskip
     {\normalsize Doctor of Philosophy\par}
