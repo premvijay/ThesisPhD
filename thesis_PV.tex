@@ -15,6 +15,8 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
 \usepackage{soul}
+\usepackage{pdfpages}
+% \usepackage{geometry}
 \hypersetup{colorlinks=true,allcolors=teal}  %
 
 
@@ -74,11 +76,24 @@
 
 \maketitle
 
+
 \setstretch{1.5}  %
 
 \fancyhead{}  %
 \rhead{\thepage}  %
 \lhead{}  %
+
+\clearpage
+\pagestyle{empty}  %
+
+% \newgeometry{left=1.5cm,top=1.5cm}
+% \includegraphics[width=1.3\linewidth,page=1]{certificate_declaration_supervisor.pdf}
+% \includegraphics[width=1.3\linewidth,page=2]{certificate_declaration_supervisor.pdf}
+\includepdf[pages=-, frame=false, scale=0.95, offset={2cm -1.5cm}]{certificate_declaration_supervisor.pdf}
+\includepdf[pages=-, frame=false, scale=0.95, offset={2cm -1.5cm}]{Declaration Form By Student.pdf}
+% \includegraphics[width=1.3\linewidth]{Declaration Form By Student.pdf}
+
+% \restoregeometry
 
 \pagestyle{fancy}  %
 
