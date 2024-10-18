@@ -1,7 +1,4 @@
 \documentclass[final]{beamer}
-% \usepackage{beamerposter}
-
-% Define poster size and scale
 \usepackage[orientation=portrait, size=a0, scale=1.4]{beamerposter}
 
 % Theme settings
@@ -15,6 +12,7 @@
 \setbeamercolor{block title}{bg=darkblue, fg=white}
 \setbeamercolor{block body}{bg=lightgray}
 
+% Graphics path
 \usepackage{graphicx}
 \graphicspath{{../}}
 
@@ -28,6 +26,19 @@
 
 % Begin poster content
 \begin{frame}[t]
+
+    % Title block
+    \begin{center}
+        \vspace{-1.5cm} % Adjust for spacing if needed
+        \usebeamerfont{title} \textcolor{darkblue}{\Huge \textbf{Exploring the Dynamical Evolution of Dark Matter Haloes in Cosmological Simulations}} \\
+        \vspace{0.5cm}
+        \usebeamerfont{author} \LARGE{PremVijay Velmani} \\
+        \vspace{0.5cm}
+        \usebeamerfont{institute} \Large{Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune} \\
+    \end{center}
+
+    \vspace{1cm} % Add space between title and content
+    
     \begin{columns}
         % Column 1: Introduction & Methods
         \begin{column}{0.32\textwidth}
@@ -51,7 +62,7 @@
             \begin{block}{Figure 1}
                 \centering
                 \includegraphics[width=0.9\linewidth]{plots/demo-cautun-gnedin.png} % Add figure path
-                \caption{Simulation of dark matter halo profile.}
+                \textbf{Simulation of dark matter halo profile.}
             \end{block}
         \end{column}
 
@@ -71,7 +82,7 @@
             \begin{block}{Figure 2}
                 \centering
                 \includegraphics[width=0.9\linewidth]{plots/fit_param_q3s_M_TE.pdf} % Add figure path
-                \caption{Quasi-adiabatic relaxation model.}
+                \textbf{Quasi-adiabatic relaxation model.}
             \end{block}
 
             % Results: Part 2
@@ -101,7 +112,7 @@
                 \centering
                 \includegraphics[width=0.9\linewidth]{plots/profiles_gas_w-wo_halo_all.pdf} % Add figure path
                 \includegraphics[width=0.9\linewidth]{plots/profiles_gas_shocked_vary-gam.pdf} % Add figure path
-                \caption{Self-similar model: Gas and dark matter profiles.}
+                \textbf{Self-similar model: Gas and dark matter profiles.}
             \end{block}
 
             % Conclusions & Future Directions
@@ -117,7 +128,7 @@
 
     % Acknowledgements
     \begin{block}{Acknowledgements}
-        This presentation is funded by Inter-University Centre of Astronomy and Astrophysics, IUCAA.
+        This presentation is funded by Inter-University Centre of Astronomy and Astrophysics (IUCAA), Pune.
     \end{block}
     
 \end{frame}
