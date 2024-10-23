@@ -29,8 +29,8 @@
 
     % Title block
     \begin{center}
-        \vspace{-1.5cm} % Adjust for spacing if needed
-        \usebeamerfont{title} \textcolor{darkblue}{\Huge \textbf{Exploring the Dynamical Evolution of Dark Matter Haloes in Cosmological Simulations}} \\
+        \vspace{1.5cm} % Adjust for spacing if needed
+        \usebeamerfont{title} \textcolor{darkblue}{\Huge \textbf{Interplay of galaxy formation and the evolution of dark matter haloes}} \\
         \vspace{0.5cm}
         \usebeamerfont{author} \LARGE{PremVijay Velmani} \\
         \vspace{0.5cm}
@@ -41,11 +41,14 @@
     
     \begin{columns}
         % Column 1: Introduction & Methods
-        \begin{column}{0.32\textwidth}
+        \begin{column}{0.45\textwidth}
             % Introduction
             \begin{block}{Introduction}
-                Dark matter haloes are fundamental structures in the Universe, hosting the formation and evolution of galaxies. 
-                This research investigates the impact of baryonic astrophysical processes on the relaxation of dark matter profiles in haloes.
+            \begin{itemize}
+                \item Dark matter haloes are fundamental structures in the Universe, hosting the formation and evolution of galaxies.
+                \item Understanding their nature and evolution is a multi-disciplinary task. 
+                \item This research investigates the impact of baryonic astrophysical processes on the relaxation of dark matter profiles in haloes.
+            \end{itemize}
             \end{block}
 
             % Methods
@@ -61,13 +64,14 @@
             % Placeholder for figure
             \begin{block}{Figure 1}
                 \centering
-                \includegraphics[width=0.9\linewidth]{plots/demo-cautun-gnedin.png} % Add figure path
+                % \includegraphics[width=0.9\linewidth]{plots/demo-cautun-gnedin.png} % Add figure path
+                \includegraphics[width=0.9\linewidth]{plots/relxn_model_comparison.pdf} % Add figure path
                 \textbf{Simulation of dark matter halo profile.}
             \end{block}
         \end{column}
 
         % Column 2: Results
-        \begin{column}{0.32\textwidth}
+        \begin{column}{0.45\textwidth}
             % Results: Part 1
             \begin{block}{Results (Part 1)}
                 \textbf{Statistical Response Characterization:}
@@ -81,7 +85,7 @@
             % Placeholder for figure
             \begin{block}{Figure 2}
                 \centering
-                \includegraphics[width=0.9\linewidth]{plots/fit_param_q3s_M_TE.pdf} % Add figure path
+                \includegraphics[width=0.6\linewidth]{plots/fit_param_q3s_M_TE.pdf} % Add figure path
                 \textbf{Quasi-adiabatic relaxation model.}
             \end{block}
 
@@ -95,9 +99,10 @@
                 \end{itemize}
             \end{block}
         \end{column}
-
+        \end{columns}
+        \begin{columns}
         % Column 3: Self-Similar Model & Conclusions
-        \begin{column}{0.32\textwidth}
+        \begin{column}{0.45\textwidth}
             % Self-Similar Model
             \begin{block}{Self-Similar Model}
                 \textbf{Spherical self-similar gas collapse model:}
@@ -111,10 +116,12 @@
             \begin{block}{Figure 3}
                 \centering
                 \includegraphics[width=0.9\linewidth]{plots/profiles_gas_w-wo_halo_all.pdf} % Add figure path
-                \includegraphics[width=0.9\linewidth]{plots/profiles_gas_shocked_vary-gam.pdf} % Add figure path
+                % \includegraphics[width=0.9\linewidth]{plots/profiles_gas_shocked_vary-gam.pdf} % Add figure path
                 \textbf{Self-similar model: Gas and dark matter profiles.}
             \end{block}
-
+            \end{column}
+            \begin{column}{0.45\textwidth}
+            \includegraphics[width=0.9\linewidth]{plots/profiles_gas_shocked_vary-gam.pdf}
             % Conclusions & Future Directions
             \begin{block}{Conclusions and Future Directions}
                 \begin{itemize}
@@ -123,6 +130,9 @@
                     \item Future work: Explore analytical models and star formation impact.
                 \end{itemize}
             \end{block}
+            \begin{alertblock}{Summary}
+                Thank you
+            \end{alertblock}
         \end{column}
     \end{columns}
 
