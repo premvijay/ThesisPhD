@@ -16,7 +16,7 @@
 % \setbeamercolor{block body}{bg=lightgray}
 
 % Define colors
-\definecolor{darktanbrown}{RGB}{90, 35, 0} % Dark tan brown color
+\definecolor{darktanbrown}{RGB}{70, 25, 0} % Dark tan brown color
 \definecolor{lightcream}{RGB}{255, 239, 204} % Light color for title text
 \definecolor{lightgblue}{RGB}{230,245,255}
 
@@ -152,7 +152,7 @@
         
         % \textbf{Quasi-adiabatic relaxation model.}
     % \end{block}
-    \begin{block}{Universal Description of Halo Response}
+    \begin{block}{Universal description of Halo Relaxation Response}
         We found that the relaxation relation, characterized by the radially dependent slope $q_1(r_f)$ and intercept $q_0(r_f)$ of this linear fit, is more universal across a wide range of halo masses up to $10^{13} \Mh$ at $z=0$ and up to $10^{14} \Mh$ at earlier redshifts ($z=1$), as shown below in the left and right panels,
         \begin{center}
             \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap098.pdf}
@@ -174,21 +174,21 @@
 % \begin{columns}
 % Column 3: Self-Similar Model & Conclusions
 \begin{column}{0.32\textwidth}
-    \begin{block}{Relaxation dynamics}
+    \begin{block}{Relaxation Dynamics}
         By tracing the evolutionary history of matched haloes, we could probe the dynamical evolution of the relaxation response of the dark matter halo to galaxy formation. 
         \begin{center}
             \includegraphics[width=\linewidth]{plots/dynam_relxn/hal_relxn_offset_evolve.pdf}
         \end{center}
         The mean intercept parameter $q_0$ in the linear relaxation relation, describing the amount of relaxation $r_f/r_i-1 \equiv q_y$ for dark matter shells with no net change in the gravitational potential $M_i/M_f-1$, is shown in the left panel as a function of time (color indicates halo mass); also the model-independent quantity $q_y$ defined as the offset $r_f/r_i-1$ is shown in the right panel. Both $q_0$ and $q_y$ start at zero, become more negative initially, but then apparently revert slowly back to zero.
     \end{block}
-    \begin{block}{Temporal connection with astrophysics}
+    \begin{block}{Temporal Connection with Astrophysics}
         The relaxation offset was also found to strongly correlate with various halo and galaxy properties, in particular with quantities like star formation rate that is associated with supernovae and other stellar feedback output. 
         \begin{center}
             \includegraphics[width=.69\linewidth]{plots/dynam_relxn/Spea_correl_vs_shift_betw_q0-SFR_fullcorr.pdf}
         \end{center}
         Spearman-rank correlation shown above between $Q_0 \equiv -q_0$ and mean SFR across a variety of haloes over long periods of time at different final halo masses suggests that the offset is typically stronger following periods of high star formation activity. Additionally, we also found that the offset in the inner region is immediately affected by high SFR, while the outer regions are affected after around 2-3 Gyr. This likely explains the explicit dependence on the halo-centric distance.
     \end{block}
-    \begin{block}{Role of Astrophysical feedback}
+    \begin{block}{Role of Astrophysical Feedback}
         Using the suite of CAMELS simulations with variation in feedback strengths, we found that the offset parameter $q_x$, which is inversely related to $q_0$, indeed strongly depends on the overall feedback flux from the galaxies. However, the parameters controlling the feedback burstiness and the wind speed have negligible impact on the relaxation offset as shown below.
         \begin{center}
             \includegraphics[clip,trim={0cm 0cm 0cm 10.5cm}, width=\linewidth]{plots/CAMELS_I_qx0.pdf}
