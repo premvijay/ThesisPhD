@@ -5,13 +5,32 @@
 \usetheme{default}
 \usecolortheme{seahorse}
 
+\usepackage{xcolor}
+
 % Color definitions
 \definecolor{darkblue}{RGB}{51, 0, 102}
 \definecolor{lightgray}{RGB}{230, 230, 230}
 \definecolor{lightyellow}{RGB}{255, 255, 20}
 \setbeamercolor{title}{bg=lightyellow, fg=darkblue}
-\setbeamercolor{block title}{bg=darkblue, fg=lightyellow}
-\setbeamercolor{block body}{bg=lightgray}
+
+% \setbeamercolor{block body}{bg=lightgray}
+
+% Define colors
+\definecolor{darktanbrown}{RGB}{90, 35, 0} % Dark tan brown color
+\definecolor{lightcream}{RGB}{255, 239, 204} % Light color for title text
+\definecolor{lightgblue}{RGB}{230,245,255}
+
+% Theme
+\setbeamercolor{title}{bg=darktanbrown, fg=lightgblue} % Title background and text color
+\setbeamercolor{block title}{bg=darktanbrown, fg=lightgblue}
+\setbeamercolor{item}{fg=darktanbrown} % Color for itemize bullet points (optional)
+
+% Main body text color
+\setbeamercolor{normal text}{bg=white, fg=black} % Main body text
+% \setbeamercolor{block body}{bg=lightgray}
+
+\setbeamerfont{title}{size=\huge} % Change size as needed
+\setbeamerfont{block title}{size=\Large} % Change size as needed
 
 % Graphics path
 \usepackage{graphicx}
@@ -42,28 +61,29 @@
 \newcommand{\erf}[1]{\ensuremath{{\rm erf}\left(#1\right)}}
 
 % Title, author, and institution information
-\title{Exploring the Dynamical Evolution of Dark Matter Haloes in Cosmological Simulations}
-\author{PremVijay Velmani}
-\institute{Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune}
-\date{\today}
+\title{{Astrophysical Impacts on Dark Matter Haloes in Cosmological Simulations}}
+% \author{PremVijay Velmani}
+% \institute{Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune}
+\date{}
 
 \begin{document}
 
 % Begin poster content
-\begin{frame}[t]
+\begin{frame}[t]{}%\HUGE Astrophysical Impacts on Dark Matter Haloes in Cosmological Simulations}
+    \maketitle
 
 % Title block
 \begin{center}
-    \vspace{1.5cm} % Adjust for spacing if needed
-    \usebeamerfont{title} \textcolor{darkblue}{\Huge \textbf{Astrophysical Impacts on Dark Matter Haloes in Cosmological Simulations}} \\
+    \vspace{-6.5cm} % Adjust for spacing if needed
+    % \usebeamerfont{title} \textcolor{darkblue}{\Huge \textbf{Astrophysical Impacts on Dark Matter Haloes in Cosmological Simulations}} \\
     \vspace{0.5cm}
-    \usebeamerfont{author} \LARGE{PremVijay Velmani}, 
-    \usebeamerfont{institute} \Large{Inter-University Centre for Astronomy and Astrophysics (IUCAA)} \\
+    \usebeamerfont{author} \textcolor{darktanbrown}{\LARGE{\textbf{Premvijay Velmani}}, 
+    \usebeamerfont{institute} \Large{Inter-University Centre for Astronomy and Astrophysics (IUCAA)}} \\
 \end{center}
 
 \vspace{.8cm} % Add space between title and content
 
-\begin{columns}
+\begin{columns}[t]
 % Column 1: Introduction & Methods
 \begin{column}{0.32\textwidth}
     % Introduction
@@ -137,7 +157,7 @@
         \begin{center}
             \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap098.pdf}
             \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap049_smpl98_allHalsMrange.pdf}
-            \hspace{-7.5cm}\raisebox{5.4cm}{\includegraphics[width=0.25\linewidth]{plots/Mass_bin_labels.pdf}}\hspace{20cm}
+            \hspace{-7.5cm}\raisebox{5.4cm}{\includegraphics[width=0.25\linewidth]{plots/Mass_bin_labels_enlarged.pdf}}\hspace{20cm}
         \end{center}
     \end{block}    
     % \begin{block}{Predicting the dark matter response: Baryonification}
@@ -175,7 +195,8 @@
         \end{center}
     \end{block}
     \begin{block}{Author}
-        \url{https://www.researchgate.net/profile/Premvijay-Velmani} premv@iucaa.in
+        % \url{https://www.researchgate.net/profile/Premvijay-Velmani} 
+        premv@iucaa.in
     \end{block}
 \end{column}
 \end{columns}
