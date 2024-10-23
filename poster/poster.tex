@@ -18,6 +18,31 @@
 \usepackage{amsmath,amssymb}
 \graphicspath{{../}}
 
+
+\newcommand{\Hi}{\textsc{Hi}}
+\newcommand{\mHi}{\ensuremath{m_{\Hi}}}
+
+\newcommand{\p}{\ensuremath{\partial}}
+
+
+\newcommand{\Msun}{\ensuremath{M_{\odot}}}
+\newcommand{\Mh}{\ensuremath{h^{-1}M_{\odot}}}
+\newcommand{\Mhsq}{\ensuremath{h^{-2}M_{\odot}}}
+\newcommand{\Mpch}{\ensuremath{h^{-1}{\rm Mpc}}}
+\newcommand{\kpch}{\ensuremath{h^{-1}{\rm kpc}}}
+\newcommand{\kms}{\ensuremath{{\rm km\,s}^{-1}}}
+\newcommand{\msq}{\ensuremath{{\rm \,m\,s}^{-2}}}
+
+\newcommand{\avg}[1]{\ensuremath{\left\langle \,#1\, \right\rangle}}
+\newcommand{\e}[1]{\ensuremath{{\rm e}^{#1}}}
+
+\newcommand{\der}{\ensuremath{{\rm d}}}
+\newcommand{\Der}{\ensuremath{{\rm D}}}
+\newcommand{\dir}{\ensuremath{\delta_{\rm D}}}
+
+\newcommand{\erfc}[1]{\ensuremath{{\rm erfc}\left(#1\right)}}
+\newcommand{\erf}[1]{\ensuremath{{\rm erf}\left(#1\right)}}
+
 % Title, author, and institution information
 \title{Exploring the Dynamical Evolution of Dark Matter Haloes in Cosmological Simulations}
 \author{PremVijay Velmani}
@@ -32,14 +57,14 @@
 % Title block
 \begin{center}
     \vspace{1.5cm} % Adjust for spacing if needed
-    \usebeamerfont{title} \textcolor{darkblue}{\Huge \textbf{Interplay of Galaxy formation and the evolution of Dark matter Haloes: Cosmological Simulations}} \\
+    \usebeamerfont{title} \textcolor{darkblue}{\Huge \textbf{Astrophysical impacts on the Dark Matter Haloes in the Cosmological Simulations}} \\
     \vspace{0.5cm}
-    \usebeamerfont{author} \LARGE{PremVijay Velmani} \\
-    \vspace{0.5cm}
-    \usebeamerfont{institute} \Large{Inter-University Centre for Astronomy and Astrophysics (IUCAA), Pune} \\
+    \usebeamerfont{author} \LARGE{Premvijay Velmani}, %\\
+    % \vspace{0.5cm}
+    \usebeamerfont{institute} \Large{Inter-University Centre for Astronomy and Astrophysics (IUCAA)} \\
 \end{center}
 
-\vspace{1cm} % Add space between title and content
+\vspace{.8cm} % Add space between title and content
 
 \begin{columns}
 % Column 1: Introduction & Methods
@@ -47,7 +72,7 @@
     % Introduction
     \begin{block}{Dark matter haloes}
     \begin{itemize}
-        \item Dark matter haloes are fundamental structures in the Universe, hosting the formation and evolution of galaxies.
+        \item Over four-fifths of all matter in the standard paradigm of cosmology is dark forming gravitationally collapsed structures called dark matter haloes hosting the formation and evolution of galaxies.
         \item Understanding their nature and evolution is a multi-disciplinary task from the particle nature of dark matter, the impact of brayonic astrophysical processes in and around galaxies and the overall cosmology. 
         \item Isolating the impact of galaxy formation and the associated astrophysical processes on the dark matter haloes is a pressing open problem.
     \end{itemize}
@@ -64,97 +89,120 @@
     % \end{block}
     \begin{block}{Cosmological Simulations}
         \begin{itemize}
-            \item It is a powerful tool to combine our knowledge of the early Universe with the late time large scale cosmological structures that we see today.
-            \item As gravity causes the tiny fluctuations to an otherwise uniform density field to grow and become non-linear, their evolution is simulated using N-body techniques and numerical hydrodynamics.
-            \item In particular, the gravatitional evolution in the absence of baryonic astrophysics is extensively studied in cosmology.
-            \item Meanwhile, there is also an ongoing research to study the baryonic astrophysics in and around the galaxies in the cosmic web through hydrodynamical simulations over cosmological volumes.
-            \item State-of-the-art simulations of galaxy formation such as EAGLE, IllustrisTNG, CAMELS employ subgrid prescrip
+            \item It is a powerful tool to combine our knowledge of the tiny fluctuation in the early Universe with the late time non-linear cosmological structures.
+            \item This growth of structures driven by gravity is extensively studied in the absence of baryonic astrophysics though N-body simulations
         \end{itemize}
-        \begin{center}
-        \includegraphics[width=0.9\linewidth]{Figures/eagle_zoom_stages1.png}
-        \textbf{Cosmological simulation of Galaxies. Credit: Virgo Consortium.}
-        \end{center}
     \end{block}
+    \begin{block}{Galaxies in cosmo simulations}
+        State-of-the-art simulations of galaxy formation such as EAGLE, IllustrisTNG, CAMELS employ subgrid prescription for various known astrophysical processes in hydrodynamical simulations of cosmological volumes.
+        \begin{center}
+            \includegraphics[width=0.9\linewidth]{Figures/eagle_zoom_stages1.png}
+            \textit{Credit: Virgo Consortium.}
+        \end{center}
+        While they primarily focus on the evolution of baryonic astrophysics, they also give the most realistic simulation of the response of the dark matter halo to galaxies.
+        \begin{center}
+            \includegraphics[clip,trim={0.5cm 0cm 2cm 0.5cm}, width=\linewidth]{plots/visual_single_halo_E.pdf}
+        \end{center} 
+        Projected density of dark matter in one such halo found in EAGLE simulation is shown above compared against the corresponding halo formed in gravity-only simulation of the same cosmological volume. Notice that it is relatively more compact and spherical when simulated with galaxy formation.
+    \end{block}
+\end{column}
+\begin{column}{0.32\textwidth}
+    \begin{block}{}
+        
+    \end{block}
+    
 
     \begin{block}{Dark matter relaxation response }
         \begin{itemize}
-            \item As baryons within the haloes condense and form form galaxies, they can become gravitationally dominant close to the haloe centres and triggering a significant redistribution of the dark matter in the halo. 
-            \item The impact of galaxy formation on the dark halo is expected to be primarily an adiabatic relaxation of dark matter particle orbits in response to baryon condensation.
-            % Assuming that the dark matter halo is spherical and doesn't undergo shell crossing while baryons condense towards the centre, the adiabatic relaxation of any given dark matter shell is determined by the change in baryonic mass within that shell. 
-            % \item Consider a shell enclosing a \emph{dark matter} mass $M_i^d(r_i)$ in radius $r_i$ in the unrelaxed halo. After relaxation, the radius of the shell changes to $r_f$. By definition, the dark matter mass $M_f^d(r_f)$ enclosed in $r_f$ in the relaxed halo is simply $M_f^d(r_f) = M_i^d(r_i)$.
-            % \item If angular momentum were to be conserved and the dark matter particle orbits stay circular, then the amount of relaxation of the shell is completely determined by the change in this total mass within the shell,
+            \item As baryons within the haloes condense and form galaxies, they can significantly change the phase-space distribution of the dark matter. 
+            \item In particular the change in the halo centric distances affects radial mass profiles of haloes that influence key observables such as the rotation curves and the radial acceleration relations.
+            \item This is usually modelled as adiabatic relaxation of dark matter in response to the net change in the gravitational potential due to galaxy formaton.
+            \item Consider a shell enclosing a \emph{dark matter} mass $M_i^d(r_i)$ in radius $r_i$ in the unrelaxed halo. After relaxation, the radius of the shell changes to $r_f$. By definition, the dark matter mass $M_f^d(r_f) = M_i^d(r_i)$.
+            \item If angular momentum were to be conserved and the dark matter particle orbits stay circular, then,
             \begin{align*}
                 r_i \,M_i(r_i) = r_f \,M_f(r_f) %
                 \implies 
             \frac{r_f}{r_i} = \frac{M_i(r_i)}{M_f(r_f)}\,. 
             \end{align*}
-            Extending this idealised scenario, quasi-adiabatic relaxation models consider the relaxation ratio $r_f/r_i$ as a function of the mass ratio $M_i/M_f$.
-            \begin{align*}
-            \frac{r_f}{r_i} &= 1 + \chi \left( \frac{M_i(r_i)}{M_f(r_f)} \right) 
-            \end{align*}
+            Since this idealized model rarely predicts the response in simulations, quasi-adiabatic relaxation models have been proposed considering the relaxation ratio $r_f/r_i$ as a function of the mass ratio $M_i/M_f$.
         \end{itemize}
     \end{block}
     % Placeholder for figure
-\end{column}
 
-% Column 2: Results
-\begin{column}{0.32\textwidth}
     % Results: Part 1
-    \begin{block}{Statistical Response Characterization:}
-        % \textbf{}
-        \begin{itemize}
-            \item Analysis of halo populations from IllustrisTNG, EAGLE.
-            \item Quasi-adiabatic model fits dark matter relaxation with astrophysical feedback.
-            \item Explicit dependence on halo-centric distance and feedback effects.
-        \end{itemize}
-    % \end{block}
-    
-    % Placeholder for figure
-    % \begin{block}{Figure 2}
-        \centering
+    \begin{block}{Relaxation in IllustrisTNG and EAGLE}
+        We found that the relaxation relation (between $r_f/r_i$ and $M_i/M_f$) varies widely between haloes of different mass scales; however, a simple linear relation can accurately describe the relaxation, provided we assume an additional explicit dependance on the halo-centric distance.
+        \begin{center}
         \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_T50_M11.pdf}
-        \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_T50_M12.pdf}
+        % \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_T50_M12.pdf}
         \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_T100_M12.5.pdf}
         \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_T300_M14.pdf}
         \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_E25_M11.pdf}
-        \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_E100_M12.5.pdf} 
-        \textbf{Quasi-adiabatic relaxation model.}
+        % \includegraphics[width=0.48\linewidth]{plots/fit_show_rf_M_E100_M12.5.pdf} 
+        \end{center}
+        Shown above the relaxation relation at few different halo-centric distances indicated by color. Notice that the exact the exact nature of the relation is very different at different halo-centric distances for some halo masses, but they are all strongly linear. 
+        % \textbf{}
+        % \begin{itemize}
+        %     \item 
+        %     \item Explicit dependence on halo-centric distance and feedback effects.
+        % \end{itemize}
     \end{block}
-    \begin{block}{Universality}
-        \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap049_smpl98_allHalsMrange.pdf}
-        \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap098.pdf}
+    
+    % Placeholder for figure
+    % \begin{block}{Figure 2}
+        % \centering
+        
+        % \textbf{Quasi-adiabatic relaxation model.}
+    % \end{block}
+    \begin{block}{Universal description of halo response}
+        We also found that the relaxation relation characterised by the radially dependent slope $q_1(r_f)$ and intercept $q_0(r_f)$ of this linear fit is more universal across a wide range of halo masses upto $10^{13} \Mh$ at $z=0$ and upto $10^{14} \Mh$ at earlier redshift $z=1$, as shown below in the left and right panel respectively.
+        \begin{center}
+            \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap098.pdf}
+            \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap049_smpl98_allHalsMrange.pdf}
+            \hspace{-10cm}\vspace{-15cm}\includegraphics[width=0.3\linewidth]{plots/Mass_bin_labels.pdf}\vspace{15cm}\hspace{20cm}
+        \end{center}
     \end{block}
-    \begin{block}{Predicting the dark matter response: Baryonification}
-        \centering
-        % \includegraphics[width=0.9\linewidth]{plots/demo-cautun-gnedin.png} % Add figure path
-        \includegraphics[width=0.7\linewidth]{plots/relxn_model_comparison.pdf} % Add figure path
-        % \textbf{Simulation of dark matter halo profile.}
-    \end{block}
+    % \begin{block}{Predicting the dark matter response: Baryonification}
+    %     \centering
+    %     % \includegraphics[width=0.9\linewidth]{plots/demo-cautun-gnedin.png} % Add figure path
+    %     \includegraphics[width=0.7\linewidth]{plots/relxn_model_comparison.pdf} % Add figure path
+    %     % \textbf{Simulation of dark matter halo profile.}
+    % \end{block}
 
     % Results: Part 2
-    \begin{block}{Relaxation dynamics}
-        \includegraphics[width=\linewidth]{plots/dynam_relxn/hal_relxn_offset_evolve.pdf}   
-    \end{block}
     
 \end{column}
 % \end{columns}
 % \begin{columns}
 % Column 3: Self-Similar Model & Conclusions
 \begin{column}{0.32\textwidth}
-    \begin{block}{Physics variation}
-        CAMELS simulations: Overall feedback energy flux affects relaxation but not the burstiness or the feedback wind speed.
-        \includegraphics[width=\linewidth]{plots/CAMELS_I_qx0.pdf}
-    {Relaxation offset parameter $q_x$ as a function of the baryonic astrophysical feedback parameters in haloes found in CAMELS-TNG at three different halo masses. Top: $z=1$, Bottom: $z=0$}
+    \begin{block}{Relaxation dynamics}
+        By tracing the evolutionary history of matched haloes, we could probe the dynamical evolution of the relaxation response of the dark matter halo to galaxy formation. 
+        \begin{center}
+            \includegraphics[width=\linewidth]{plots/dynam_relxn/hal_relxn_offset_evolve.pdf}
+        \end{center}
+        The mean intercept parameter $q_0$ in the linear relaxation relation, describing the amount of relaxation $r_f/r_i-1 \equiv q_y$ for dark matter shells with no net change in the graviational potential $M_i/M_f-1$ is shown in left panel as function of time (color indicates halo mass); also the model independent quantity $q_y$ defined as the offset $r_f/r_i-1$ is shown in the right panel. Both $q_0$ and $q_y$ starts at zero and becomes more negative initially but then apparently reverts slowly back to zero.
+    \end{block}
+    \begin{block}{Temporal connection with astrophysics}
+        The relaxation offset was also found to strongly correlate with variouds halo and galaxy properties, in particular with quantities like star formation rate that is associated with supernovae and other stellar feedback output. 
+        \begin{center}
+            \includegraphics[width=.69\linewidth]{plots/dynam_relxn/Spea_correl_vs_shift_betw_q0-SFR_fullcorr.pdf}
+        \end{center}
+        Spearmann-rank correlation shown above between $Q_0 \equiv -q_0$ and mean SFR across a variety of haloes over long period of time at different final halo masses suggest that the offset is typically stronger following periods of high star formation activity. Additionally, we also found that the offset in the inner region is immediately affected by high SFR, while the outer regions are affected after arounf 2-3 Gyr.  This is likely to explain to the explicit dependence on the halo-centric distance.
+    \end{block}
+    \begin{block}{Role of Astrophysical feedback}
+        Using the suite of CAMELS simulations with variation in feedback strengths, we found that the offset parameter $q_x$ which is inversely related to $q_0$ is indeed strongly depends on the overall feedback flux from the galaxies. However, the parameters controlling the feedback burstiness and the wind speed have neglible impact on the relaxation offset as shown below.
+        \includegraphics[clip,trim={0cm 12cm 0cm 0cm}, width=\linewidth]{plots/CAMELS_I_qx0.pdf}
+    \end{block}
+    \begin{block}{References}
+        
     \end{block}
 
-    \begin{block}{Epoch-dependent Feedback Effects}
-        \begin{itemize}
-            \item Effect of feedback on different epochs (e.g., $z=5$ to $z=0$).
-            \item Significant influence of gas equation of state.
-        \end{itemize}
-        \includegraphics[width=.69\linewidth]{plots/dynam_relxn/shift_betw_multi-Wind_FoF_fullcorr.pdf}
-        {In the top panel, correlation weighted mean time lags ($\tau_{\pm}$) between relaxation offset strengths ($Q_0, Q_0^{\rm{in}}, Q_0^{\rm{out}}$) and SFR against the mass in wind within the halo ($M_{\rm{Wind}}$) in the six halo populations selected by their final masses at redshift $z\sim 0$ are shown. The corresponding strengths ($A_{\pm}$) and the durations ($\Delta \tau_{\pm}$) of the correlation are shown in the middle and bottom panels, respectively.}
-    \end{block}
+    
+
+    % \begin{block}{Epoch-dependent Feedback Effects}
+        
+    % \end{block}
     % % Self-Similar Model
     % \begin{block}{Self-Similar Model}
     %     \textbf{Spherical self-similar gas collapse model:}
@@ -175,23 +223,23 @@
     % % \begin{column}{0.32\textwidth}
     % \includegraphics[width=0.9\linewidth]{plots/profiles_gas_shocked_vary-gam.pdf}
     % % Conclusions & Future Directions
-    \begin{block}{Conclusions and Future Directions}
-        \begin{itemize}
-            \item Improved understanding of astrophysical feedback effects on halo relaxation.
-            \item Quasi-adiabatic models applicable across a wide mass range.
-            \item Future work: Explore analytical models and star formation impact.
-        \end{itemize}
-    \end{block}
+    % \begin{block}{Conclusions and Future Directions}
+    %     \begin{itemize}
+    %         \item Improved understanding of astrophysical feedback effects on halo relaxation.
+    %         \item Quasi-adiabatic models applicable across a wide mass range.
+    %         \item Future work: Explore analytical models and star formation impact.
+    %     \end{itemize}
+    % \end{block}
     % \begin{alertblock}{Summary}
     %     Dark matter haloes contain a multitude of information about cosmology, particle physics, and galactic astrophysics. We attempt to decouple the astrophysical effects on the radial distribution within haloes. We statistically explore this relaxation response across various haloes in realistic cosmological simulations from IllustrisTNG and EAGLE. We characterize them accurately with a simple quasi-adiabatic model that accounts for astrophysical feedback effects and an explicit dependence on halo-centric distance. EAGLE simulations with a variety of astrophysical models further show that the gas equation of state strongly influences relaxation alongside feedback effects. These connections typically manifest immediately in inner regions, but with a 2 to 3 Gyr delay in the outer halo, elucidating the dependence on halo-centric distance. These findings can enhance baryonification schemes and semi-analytical models. Lastly, we develop a spherical self-similar model, incorporating radiative cooling and artificial viscosity to accreting gas, that mimics the formation of a galaxy disk.
     % \end{alertblock}
 \end{column}
 \end{columns}
 
-% Acknowledgements
-\begin{block}{Acknowledgements}
-    This presentation is funded by Inter-University Centre of Astronomy and Astrophysics (IUCAA), Pune.
-\end{block}
+% % Acknowledgements
+% \begin{block}{Acknowledgements}
+%     This presentation is funded by Inter-University Centre of Astronomy and Astrophysics (IUCAA), Pune.
+% \end{block}
     
 \end{frame}
 \end{document}
