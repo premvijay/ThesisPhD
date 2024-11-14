@@ -15,3 +15,5 @@ poster/poster.nav
 poster/poster.snm
 poster/poster.pdf
 Research statement Future/res_statement.pdf
+*.bcf
+*.run.xml
