@@ -70,8 +70,10 @@
 \begin{tikzpicture}
 \node (top) [rectangle, draw] {Chapters};
 \node (sub) [rectangle, draw, right of=top, xshift=4cm] {Introduction};
-\node (methods) [rectange, draw, xshift=2cm] {Methods};
+\node (met) [rectangle, draw, xshift=2cm, yshift=-2cm] {Simulations and Methods};
+\node (selfsim) [rectangle, draw, yshift=-4cm] {Controlled numerical experiment};
 \draw [->] (top) -- (sub);
+\draw [->] (top) -- (met);
 \end{tikzpicture}
 \end{frame}
 
