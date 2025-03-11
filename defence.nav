@@ -55,32 +55,34 @@
 \headcommand {\beamer@framepages {18}{18}}
 \headcommand {\slideentry {3}{1}{9}{19/19}{Chapter 3}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\slideentry {3}{1}{10}{20/20}{Chapter 3}{0}}
+\headcommand {\beamer@subsectionpages {10}{19}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{20}{Chapter 4}}
+\headcommand {\slideentry {3}{2}{1}{20/20}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {3}{1}{11}{21/21}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{2}{21/21}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {21}{21}}
-\headcommand {\slideentry {3}{1}{12}{22/22}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{3}{22/22}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {22}{22}}
-\headcommand {\slideentry {3}{1}{13}{23/23}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{4}{23/23}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {23}{23}}
-\headcommand {\slideentry {3}{1}{14}{24/25}{Chapter 3}{0}}
-\headcommand {\beamer@framepages {24}{25}}
-\headcommand {\slideentry {3}{1}{15}{26/26}{Chapter 3}{0}}
-\headcommand {\beamer@framepages {26}{26}}
-\headcommand {\slideentry {3}{1}{16}{27/28}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{5}{24/24}{Chapter 4}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {3}{2}{6}{25/26}{Chapter 4}{0}}
+\headcommand {\beamer@framepages {25}{26}}
+\headcommand {\slideentry {3}{2}{7}{27/28}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {27}{28}}
-\headcommand {\slideentry {3}{1}{17}{29/29}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{8}{29/29}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\slideentry {3}{1}{18}{30/30}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{9}{30/30}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\slideentry {3}{1}{19}{31/31}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{10}{31/31}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\slideentry {3}{1}{20}{32/32}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{11}{32/32}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\slideentry {3}{1}{21}{33/33}{Chapter 3}{0}}
+\headcommand {\slideentry {3}{2}{12}{33/33}{Chapter 4}{0}}
 \headcommand {\beamer@framepages {33}{33}}
 \headcommand {\beamer@partpages {1}{33}}
-\headcommand {\beamer@subsectionpages {10}{33}}
+\headcommand {\beamer@subsectionpages {20}{33}}
 \headcommand {\beamer@sectionpages {10}{33}}
 \headcommand {\beamer@documentpages {33}}
 \headcommand {\gdef \inserttotalframenumber {30}}

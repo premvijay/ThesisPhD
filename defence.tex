@@ -319,20 +319,6 @@ every path/.style={thick, ->}
 
 
 \begin{frame}
-\begin{columns}
-\begin{column}{0.5\linewidth}
-\begin{itemize}
-    \item 
-    \item 
-\end{itemize}
-\end{column}
-\begin{column}{0.48\linewidth}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}
     \begin{columns}
     \begin{column}{0.5\linewidth}
     \begin{itemize}
@@ -353,15 +339,15 @@ every path/.style={thick, ->}
 
 \begin{frame}
     \begin{columns}
-    \begin{column}{0.58\linewidth}
+    \begin{column}{0.45\linewidth}
     \begin{itemize}
         \item 
         \item 
     \end{itemize}
     \end{column}
-    \begin{column}{0.4\linewidth}
+    \begin{column}{0.54\linewidth}
         \includegraphics[width=\linewidth]{plots/fit_params_rf_M_T.pdf}
-        \includegraphics[width=\linewidth]{plots/fit_params_rf_M_E.pdf}
+        % \includegraphics[width=\linewidth]{plots/fit_params_rf_M_E.pdf}
     \end{column}
     \end{columns}
 \end{frame}
@@ -383,12 +369,12 @@ every path/.style={thick, ->}
 
 \begin{frame}
 \begin{columns}
-\begin{column}{0.5\linewidth}
+\begin{column}{0.3\linewidth}
 \begin{itemize}
     \item Percentiles
 \end{itemize}
 \end{column}
-\begin{column}{0.48\linewidth}
+\begin{column}{0.68\linewidth}
 \includegraphics[clip,trim={0.2cm 1.18cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-cs_T.pdf}
 \includegraphics[clip,trim={0.2cm 1.18cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-fs1_T.pdf}
 \includegraphics[clip,trim={0.2cm 0cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-ssfr1_T.pdf}
@@ -397,7 +383,7 @@ every path/.style={thick, ->}
 \end{columns}
 \end{frame}
 
-\begin{frame}{Application}
+\begin{frame}{Applications to }
     \begin{columns}
         \begin{column}{0.5\linewidth}
             \begin{itemize}
@@ -414,9 +400,10 @@ every path/.style={thick, ->}
 
 
 %\section{Velmani \& Paranjape 2024b}
+\subsection*{Chapter 4}
 \date[JCAP/ arXiv:2408.04864]{17 March 2025}
 
-\begin{frame}{Universal description of Halo Relaxation Response}
+\begin{frame}{Universal description of Halo Relaxation Response at $z=1$}
     The radially dependent slope $q_1(r_f)$ and intercept $q_0(r_f)$ of this linear fit, is more universal across a wide range of halo masses up to $10^{13} \Mh$ at $z=0$ (left) and up to $10^{14} \Mh$ at earlier redshift, $z=1$ (right).
     \begin{center}
         \includegraphics[width=0.48\linewidth,trim={0.5cm 0 0 0},clip]{plots/fit_params_rf_M_T_snap098.pdf}
@@ -424,6 +411,40 @@ every path/.style={thick, ->}
         \hspace{-3.8cm}\raisebox{2.4cm}{\includegraphics[width=0.28\linewidth]{plots/Mass_bin_labels_enlarged.pdf}}\hspace{20cm}
     \end{center}
 \end{frame}
+
+\begin{frame}
+    \begin{columns}
+    \begin{column}{0.3\linewidth}
+    \begin{itemize}
+        \item 
+        \item 
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.68\linewidth}
+        \includegraphics[width=\linewidth]{plots/CAMELS_I_qx0.pdf}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+    \begin{columns}
+    \begin{column}{0.5\linewidth}
+    \begin{itemize}
+        \item Relaxation offset parameter $q_0$ as a function of the baryonic feedback parameters in CAMELS-TNG. Left: $z=1$, Right: $z=0$.
+        \item  Using the suite of CAMELS simulations with variation in feedback strengths, we found that the offset parameter $q_x$, which is inversely related to $q_0$, indeed strongly depends on the overall feedback flux from the galaxies. However, the parameters controlling the feedback burstiness and the wind speed have negligible impact on the relaxation offset as shown below.
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.48\linewidth}
+        \includegraphics[width=0.99\linewidth]{plots/CAMELS_I_q0_sn18.pdf}
+        \includegraphics[width=0.99\linewidth]{plots/CAMELS_I_q0_sn33.pdf}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+
+
+
 
 
 
@@ -499,12 +520,12 @@ every path/.style={thick, ->}
 %\section{Velmani \& Paranjape 2024b}
 \date[JCAP/ arXiv:2408.04864]{17 March 2025}
 
-\begin{frame}{Role of Astrophysical Feedback}
-    Using the suite of CAMELS simulations with variation in feedback strengths, we found that the offset parameter $q_x$, which is inversely related to $q_0$, indeed strongly depends on the overall feedback flux from the galaxies. However, the parameters controlling the feedback burstiness and the wind speed have negligible impact on the relaxation offset as shown below.
-    \begin{center}
-        \includegraphics[clip,trim={0cm 0cm 0cm 10.5cm}, width=\linewidth]{plots/CAMELS_I_qx0.pdf}
-    \end{center}
-\end{frame}
+% \begin{frame}{Role of Astrophysical Feedback}
+%     Using the suite of CAMELS simulations with variation in feedback strengths, we found that the offset parameter $q_x$, which is inversely related to $q_0$, indeed strongly depends on the overall feedback flux from the galaxies. However, the parameters controlling the feedback burstiness and the wind speed have negligible impact on the relaxation offset as shown below.
+%     \begin{center}
+%         \includegraphics[clip,trim={0cm 0cm 0cm 10.5cm}, width=\linewidth]{plots/CAMELS_I_qx0.pdf}
+%     \end{center}
+% \end{frame}
 
 %\section{}
 \date[]{17 March 2025}
