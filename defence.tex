@@ -107,8 +107,8 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 \begin{frame}{Overview of the talk}
 \begin{enumerate}
     \item Background and motivation
-    \item Thesis structure
-    \item Simulations and analysis methods
+    \item Organisation of the thesis
+    \item Simulations and analysis techniques
     \item Findings
     \item Summary and future plans
 \end{enumerate}
@@ -163,7 +163,7 @@ for unresolved haloes across redshift and cosmology using correlations with loca
     This thesis aims to understand the change in the radial mass distribution of dark matter in the haloes that influence key observables such as the rotation curves and radial acceleration relations.
 \end{frame}
 
-\subsection{Thesis Structure}
+\subsection{Organisation of the thesis}
 \begin{frame}{Overview of thesis structure}
 \centering
 \begin{tikzpicture}[
@@ -172,14 +172,14 @@ every node/.style={rectangle, draw, align=center, rounded corners=3pt},
 every path/.style={thick, ->}
 ]
 % Main Nodes
-\node (intro) {Chapter 1: Introduction};
-\node (methods) [below=of intro] {Chapter 2 : Methods \\ Modern realistic simulations\\ of relaxation response};
-\node (results1) [right=of methods, xshift=-0.5cm, yshift=2cm] {Chapter 3: Diverse and \\universal aspects of relaxation \\across a variety of haloes};
-\node (results2) [right=of methods, xshift=-0.5cm, yshift=0.1cm] {Chapter 4: Role of \\Astrophysical Modeling in \\ simulated response};
-\node (results3) [right=of methods, xshift=-0.5cm, yshift=-1.7cm] {Chapter 5 : Timescales \\and Relaxation dynamics};
+\node (intro) {\textbf{Chapter 1}: Introduction};
+\node (methods) [below=of intro] {\textbf{Chapter 2} : Techniques \\ Modern realistic simulations\\ of relaxation response};
+\node (results1) [right=of methods, xshift=-0.5cm, yshift=2cm] {\textbf{Chapter 3}: Diverse and \\universal aspects of relaxation \\across a variety of haloes};
+\node (results2) [right=of methods, xshift=-0.5cm, yshift=0.1cm] {\textbf{Chapter 4}: Role of \\Astrophysical Modeling in \\ simulated response};
+\node (results3) [right=of methods, xshift=-0.5cm, yshift=-1.7cm] {\textbf{Chapter 5} : Timescales \\and Relaxation dynamics};
 \node (tractable) [below=of methods, xshift=0cm, yshift=0.2cm] { In more tractable \\halo-galaxy systems };
-\node (selfsim) [below=of results3, yshift=1cm] {Chapter 6: Self-Similar Model};
-\node (conclusion) [below=of tractable, yshift=1.2cm] {Chapter 7: Conclusions };
+\node (selfsim) [below=of results3, yshift=1cm] {\textbf{Chapter 6}: Self-Similar Model};
+\node (conclusion) [below=of tractable, yshift=1.2cm] {\textbf{Chapter 7}: Conclusions };
 % Connections
 \draw [->] (intro) -- (methods);
 \draw [->] (methods) -- (results1);
@@ -191,28 +191,11 @@ every path/.style={thick, ->}
 \draw [->] (selfsim) -- (conclusion);
 \draw [-] (methods) -- (tractable);
 \draw[-] (tractable) -- (conclusion);
-% \path (results1) -- (selfsim);
-% \path (results2) -- (selfsim);
-% \path (results3) -- (selfsim);
-% \path (selfsim) -- (conclusion);
 \end{tikzpicture}
 \end{frame}
 
 
-
-% \begin{frame}
-% \begin{tikzpicture}
-% \node (top) [rectangle, draw] {Chapters};
-% \node (sub) [rectangle, draw, right of=top, xshift=4cm] {Introduction};
-% \node (met) [rectangle, draw, xshift=2cm, yshift=-2cm] {Simulations and Methods};
-% \node (selfsim) [rectangle, draw, yshift=-4cm] {Controlled numerical experiment};
-% \draw [->] (top) -- (sub);
-% \draw [->] (top) -- (met);
-% \end{tikzpicture}
-% \end{frame}
-
-
-\section{Methods}
+\section{Simulations and Analysis}
 \subsection{Chapter 2}
 
 \begin{frame}{Simulations}
