@@ -11,13 +11,13 @@
 \graphicspath{{../../../thesis/}}
 \usefonttheme{professionalfonts}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,allcolors=teal}
+\hypersetup{colorlinks=false,urlbordercolor=red}
 
 % Color definitions
 \definecolor{darktanbrown}{RGB}{70, 25, 0} % Dark tan brown
 \definecolor{lightcream}{RGB}{255, 239, 204} % Light cream
 \definecolor{lightgblue}{RGB}{230, 255, 235} % Light greenish-blue
-\setbeamercolor{title}{bg=darktanbrown, fg=lightgblue} % Title color
+% \setbeamercolor{title}{bg=darktanbrown, fg=lightgblue} % Title color
 
 
 \newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
@@ -45,11 +45,11 @@
 \newcommand{\erf}[1]{\ensuremath{{\rm erf}\left(#1\right)}}
 
 % Title settings
-\title[Cosmo Simulation, Galaxy, Dark Matter Halo]{Interplay of galaxy formation and the evolution of dark matter haloes in the cosmic web}
-\author{Premvijay Velmani}
-\institute[IUCAA]{Inter-University Centre for Astronomy and Astrophysics (IUCAA), India \vspace{-1cm}}
-% \titlegraphic{\includegraphics[width=1cm]{./logosfigs/IUCAA-logo.png}}
-\date[]{January, 2025}
+\title[PI: Prof. Aseem Paranjape]{Interplay of galaxy formation and the evolution of dark matter haloes in the cosmic web}
+\author[Premvijay Velmani]{PhD defence by Premvijay Velmani \\  supervised by Prof. Aseem Paranjape}
+\institute[IUCAA]{Inter-University Centre for Astronomy and Astrophysics (IUCAA), India \vspace{0cm}}
+\titlegraphic{\includegraphics[width=1cm]{./Figures/IUCAA-logo.png}}
+\date[]{17 March 2025}
 
 
 \begin{document}
@@ -57,78 +57,23 @@
     \maketitle
 \end{frame}
 
-\begin{frame}{Overview}
-\begin{enumerate}
-    \item Introduction
-    \item Techniques
-    \item z0
-    \item Physvar
-\end{enumerate}
-    
-\end{frame}
-
-\begin{frame}{Thesis Overview}
-\centering
-\begin{tikzpicture}[
-node distance=1.5cm and 2.5cm,
-every node/.style={rectangle, draw, align=center, rounded corners=3pt},
-every path/.style={thick, ->}
-]
-
-% Main Nodes
-\node (intro) {Chapter 1: Introduction};
-\node (methods) [below=of intro] {Chapter 2 : Methods \\ Modern realistic simulations\\ of relaxation response};
-\node (results1) [right=of methods, xshift=-0.5cm, yshift=2cm] {Chapter 3: Diverse and \\universal aspects of relaxation \\across a variety of haloes};
-\node (results2) [right=of methods, xshift=-0.5cm, yshift=0.1cm] {Chapter 4: Role of \\Astrophysical Modeling in \\ simulated response};
-\node (results3) [right=of methods, xshift=-0.5cm, yshift=-1.7cm] {Chapter 5 : Timescales \\and Relaxation dynamics};
-\node (tractable) [below=of methods, xshift=0cm, yshift=0.2cm] { In more tractable \\halo-galaxy systems };
-\node (selfsim) [below=of results3, yshift=1cm] {Chapter 6: Self-Similar Model};
-\node (conclusion) [below=of tractable, yshift=1.2cm] {Chapter 7: Conclusions };
-
-% Connections
-\draw [->] (intro) -- (methods);
-\draw [->] (methods) -- (results1);
-\draw [->] (methods) -- (results2);
-\draw [->] (methods) -- (results3);
-\draw [->] (results1) -- (results2);
-\draw [->] (results2) -- (results3);
-\draw [->] (tractable) -- (selfsim);
-\draw [->] (selfsim) -- (conclusion);
-\draw [-] (methods) -- (tractable);
-\draw[-] (tractable) -- (conclusion);
-% \path (results1) -- (selfsim);
-% \path (results2) -- (selfsim);
-% \path (results3) -- (selfsim);
-% \path (selfsim) -- (conclusion);
-
-\end{tikzpicture}
-\end{frame}
-
-% \begin{frame}
-% \begin{tikzpicture}
-% \node (top) [rectangle, draw] {Chapters};
-% \node (sub) [rectangle, draw, right of=top, xshift=4cm] {Introduction};
-% \node (met) [rectangle, draw, xshift=2cm, yshift=-2cm] {Simulations and Methods};
-% \node (selfsim) [rectangle, draw, yshift=-4cm] {Controlled numerical experiment};
-% \draw [->] (top) -- (sub);
-% \draw [->] (top) -- (met);
-% \end{tikzpicture}
-% \end{frame}
+\section{Preface}
+\subsection*{List of Publications}
 
 \begin{frame}{List of Publications}
     % \begin{itemize}
     %     \item 
     % \end{itemize}
 \noindent
-1. Velmani \& Paranjape, 2023, ``The quasi-adiabatic relaxation of haloes in the IllustrisTNG and EAGLE cosmological simulations", \textit{MNRAS}, 
-\textbf{520}(2):2867-2886. 
+1. Velmani \& Paranjape, 2023, ``The quasi-adiabatic relaxation of haloes in the IllustrisTNG and EAGLE cosmological simulations", \textbf{MNRAS}, 
+{520}(2):2867-2886. 
 \doi{10.1093/mnras/stad297}
 % \href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.2867V}{ads:2023MNRAS.520.2867V}
 
 \vspace{0.1cm}
 
 \noindent
-2. Velmani \& Paranjape, 2024, ``A self-similar model of galaxy formation and dark halo relaxation", \textit{JCAP}, 
+2. Velmani \& Paranjape, 2024, ``A self-similar model of galaxy formation and dark halo relaxation", \textbf{JCAP}, 
 % \textbf{2024}(5):080. 
 \doi{10.1088/1475-7516/2024/05/080},
 % \href{https://ui.adsabs.harvard.edu/abs/2024JCAP...05..080V}{ads:2024JCAP...05..080V}
@@ -136,16 +81,16 @@ every path/.style={thick, ->}
 \vspace{0.1cm}
 
 \noindent
-3. Velmani \& Paranjape, 2025,``Dynamics of the response of dark matter halo to galaxy evolution in IllustrisTNG", \textit{JCAP},
+3. Velmani \& Paranjape, 2025,``Dynamics of the response of dark matter halo to galaxy evolution in IllustrisTNG", \textbf{JCAP},
 \doi{10.1088/1475-7516/2025/02/006}, 
 % \href{https://ui.adsabs.harvard.edu/abs/2024arXiv240708030V}{ads:2024arXiv240708030V}
 
 \vspace{0.1cm}
 
 \noindent
-4. Velmani \& Paranjape, 2024,``Role of astrophysical modeling on dark matter halo relaxation response at redshifts z = 0 and z = 1", \href{https://arxiv.org/abs/2408.04864}{arXiv:2408.04864}, \textit{JCAP subm.}
+4. Velmani \& Paranjape, 2024,``Role of astrophysical modeling on dark matter halo relaxation response at redshifts z = 0 and z = 1", \href{https://arxiv.org/abs/2408.04864}{arXiv:2408.04864}, \textbf{JCAP} \textit{subm.}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \textbf{Not included in this thesis}
 
@@ -157,87 +102,19 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 \end{frame}
 
 
-\begin{frame}{Relaxation relation in IllustrisTNG}
-    \begin{columns}
-        \begin{column}{.59\linewidth}
-            \includegraphics[width=\linewidth,trim={0 0 0cm 0},clip]{plots/indv_relx-reln_all.pdf}
-            \includegraphics[width=0.5\linewidth]{plots/Mass_bin_labels.pdf}
-        \end{column}
-        \begin{column}{.4\linewidth}
-            \begin{itemize}
-                \item Stacking the relaxation relation across haloes in populations selected by their sizes.
-                \item Relaxation significantly weaker in cluster scale haloes.
-            \end{itemize}
-        \end{column}
-    \end{columns}
+
+
+\begin{frame}{Overview of the talk}
+\begin{enumerate}
+    \item Background and motivation
+    \item Thesis structure
+    \item Simulations and analysis methods
+    \item Findings
+    \item Summary and future plans
+\end{enumerate}
 \end{frame}
 
-
-\begin{frame}  
-        \begin{columns}
-            \begin{column}{.59\linewidth}
-                \includegraphics[width=0.49\linewidth]{plots/fit_view_M_T.pdf}
-                \includegraphics[width=0.49\linewidth]{plots/fit_view_M_E.pdf}  
-            \end{column}
-            \begin{column}{.4\linewidth}
-                \begin{itemize}
-                    \item Stacking the relaxation relation across haloes in populations selected by their sizes.
-                    \item Relaxation significantly weaker in cluster scale haloes.
-                \end{itemize}
-            \end{column}
-        \end{columns}
-\end{frame}
-
-
-
-
-\begin{frame}
-    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T50_M11.pdf}
-    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T50_M12.pdf}
-    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T100_M12.5.pdf}
-    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T300_M14.pdf}
-    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_E25_M11.pdf}
-    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_E100_M12.5.pdf}
-\end{frame}
-
-\begin{frame}
-    \includegraphics[width=0.49\linewidth]{plots/fit_params_rf_M_T.pdf}
-    \includegraphics[width=0.49\linewidth]{plots/fit_params_rf_M_E.pdf}
-\end{frame}
-
-\begin{frame}
-    \includegraphics[width=.4\linewidth]{plots/fit_param_q3s_M_TE.pdf}
-\end{frame}
-
-\begin{frame}
-\begin{columns}
-\begin{column}{0.5\linewidth}
-\begin{itemize}
-    \item Percentiles
-\end{itemize}
-\end{column}
-\begin{column}{0.48\linewidth}
-\includegraphics[clip,trim={0.2cm 1.18cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-cs_T.pdf}
-\includegraphics[clip,trim={0.2cm 1.18cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-fs1_T.pdf}
-\includegraphics[clip,trim={0.2cm 0cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-ssfr1_T.pdf}
-\includegraphics[clip,trim={0.2cm 0cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-fg_T.pdf}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}{Application}
-    \begin{columns}
-        \begin{column}{0.5\linewidth}
-            \begin{itemize}
-                \item Using the three parameter model, we can predict the relaxed dark matter profile given the baryonic mass profiles.
-                \item These predictions are an order of magnitude better than existing models.
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.48\linewidth}
-            \includegraphics[width=0.84\textwidth]{plots/Mass-prof_with_demo_accu-1.pdf}
-        \end{column}
-    \end{columns}
-\end{frame}
+\subsection*{Background}
 
 \begin{frame}{Introduction}
     \begin{itemize}
@@ -276,38 +153,130 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 \end{tikzpicture}
 \end{frame}
 
+\subsection{Aim and Motivation}
+
 \begin{frame}{Dark matter halo response to galaxies}
     A halo from EAGLE simulation in the presence of galaxy (left image) can be seen more compact, spherical and even their centres shifted.
     \begin{center}
         \includegraphics[clip,trim={0.5cm 0cm 2cm 0.5cm}, width=0.8\linewidth]{plots/visual_single_halo_E.pdf}
     \end{center} 
-    In particular, the change in the halo-centric distances affects radial mass profiles of haloes that influence key observables such as the rotation curves and radial acceleration relations.
+    This thesis aims to understand the change in the radial mass distribution of dark matter in the haloes that influence key observables such as the rotation curves and radial acceleration relations.
 \end{frame}
 
-\begin{frame}{Relaxation response physics}
-\begin{itemize}
-        \item Early works modeled this as adiabatic relaxation of dark matter in response to the \textbf{\color{red}net} change in the gravitational potential due to galaxy formation.
-        \item Consider a dark matter particle in circular orbit starting from radius $r_i$ and adiabatically (conserving angular momentum) evolving to radius $r_f$ caused by change in sphericalised total mass profile from $M_i(r)$ to $M_f(r)$ due to galaxy, then
-        \begin{align*}
-            r_i \,M_i(r_i) = r_f \,M_f(r_f) % 
-            \implies 
-            \frac{r_f}{r_i} = \frac{M_i(r_i)}{M_f(r_f)}\,. 
-        \end{align*}
-        \item By assuming no shell crossing, these quantities can be calculated by the comparing total and dark matter mass profile in the presence and absence of galaxies using the relation $M_f^d(r_f) = M_i^d(r_i)$.
-        % \item Consider a shell enclosing a \emph{dark matter} mass $M_i^d(r_i)$ at radius $r_i$ in the unrelaxed halo. After relaxation, the radius of the shell changes to $r_f$. Assuming no-shell crossing, $M_f^d(r_f) = M_i^d(r_i)$.
-        % \item If angular momentum is conserved and the dark matter particle orbits stay circular, then,c
-        \item Quasi-adiabatic relaxation models consider the relaxation ratio $r_f/r_i$ as a function of the mass ratio $M_i/M_f$.
-    \end{itemize}
+\subsection{Thesis Structure}
+\begin{frame}{Overview of thesis structure}
+\centering
+\begin{tikzpicture}[
+node distance=1.5cm and 2.5cm,
+every node/.style={rectangle, draw, align=center, rounded corners=3pt},
+every path/.style={thick, ->}
+]
+% Main Nodes
+\node (intro) {Chapter 1: Introduction};
+\node (methods) [below=of intro] {Chapter 2 : Methods \\ Modern realistic simulations\\ of relaxation response};
+\node (results1) [right=of methods, xshift=-0.5cm, yshift=2cm] {Chapter 3: Diverse and \\universal aspects of relaxation \\across a variety of haloes};
+\node (results2) [right=of methods, xshift=-0.5cm, yshift=0.1cm] {Chapter 4: Role of \\Astrophysical Modeling in \\ simulated response};
+\node (results3) [right=of methods, xshift=-0.5cm, yshift=-1.7cm] {Chapter 5 : Timescales \\and Relaxation dynamics};
+\node (tractable) [below=of methods, xshift=0cm, yshift=0.2cm] { In more tractable \\halo-galaxy systems };
+\node (selfsim) [below=of results3, yshift=1cm] {Chapter 6: Self-Similar Model};
+\node (conclusion) [below=of tractable, yshift=1.2cm] {Chapter 7: Conclusions };
+% Connections
+\draw [->] (intro) -- (methods);
+\draw [->] (methods) -- (results1);
+\draw [->] (methods) -- (results2);
+\draw [->] (methods) -- (results3);
+\draw [->] (results1) -- (results2);
+\draw [->] (results2) -- (results3);
+\draw [->] (tractable) -- (selfsim);
+\draw [->] (selfsim) -- (conclusion);
+\draw [-] (methods) -- (tractable);
+\draw[-] (tractable) -- (conclusion);
+% \path (results1) -- (selfsim);
+% \path (results2) -- (selfsim);
+% \path (results3) -- (selfsim);
+% \path (selfsim) -- (conclusion);
+\end{tikzpicture}
 \end{frame}
 
-\section{Velmani \& Paranjape 2022}
-\subsection{arXiv:2206.07733}
+
+
+% \begin{frame}
+% \begin{tikzpicture}
+% \node (top) [rectangle, draw] {Chapters};
+% \node (sub) [rectangle, draw, right of=top, xshift=4cm] {Introduction};
+% \node (met) [rectangle, draw, xshift=2cm, yshift=-2cm] {Simulations and Methods};
+% \node (selfsim) [rectangle, draw, yshift=-4cm] {Controlled numerical experiment};
+% \draw [->] (top) -- (sub);
+% \draw [->] (top) -- (met);
+% \end{tikzpicture}
+% \end{frame}
+
+
+\section{Methods}
+\subsection{Chapter 2}
 
 \begin{frame}{Simulations}
     \begin{itemize}
         \item IllustrisTNG and EAGLE
     \end{itemize}
 \end{frame}
+
+\begin{frame}{Physically characterizing the relaxation response}
+\begin{itemize}
+    \item Early works modeled this as adiabatic relaxation of dark matter in response to the \textbf{\color{red}net} change in the gravitational potential due to galaxy formation.
+    \item Consider a dark matter particle in circular orbit starting from radius $r_i$ and adiabatically (conserving angular momentum) evolving to radius $r_f$ caused by change in sphericalised total mass profile from $M_i(r)$ to $M_f(r)$ due to galaxy, then
+    \begin{align*}
+        r_i \,M_i(r_i) = r_f \,M_f(r_f) % 
+        \implies 
+        \frac{r_f}{r_i} = \frac{M_i(r_i)}{M_f(r_f)}\,. 
+    \end{align*}
+    \item By assuming no shell crossing, these quantities can be calculated by the comparing total and dark matter mass profile in the presence and absence of galaxies using the relation $M_f^d(r_f) = M_i^d(r_i)$.
+    % \item Consider a shell enclosing a \emph{dark matter} mass $M_i^d(r_i)$ at radius $r_i$ in the unrelaxed halo. After relaxation, the radius of the shell changes to $r_f$. Assuming no-shell crossing, $M_f^d(r_f) = M_i^d(r_i)$.
+    % \item If angular momentum is conserved and the dark matter particle orbits stay circular, then,c
+    \item Quasi-adiabatic relaxation models consider the relaxation ratio $r_f/r_i$ as a function of the mass ratio $M_i/M_f$.
+\end{itemize}
+\end{frame}
+
+
+\section{Results}
+\subsection{Chapter 3}
+
+\begin{frame}{Relaxation relation in IllustrisTNG}
+    \begin{columns}
+        \begin{column}{.59\linewidth}
+            \includegraphics[width=\linewidth,trim={0 0 0cm 0},clip]{plots/indv_relx-reln_all.pdf}
+        \end{column}
+        \begin{column}{.4\linewidth}
+            \begin{itemize}
+                \item Stacking the relaxation relation across haloes in populations selected by their sizes.
+                \item Relaxation significantly weaker in cluster scale haloes.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Diversity in relaxation relation across halo masses}
+        \begin{columns}
+            \begin{column}{.4\linewidth}
+                \begin{itemize}
+                    \item Stacked relaxation relation is significantly different across halo masses.
+                    \item Existing quasi-adiabatic framework failed to provide a simple description across all scales.
+                    \item Relaxation significantly weaker in cluster scale haloes.
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.59\linewidth}
+                \only<1>{\centering {\LARGE IllustrisTNG} \\ \includegraphics[width=\linewidth]{plots/fit_view_M_T.pdf}}
+                \pause
+                \only<2>{\centering {\LARGE EAGLE} \\ \includegraphics[width=\linewidth]{plots/fit_view_M_E.pdf}}
+            \end{column}
+        \end{columns}
+\end{frame}
+
+
+\date[MNRAS/ arXiv:2206.07733]{17 March 2025}
+
+
 
 \begin{frame}{Relaxation in IllustrisTNG and EAGLE}
     \begin{columns}
@@ -349,8 +318,103 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 \end{frame}
 
 
-\section{Velmani \& Paranjape 2024b}
-\subsection{arXiv:2408.04864}
+\begin{frame}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\begin{itemize}
+    \item 
+    \item 
+\end{itemize}
+\end{column}
+\begin{column}{0.48\linewidth}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+    \begin{columns}
+    \begin{column}{0.5\linewidth}
+    \begin{itemize}
+        \item 
+        \item 
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.48\linewidth}
+        \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T50_M11.pdf}
+    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T50_M12.pdf}
+    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T100_M12.5.pdf}
+    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_T300_M14.pdf}
+    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_E25_M11.pdf}
+    \includegraphics[width=0.28\linewidth]{plots/fit_show_rf_M_E100_M12.5.pdf}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \begin{columns}
+    \begin{column}{0.58\linewidth}
+    \begin{itemize}
+        \item 
+        \item 
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.4\linewidth}
+        \includegraphics[width=\linewidth]{plots/fit_params_rf_M_T.pdf}
+        \includegraphics[width=\linewidth]{plots/fit_params_rf_M_E.pdf}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \begin{columns}
+    \begin{column}{0.5\linewidth}
+    \begin{itemize}
+        \item 
+        \item 
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.48\linewidth}
+        \includegraphics[width=\linewidth]{plots/fit_param_q3s_M_TE.pdf}
+    \end{column}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}
+\begin{columns}
+\begin{column}{0.5\linewidth}
+\begin{itemize}
+    \item Percentiles
+\end{itemize}
+\end{column}
+\begin{column}{0.48\linewidth}
+\includegraphics[clip,trim={0.2cm 1.18cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-cs_T.pdf}
+\includegraphics[clip,trim={0.2cm 1.18cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-fs1_T.pdf}
+\includegraphics[clip,trim={0.2cm 0cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-ssfr1_T.pdf}
+\includegraphics[clip,trim={0.2cm 0cm 0.25cm 0.3cm},width=0.4\linewidth]{plots/percentile_data_M-fg_T.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Application}
+    \begin{columns}
+        \begin{column}{0.5\linewidth}
+            \begin{itemize}
+                \item Using the three parameter model, we can predict the relaxed dark matter profile given the baryonic mass profiles.
+                \item These predictions are an order of magnitude better than existing models.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.48\linewidth}
+            \includegraphics[width=0.84\textwidth]{plots/Mass-prof_with_demo_accu-1.pdf}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+
+
+%\section{Velmani \& Paranjape 2024b}
+\date[JCAP/ arXiv:2408.04864]{17 March 2025}
 
 \begin{frame}{Universal description of Halo Relaxation Response}
     The radially dependent slope $q_1(r_f)$ and intercept $q_0(r_f)$ of this linear fit, is more universal across a wide range of halo masses up to $10^{13} \Mh$ at $z=0$ (left) and up to $10^{14} \Mh$ at earlier redshift, $z=1$ (right).
@@ -363,8 +427,8 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 
 
 
-\section{Velmani \& Paranjape 2024a}
-\subsection{arXiv:2407.08030}
+%\section{Velmani \& Paranjape 2024a}
+\date[JCAP/ arXiv:2407.08030]{17 March 2025}
 
 
 \begin{frame}{Relaxation Dynamics}
@@ -391,8 +455,8 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 \end{frame}
 
 
-\section{Velmani \& Paranjape 2022}
-\subsection{arXiv:2206.07733}
+%\section{Velmani \& Paranjape 2022}
+\date[MNRAS/ arXiv:2206.07733]{17 March 2025}
 \begin{frame}{Astrophysical connection}
     \begin{columns}
         \begin{column}{0.5\linewidth}
@@ -414,8 +478,8 @@ for unresolved haloes across redshift and cosmology using correlations with loca
 \end{frame}
 
 
-\section{Velmani \& Paranjape 2024a}
-\subsection{arXiv:2407.08030}
+%\section{Velmani \& Paranjape 2024a}
+\date[JCAP/ arXiv:2407.08030]{17 March 2025}
 
 \begin{frame}{Temporal Connection with Astrophysics}
     \begin{columns}
@@ -432,8 +496,8 @@ for unresolved haloes across redshift and cosmology using correlations with loca
     Additionally, we also found that the offset in the inner region is immediately affected by high SFR, while the outer regions are affected after around 2-3 Gyr. This likely explains the explicit dependence on the halo-centric distance.    
 \end{frame}
 
-\section{Velmani \& Paranjape 2024b}
-\subsection{arXiv:2408.04864}
+%\section{Velmani \& Paranjape 2024b}
+\date[JCAP/ arXiv:2408.04864]{17 March 2025}
 
 \begin{frame}{Role of Astrophysical Feedback}
     Using the suite of CAMELS simulations with variation in feedback strengths, we found that the offset parameter $q_x$, which is inversely related to $q_0$, indeed strongly depends on the overall feedback flux from the galaxies. However, the parameters controlling the feedback burstiness and the wind speed have negligible impact on the relaxation offset as shown below.
@@ -442,8 +506,8 @@ for unresolved haloes across redshift and cosmology using correlations with loca
     \end{center}
 \end{frame}
 
-\section{}
-\subsection{}
+%\section{}
+\date[]{17 March 2025}
 
 \begin{frame}{Future plans}
     \begin{itemize}
