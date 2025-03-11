@@ -7,6 +7,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath, amssymb}
 \usepackage{tikz}
+\usetikzlibrary{positioning, arrows}
 \graphicspath{{../../../thesis/}}
 \usefonttheme{professionalfonts}
 \usepackage{hyperref}
@@ -66,16 +67,53 @@
     
 \end{frame}
 
-\begin{frame}
-\begin{tikzpicture}
-\node (top) [rectangle, draw] {Chapters};
-\node (sub) [rectangle, draw, right of=top, xshift=4cm] {Introduction};
-\node (met) [rectangle, draw, xshift=2cm, yshift=-2cm] {Simulations and Methods};
-\node (selfsim) [rectangle, draw, yshift=-4cm] {Controlled numerical experiment};
-\draw [->] (top) -- (sub);
-\draw [->] (top) -- (met);
+\begin{frame}{Thesis Overview}
+\centering
+\begin{tikzpicture}[
+node distance=1.5cm and 2.5cm,
+every node/.style={rectangle, draw, align=center, rounded corners=3pt},
+every path/.style={thick, ->}
+]
+
+% Main Nodes
+\node (intro) {Chapter 1: Introduction};
+\node (methods) [below=of intro] {Chapter 2 : Methods \\ Modern realistic simulations\\ of relaxation response};
+\node (results1) [right=of methods, xshift=-0.5cm, yshift=2cm] {Chapter 3: Diverse and \\universal aspects of relaxation \\across a variety of haloes};
+\node (results2) [right=of methods, xshift=-0.5cm, yshift=0.1cm] {Chapter 4: Role of \\Astrophysical Modeling in \\ simulated response};
+\node (results3) [right=of methods, xshift=-0.5cm, yshift=-1.7cm] {Chapter 5 : Timescales \\and Relaxation dynamics};
+\node (tractable) [below=of methods, xshift=0cm, yshift=0.2cm] { In more tractable \\halo-galaxy systems };
+\node (selfsim) [below=of results3, yshift=1cm] {Chapter 6: Self-Similar Model};
+\node (conclusion) [below=of tractable, yshift=1.2cm] {Chapter 7: Conclusions };
+
+% Connections
+\draw [->] (intro) -- (methods);
+\draw [->] (methods) -- (results1);
+\draw [->] (methods) -- (results2);
+\draw [->] (methods) -- (results3);
+\draw [->] (results1) -- (results2);
+\draw [->] (results2) -- (results3);
+\draw [->] (tractable) -- (selfsim);
+\draw [->] (selfsim) -- (conclusion);
+\draw [-] (methods) -- (tractable);
+\draw[-] (tractable) -- (conclusion);
+% \path (results1) -- (selfsim);
+% \path (results2) -- (selfsim);
+% \path (results3) -- (selfsim);
+% \path (selfsim) -- (conclusion);
+
 \end{tikzpicture}
 \end{frame}
+
+% \begin{frame}
+% \begin{tikzpicture}
+% \node (top) [rectangle, draw] {Chapters};
+% \node (sub) [rectangle, draw, right of=top, xshift=4cm] {Introduction};
+% \node (met) [rectangle, draw, xshift=2cm, yshift=-2cm] {Simulations and Methods};
+% \node (selfsim) [rectangle, draw, yshift=-4cm] {Controlled numerical experiment};
+% \draw [->] (top) -- (sub);
+% \draw [->] (top) -- (met);
+% \end{tikzpicture}
+% \end{frame}
 
 \begin{frame}{List of Publications}
     % \begin{itemize}
@@ -87,7 +125,7 @@
 \doi{10.1093/mnras/stad297}
 % \href{https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.2867V}{ads:2023MNRAS.520.2867V}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \noindent
 2. Velmani \& Paranjape, 2024, ``A self-similar model of galaxy formation and dark halo relaxation", \textit{JCAP}, 
@@ -95,17 +133,17 @@
 \doi{10.1088/1475-7516/2024/05/080},
 % \href{https://ui.adsabs.harvard.edu/abs/2024JCAP...05..080V}{ads:2024JCAP...05..080V}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \noindent
 3. Velmani \& Paranjape, 2025,``Dynamics of the response of dark matter halo to galaxy evolution in IllustrisTNG", \textit{JCAP},
 \doi{10.1088/1475-7516/2025/02/006}, 
 % \href{https://ui.adsabs.harvard.edu/abs/2024arXiv240708030V}{ads:2024arXiv240708030V}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \noindent
-4. Velmani \& Paranjape, 2024,``Role of astrophysical modeling on dark matter halo relaxation response at redshifts z = 0 and z = 1", \textit{JCAP subm.}
+4. Velmani \& Paranjape, 2024,``Role of astrophysical modeling on dark matter halo relaxation response at redshifts z = 0 and z = 1", \href{https://arxiv.org/abs/2408.04864}{arXiv:2408.04864}, \textit{JCAP subm.}
 
 \vspace{0.2cm}
 
