@@ -618,16 +618,65 @@ RecalHR & High-resolution variant with recalibrated parameters \\
 \begin{frame}{Temporal Connection with Astrophysics}
     \begin{columns}
         \begin{column}{0.45\linewidth}
-            Spearman-rank correlation between $Q_0 \equiv -q_0$ and mean SFR across a variety of haloes over long periods of time at different final halo masses suggests that the offset is typically stronger following periods of high star formation activity.
+            \begin{itemize}
+                \item Spearman-rank correlation between $Q_0 \equiv -q_0$ and mean SFR across haloes over long periods of time is shown.
+                \item This suggest that the offset is typically stronger following periods of high star formation activity.
+                % \item Color indicates the final halo masses suggestsin different mass bins indicated by color
+            \end{itemize}
         \end{column}
         \begin{column}{0.55\linewidth}
             \begin{center}
                 \includegraphics[width=.95\linewidth]{plots/dynam_relxn/Spea_correl_vs_shift_betw_q0-SFR_fullcorr.pdf}
             \end{center}
         \end{column}
-    \end{columns} 
-    \pause
-    Additionally, we also found that the offset in the inner region is immediately affected by high SFR, while the outer regions are affected after around 2-3 Gyr. This likely explains the explicit dependence on the halo-centric distance.    
+    \end{columns}   
+\end{frame}
+
+\begin{frame}{Time Lag Analysis}
+    \small
+    \begin{itemize}
+        \item Spearman correlations ($\rho^s_h, \rho^s_t, ~\&~ \rho^s_f$) as a function of time lag ($\tau$) depict a qualitative picture of the sequences of galactic processes.
+        \item We compute the mean time lag between SFR and metallicity weighed by their correlation strengths.
+        \item Spearman correlation coefficients in the correlation era $\rho_{+}$ and the anti-correlation era $\rho_{-}$ are defined as:
+    \end{itemize}
+    \begin{gather*}
+    \rho_{+}(\tau) = 
+    \begin{cases} 
+    \rho^s_f(\tau) & \text{if } \rho^s_f(\tau) > 0 \\ 
+    0 & \text{else} 
+    \end{cases}, \qquad
+    \rho_{-}(\tau) = 
+    \begin{cases} 
+    -\rho^s_f(\tau) & \text{if } \rho^s_f(\tau) < 0 \\
+    0 & \text{else} 
+    \end{cases}
+    \end{gather*}
+    \begin{gather*}
+    \Delta\tau_{+} = \int_{\rho(\tau)>0} w d\tau , \qquad \Delta\tau_{-} = \int_{\rho<0} w d\tau   \\
+    A_{+} = \int w(\tau) \rho_{+}(\tau) d\tau / \Delta\tau_{+}, \qquad A_{-} = \int w(\tau) \rho_{-}(\tau) d\tau / \Delta\tau_{-} \\
+    \tau_{+} = \frac{1}{A_{+} \Delta\tau_{+}} \int \tau w(\tau) \rho_{+}(\tau) d\tau , \qquad \tau_{-} = \frac{1}{A_{-}\Delta\tau_{-}} \int \tau w(\tau) \rho_{-}(\tau) d\tau     
+    \end{gather*}
+    \begin{itemize}
+        \item The weight function $w$ is taken to be the fraction of the entire data between $z \sim 5$ and $z \sim 0$ involved in computing the correlation coefficient at a given time lag.
+        \item Positive time lag $\tau_{+}[X,Y]$ (or $\tau_{-}[X,Y]$) indicates that the positive (or negative) correlation is seen with $Y$ lagging behind $X$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Timescales of Relaxation Dynamics}
+    \begin{columns}
+    \begin{column}{0.45\linewidth}
+    \includegraphics[width=\linewidth]{plots/dynam_relxn/shift_betw_multi-SFR_fullcorr.pdf}
+    \end{column}
+    \begin{column}{0.54\linewidth}
+        \small
+    \begin{itemize}
+        \item The correlation weighted mean time lags ($\tau_{\pm}$) between relaxation offset strengths ($Q_0, Q_0^{\rm{in}}, Q_0^{\rm{out}}$) against the star formation rate (SFR) vs final masses at $z\sim 0$ are shown.
+        \item The corresponding strengths ($A_{\pm}$) and the durations ($\Delta \tau_{\pm}$) of the correlation are shown in the middle and bottom panels, respectively.
+        \item The relaxation offset in the inner region is immediately affected by high SFR, while the outer regions are affected after around 2-3 Gyr.
+        \item This likely explains the explicit dependence on the halo-centric distance.
+    \end{itemize}
+    \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Chapter 5 Summary}
